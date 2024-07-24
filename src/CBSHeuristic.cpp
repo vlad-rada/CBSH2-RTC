@@ -369,9 +369,9 @@ int CBSHeuristic::minimumVertexCover(const vector<int>& CG)
             }
         }
         else {
-            for (int i = 1; i < (int) indices.size(); i++) {
-                if (KVertexCover(subgraph, (int) indices.size(), num_edges, i, (int) indices.size())) {
-                    rst += i;
+            for (int k = 1; k < (int) indices.size(); k++) {
+                if (KVertexCover(subgraph, (int) indices.size(), num_edges, k, (int) indices.size())) {
+                    rst += k;
                     break;
                 }
                 double runtime = (double) (clock() - start_time) / CLOCKS_PER_SEC;
