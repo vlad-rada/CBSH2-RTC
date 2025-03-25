@@ -1,6 +1,12 @@
 import subprocess
 import os
 import random
+import psutil
+import time
+import csv
+
+results_csv = "memory_results.csv"
+write_header = not os.path.exists(results_csv)
 
 #look into psutil to get peak memory usage 
 #take in 
@@ -57,6 +63,32 @@ for filename in input_files:
             print("Running " + filename + " with " + str(y) + " agents")
             output_path = os.path.join(output_dir, f"{filename}{counter}")
             numAgents = str(y)
-            args = ["time", executable, "-m", input_path, "-a", "agents.txt", "-o", "runtests.csv", "--outputPaths=" + output_path,"-k", numAgents, "-t", "600", "--heuristics", "Zero", "--prioritizingConflicts", "0", "--bypass", "0", "--disjointSplitting", "0", "--rectangleReasoning", "None", "--corridorReasoning", "None", "--mutexReasoning", "0", "--targetReasoning", "0"]
-            result = subprocess.run(args, capture_output=True, text=True)
+            args = [executable, "-m", input_path, "-a", "agents.txt", "-o", "runtests.csv", "--outputPaths=" + output_path,"-k", numAgents, "-t", "600", "--heuristics", "Zero", "--prioritizingConflicts", "0", "--bypass", "0", "--disjointSplitting", "0", "--rectangleReasoning", "None", "--corridorReasoning", "None", "--mutexReasoning", "0", "--targetReasoning", "0", "--sip", "0"]
+           
+           #run process. collect resource data with psutil
+            process = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            p = psutil.Process(process.pid)
+            peak_memory = 0
+
+            while process.poll() is None:
+                try:
+                    mem = p.memory_info().rss  
+                    peak_memory = max(peak_memory, mem)
+                except psutil.NoSuchProcess:
+                    break
+                time.sleep(0.1)  #frequncy of polling
+
+            stdout, stderr = process.communicate()
+
+            # bytes to MB
+            peak_memory_MB = peak_memory / (1024 * 1024)
+
+            with open(results_csv, mode="a", newline="") as file:
+                writer = csv.writer(file)
+                if write_header:
+                    writer.writerow(["Filename", "AgentCount", "RunID", "PeakMemoryMB"])
+                    write_header = False  # Avoid writing header again
+                writer.writerow([filename, y, counter, f"{peak_memory_MB:.2f}"])
+
             counter = counter + 1
+            
