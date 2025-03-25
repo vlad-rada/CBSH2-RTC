@@ -6,6 +6,9 @@ This module will prompt the user for a map area and generate a map for use in CB
 
 import random
 
+MAX_WIDTH = 2048
+MAX_HEIGHT = 2048
+
 
 def prompts():
     """
@@ -21,14 +24,14 @@ def prompts():
     
     # Map width prompt
     width = input("Enter the map width[min=4 max=512]: ")
-    while not (4 <= int(width) <= 512):
+    while not (4 <= int(width) <= MAX_WIDTH):
         width = input("Invalid input. Enter the map width[min=4 max=512]: ")
     returns.append(width)
     
     # Map height prompt
-    height = input("Enter the map height[min=4 max=512]: ")
-    while not (4 <= int(height) <= 512):
-        height = input("Invalid input. Enter the map height[min=4 max=512]: ")
+    height = input("Enter the map height[min=4 max=2048]: ")
+    while not (4 <= int(height) <= MAX_HEIGHT):
+        height = input("Invalid input. Enter the map height[min=4 max=2048]: ")
     returns.append(height)
     
     # Map blockage probability prompt
