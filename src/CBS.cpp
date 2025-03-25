@@ -600,7 +600,7 @@ void CBS::saveResults(const string& fileName, const string& instanceName) const
 				 "runtime of rectangle conflicts,runtime of corridor conflicts,runtime of mutex conflicts," <<
 				 "runtime of building MDDs,runtime of building constraint tables,runtime of building CATs," <<
 				 "runtime of path finding,runtime of generating child nodes," <<
-				 "preprocessing runtime,solver name,instance name" << endl;
+				 "preprocessing runtime,solver name,instance name,num_agents" << endl;
 		addHeads.close();
 	}
 	ofstream stats(fileName, std::ios::app);
@@ -626,7 +626,7 @@ void CBS::saveResults(const string& fileName, const string& instanceName) const
 		  mdd_helper.accumulated_runtime << "," << runtime_build_CT << "," << runtime_build_CAT << "," <<
 		  runtime_path_finding << "," << runtime_generate_child << "," <<
 
-		  runtime_preprocessing << "," << getSolverName() << "," << instanceName << endl;
+		  runtime_preprocessing << "," << getSolverName() << "," << instanceName << "," << num_of_agents << endl;
 	stats.close();
 }
 
@@ -1291,3 +1291,4 @@ void CBS::clear()
 	solution_found = false;
 	solution_cost = -2;
 }
+
