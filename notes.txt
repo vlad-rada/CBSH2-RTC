@@ -8,3 +8,9 @@
 --targetReasoning arg (=1)       Using target reasoning
 --restart arg (=1)               number of restart times (at least 1)
 --sipp arg (=0)                  using sipp as the single agent solver
+
+
+if solution cost is set to -1 then the agent timed out
+
+cbs command to run:
+    ./cbs -m orz900d.map -a orz900d-even-1.scen -o test.csv --outputPaths=paths.txt -k 2 -t 600 --heuristics Zero --prioritizingConflicts 0 --bypass 0 --disjointSplitting 0 --rectangleReasoning None --corridorReasoning None --mutexReasoning 0 --targetReasoning 0 --sipp 0
