@@ -1,0 +1,1186 @@
+--------------------------------------------------------------------------------
+Command:            ./cbs -m orz900d.map -a orz900d-even-1.scen -o test.csv --outputPaths=paths.txt -k 2 -t 600 --heuristics Zero --prioritizingConflicts 0 --bypass 0 --disjointSplitting 0 --rectangleReasoning None --corridorReasoning None --mutexReasoning 0 --targetReasoning 0 --sipp 0
+Massif arguments:   --stacks=yes
+ms_print arguments: massif.out.656634
+--------------------------------------------------------------------------------
+
+
+    MB
+10.01^                                                                    #   
+     |                                                                   @#   
+     |                                                                   @#   
+     |                                                                 @@@#   
+     |                                                                @@@@#:  
+     |                                  @@:::::::::::::::@::::::::@::@@@@@#:::
+     |                                  @ :::::: : ::: ::@:: :: ::@::@@@@@#:::
+     |                                  @ :::::: : ::: ::@:: :: ::@::@@@@@#:::
+     |                                  @ :::::: : ::: ::@:: :: ::@::@@@@@#:::
+     |                                  @ :::::: : ::: ::@:: :: ::@::@@@@@#:::
+     |                                  @ :::::: : ::: ::@:: :: ::@::@@@@@#:::
+     |                                  @ :::::: : ::: ::@:: :: ::@::@@@@@#:::
+     |                                  @ :::::: : ::: ::@:: :: ::@::@@@@@#:::
+     |      :::::::::@::::::::::::::::::@ :::::: : ::: ::@:: :: ::@::@@@@@#:::
+     |      : ::: :::@: :: : ::: :::::: @ :::::: : ::: ::@:: :: ::@::@@@@@#:::
+     |      : ::: :::@: :: : ::: :::::: @ :::::: : ::: ::@:: :: ::@::@@@@@#:::
+     |      : ::: :::@: :: : ::: :::::: @ :::::: : ::: ::@:: :: ::@::@@@@@#:::
+     |      : ::: :::@: :: : ::: :::::: @ :::::: : ::: ::@:: :: ::@::@@@@@#:::
+     |      : ::: :::@: :: : ::: :::::: @ :::::: : ::: ::@:: :: ::@::@@@@@#:::
+     |      : ::: :::@: :: : ::: :::::: @ :::::: : ::: ::@:: :: ::@::@@@@@#:::
+   0 +----------------------------------------------------------------------->Mi
+     0                                                                   221.8
+
+Number of snapshots: 82
+ Detailed snapshots: [1, 12, 27, 41, 48, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77 (peak)]
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0                0                0             0            0
+  1      4,567,396          228,712          221,919         3,097        3,696
+97.03% (221,919B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->53.46% (122,264B) 0x44062E: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->53.46% (122,264B) 0x4489A0: Instance::loadMap() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->53.46% (122,264B) 0x44B79E: Instance::Instance(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, int, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->53.46% (122,264B) 0x407F52: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       
+->32.24% (73,728B) 0x498771B: pool (eh_alloc.cc:235)
+| ->32.24% (73,728B) 0x498771B: __static_initialization_and_destruction_0 (eh_alloc.cc:373)
+|   ->32.24% (73,728B) 0x498771B: _GLOBAL__sub_I_eh_alloc.cc (eh_alloc.cc:456)
+|     ->32.24% (73,728B) 0x4004556: call_init (dl-init.c:74)
+|       ->32.24% (73,728B) 0x4004556: call_init (dl-init.c:26)
+|         ->32.24% (73,728B) 0x400464C: _dl_init (dl-init.c:121)
+|           ->32.24% (73,728B) 0x401CE5F: ??? (in /usr/lib64/ld-linux-x86-64.so.2)
+|             ->32.24% (73,728B) 0x1D: ???
+|               ->32.24% (73,728B) 0x1FFEFFF4FE: ???
+|                 ->32.24% (73,728B) 0x1FFEFFF504: ???
+|                   ->32.24% (73,728B) 0x1FFEFFF507: ???
+|                     ->32.24% (73,728B) 0x1FFEFFF513: ???
+|                       ->32.24% (73,728B) 0x1FFEFFF516: ???
+|                         ->32.24% (73,728B) 0x1FFEFFF52A: ???
+|                           ->32.24% (73,728B) 0x1FFEFFF52D: ???
+|                             ->32.24% (73,728B) 0x1FFEFFF536: ???
+|                               ->32.24% (73,728B) 0x1FFEFFF54E: ???
+|                                 ->32.24% (73,728B) 0x1FFEFFF551: ???
+|                                   ->32.24% (73,728B) 0x1FFEFFF553: ???
+|                                     ->32.24% (73,728B) 0x1FFEFFF556: ???
+|                                       ->32.24% (73,728B) 0x1FFEFFF55A: ???
+|                                         ->32.24% (73,728B) 0x1FFEFFF567: ???
+|                                           ->32.24% (73,728B) 0x1FFEFFF56C: ???
+|                                             ->32.24% (73,728B) 0x1FFEFFF584: ???
+|                                               ->32.24% (73,728B) 0x1FFEFFF586: ???
+|                                                 ->32.24% (73,728B) 0x1FFEFFF58F: ???
+|                                                   ->32.24% (73,728B) 0x1FFEFFF591: ???
+|                                                     ->32.24% (73,728B) 0x1FFEFFF5A5: ???
+|                                                       ->32.24% (73,728B) 0x1FFEFFF5A7: ???
+|                                                         ->32.24% (73,728B) 0x1FFEFFF5BC: ???
+|                                                           ->32.24% (73,728B) 0x1FFEFFF5C1: ???
+|                                                             ->32.24% (73,728B) 0x1FFEFFF5D5: ???
+|                                                               ->32.24% (73,728B) 0x1FFEFFF5DA: ???
+|                                                                 
+->05.48% (12,535B) in 62 places, all below massif's threshold (1.00%)
+| 
+->03.58% (8,192B) 0x49C2CCE: _M_allocate_internal_buffer (fstream.tcc:56)
+| ->03.58% (8,192B) 0x49C2CCE: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (fstream.tcc:49)
+|   ->03.58% (8,192B) 0x49C5383: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (fstream.tcc:187)
+|     ->03.58% (8,192B) 0x4470BF: Instance::loadMap() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->03.58% (8,192B) 0x44B79E: Instance::Instance(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, int, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         ->03.58% (8,192B) 0x407F52: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|           
+->01.22% (2,800B) 0x4879684: boost::program_options::options_description_easy_init::operator()(char const*, boost::program_options::value_semantic const*, char const*) (in /home/gabi/anaconda3/lib/libboost_program_options.so.1.78.0)
+| ->01.22% (2,800B) in 25 places, all below massif's threshold (1.00%)
+|   
+->01.05% (2,400B) 0x48832DF: std::_Rb_tree_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, boost::program_options::variable_value> > std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, boost::program_options::variable_value>, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, boost::program_options::variable_value> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, boost::program_options::variable_value> > >::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>, std::tuple<> >(std::_Rb_tree_const_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, boost::program_options::variable_value> >, std::piecewise_construct_t const&, std::tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>&&, std::tuple<>&&) [clone .isra.0] (in /home/gabi/anaconda3/lib/libboost_program_options.so.1.78.0)
+  ->01.05% (2,400B) in 2 places, all below massif's threshold (1.00%)
+    
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  2      9,815,930          228,576          221,919         3,097        3,560
+  3     14,236,863          228,576          221,919         3,097        3,560
+  4     17,456,200          228,576          221,919         3,097        3,560
+  5     21,907,418        4,133,368        4,126,531         4,053        2,784
+  6     26,192,448        4,136,256        4,128,571         4,901        2,784
+  7     30,729,294        4,137,280        4,129,339         5,157        2,784
+  8     34,080,140        4,134,336        4,127,363         4,357        2,616
+  9     39,227,809        4,133,384        4,126,635         4,133        2,616
+ 10     43,640,089        4,133,624        4,126,739         4,101        2,784
+ 11     47,316,965        4,137,144        4,129,307         5,141        2,696
+ 12     50,626,099        4,134,040        4,127,051         4,293        2,696
+99.83% (4,127,051B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->94.64% (3,912,384B) 0x46BE4B: std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->94.64% (3,912,384B) 0x46B93B: SingleAgentSolver::compute_heuristics() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->94.64% (3,912,384B) 0x413637: CBS::CBS(Instance const&, bool, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->94.64% (3,912,384B) 0x40806B: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       
+->02.96% (122,264B) 0x44062E: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->02.96% (122,264B) 0x4489A0: Instance::loadMap() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->02.96% (122,264B) 0x44B79E: Instance::Instance(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, int, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->02.96% (122,264B) 0x407F52: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       
+->01.78% (73,728B) 0x498771B: pool (eh_alloc.cc:235)
+| ->01.78% (73,728B) 0x498771B: __static_initialization_and_destruction_0 (eh_alloc.cc:373)
+|   ->01.78% (73,728B) 0x498771B: _GLOBAL__sub_I_eh_alloc.cc (eh_alloc.cc:456)
+|     ->01.78% (73,728B) 0x4004556: call_init (dl-init.c:74)
+|       ->01.78% (73,728B) 0x4004556: call_init (dl-init.c:26)
+|         ->01.78% (73,728B) 0x400464C: _dl_init (dl-init.c:121)
+|           ->01.78% (73,728B) 0x401CE5F: ??? (in /usr/lib64/ld-linux-x86-64.so.2)
+|             ->01.78% (73,728B) 0x1D: ???
+|               ->01.78% (73,728B) 0x1FFEFFF4FE: ???
+|                 ->01.78% (73,728B) 0x1FFEFFF504: ???
+|                   ->01.78% (73,728B) 0x1FFEFFF507: ???
+|                     ->01.78% (73,728B) 0x1FFEFFF513: ???
+|                       ->01.78% (73,728B) 0x1FFEFFF516: ???
+|                         ->01.78% (73,728B) 0x1FFEFFF52A: ???
+|                           ->01.78% (73,728B) 0x1FFEFFF52D: ???
+|                             ->01.78% (73,728B) 0x1FFEFFF536: ???
+|                               ->01.78% (73,728B) 0x1FFEFFF54E: ???
+|                                 ->01.78% (73,728B) 0x1FFEFFF551: ???
+|                                   ->01.78% (73,728B) 0x1FFEFFF553: ???
+|                                     ->01.78% (73,728B) 0x1FFEFFF556: ???
+|                                       ->01.78% (73,728B) 0x1FFEFFF55A: ???
+|                                         ->01.78% (73,728B) 0x1FFEFFF567: ???
+|                                           ->01.78% (73,728B) 0x1FFEFFF56C: ???
+|                                             ->01.78% (73,728B) 0x1FFEFFF584: ???
+|                                               ->01.78% (73,728B) 0x1FFEFFF586: ???
+|                                                 ->01.78% (73,728B) 0x1FFEFFF58F: ???
+|                                                   ->01.78% (73,728B) 0x1FFEFFF591: ???
+|                                                     ->01.78% (73,728B) 0x1FFEFFF5A5: ???
+|                                                       ->01.78% (73,728B) 0x1FFEFFF5A7: ???
+|                                                         ->01.78% (73,728B) 0x1FFEFFF5BC: ???
+|                                                           ->01.78% (73,728B) 0x1FFEFFF5C1: ???
+|                                                             ->01.78% (73,728B) 0x1FFEFFF5D5: ???
+|                                                               ->01.78% (73,728B) 0x1FFEFFF5DA: ???
+|                                                                 
+->00.45% (18,675B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 13     53,651,212        4,132,168        4,125,819         3,733        2,616
+ 14     59,196,860        4,132,224        4,125,723         3,717        2,784
+ 15     63,230,059        4,135,136        4,127,939         4,581        2,616
+ 16     69,280,006        4,133,264        4,126,579         4,069        2,616
+ 17     74,321,558        4,132,216        4,125,851         3,749        2,616
+ 18     76,809,999        4,133,264        4,126,547         4,021        2,696
+ 19     80,714,005        4,135,488        4,128,179         4,693        2,616
+ 20     83,642,423        4,133,584        4,126,819         4,149        2,616
+ 21     87,546,571        4,131,744        4,125,419         3,541        2,784
+ 22     90,474,707        4,133,424        4,126,635         4,085        2,704
+ 23     94,378,709        4,134,008        4,127,067         4,245        2,696
+ 24     98,282,710        4,135,920        4,128,403         4,821        2,696
+ 25    102,186,880        4,133,848        4,126,971         4,181        2,696
+ 26    106,091,057        4,132,600        4,126,139         3,845        2,616
+ 27    112,110,313        8,043,296        8,037,331         3,165        2,800
+99.93% (8,037,331B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->97.28% (7,824,768B) 0x46BE4B: std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->97.28% (7,824,768B) 0x46B93B: SingleAgentSolver::compute_heuristics() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->97.28% (7,824,768B) 0x413637: CBS::CBS(Instance const&, bool, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->97.28% (7,824,768B) 0x40806B: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       
+->01.52% (122,264B) 0x44062E: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->01.52% (122,264B) 0x4489A0: Instance::loadMap() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->01.52% (122,264B) 0x44B79E: Instance::Instance(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, int, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->01.52% (122,264B) 0x407F52: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       
+->01.12% (90,299B) in 74 places, all below massif's threshold (1.00%)
+  
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 28    116,990,391        8,045,816        8,039,171         4,029        2,616
+ 29    120,894,520        8,045,304        8,038,691         3,917        2,696
+ 30    125,335,151        8,048,080        8,040,731         4,733        2,616
+ 31    128,360,242        8,050,632        8,042,531         5,485        2,616
+ 32    131,385,342        8,048,432        8,040,987         4,829        2,616
+ 33    134,410,427        8,047,336        8,040,091         4,461        2,784
+ 34    138,948,043        8,044,664        8,038,187         3,693        2,784
+ 35    141,973,452        8,045,240        8,038,691         3,933        2,616
+ 36    146,511,040        8,044,736        8,038,243         3,709        2,784
+ 37    149,536,127        8,045,104        8,038,483         3,837        2,784
+ 38    154,073,746        8,046,144        8,039,251         4,109        2,784
+ 39    160,123,859        8,047,104        8,040,003         4,413        2,688
+ 40    163,149,006        8,045,184        8,038,667         3,901        2,616
+ 41    166,174,080        8,044,672        8,038,179         3,709        2,784
+99.92% (8,038,179B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->97.27% (7,824,768B) 0x46BE4B: std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->97.27% (7,824,768B) 0x46B93B: SingleAgentSolver::compute_heuristics() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->97.27% (7,824,768B) 0x413637: CBS::CBS(Instance const&, bool, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->97.27% (7,824,768B) 0x40806B: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       
+->01.52% (122,264B) 0x44062E: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->01.52% (122,264B) 0x4489A0: Instance::loadMap() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->01.52% (122,264B) 0x44B79E: Instance::Instance(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, int, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->01.52% (122,264B) 0x407F52: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       
+->01.13% (91,147B) in 74 places, all below massif's threshold (1.00%)
+  
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 42    170,711,670        8,048,312        8,040,931         4,765        2,616
+ 43    173,736,736        8,048,424        8,040,931         4,797        2,696
+ 44    178,274,677        8,046,480        8,039,611         4,253        2,616
+ 45    182,812,279        8,045,664        8,038,931         3,949        2,784
+ 46    188,862,443        8,049,880        8,041,899         5,197        2,784
+ 47    191,887,600        8,049,224        8,041,419         5,021        2,784
+ 48    196,425,519        8,045,888        8,039,059         4,045        2,784
+99.92% (8,039,059B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->97.25% (7,824,768B) 0x46BE4B: std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->97.25% (7,824,768B) 0x46B93B: SingleAgentSolver::compute_heuristics() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->97.25% (7,824,768B) 0x413637: CBS::CBS(Instance const&, bool, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->97.25% (7,824,768B) 0x40806B: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       
+->01.52% (122,264B) 0x44062E: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->01.52% (122,264B) 0x4489A0: Instance::loadMap() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->01.52% (122,264B) 0x44B79E: Instance::Instance(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, int, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->01.52% (122,264B) 0x407F52: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       
+->01.14% (92,027B) in 74 places, all below massif's threshold (1.00%)
+  
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 49    199,450,579        8,046,936        8,039,803         4,349        2,784
+ 50    201,939,060        8,044,768        8,038,259         3,725        2,784
+ 51    204,427,505        8,043,928        8,037,691         3,453        2,784
+ 52    205,045,184        8,123,744        8,093,315        17,069       13,360
+99.63% (8,093,315B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->96.32% (7,824,768B) 0x46BE4B: std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->96.32% (7,824,768B) 0x46B93B: SingleAgentSolver::compute_heuristics() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->96.32% (7,824,768B) 0x413637: CBS::CBS(Instance const&, bool, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->96.32% (7,824,768B) 0x40806B: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       
+->01.80% (146,283B) in 92 places, all below massif's threshold (1.00%)
+| 
+->01.51% (122,264B) 0x44062E: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  ->01.51% (122,264B) 0x4489A0: Instance::loadMap() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+    ->01.51% (122,264B) 0x44B79E: Instance::Instance(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, int, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+      ->01.51% (122,264B) 0x407F52: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+        
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 53    205,589,200        8,205,112        8,158,203        33,501       13,408
+99.43% (8,158,203B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->95.36% (7,824,768B) 0x46BE4B: std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->95.36% (7,824,768B) 0x46B93B: SingleAgentSolver::compute_heuristics() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->95.36% (7,824,768B) 0x413637: CBS::CBS(Instance const&, bool, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->95.36% (7,824,768B) 0x40806B: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       
+->02.57% (211,171B) in 92 places, all below massif's threshold (1.00%)
+| 
+->01.49% (122,264B) 0x44062E: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  ->01.49% (122,264B) 0x4489A0: Instance::loadMap() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+    ->01.49% (122,264B) 0x44B79E: Instance::Instance(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, int, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+      ->01.49% (122,264B) 0x407F52: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+        
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 54    206,108,848        8,287,288        8,224,739        49,141       13,408
+99.25% (8,224,739B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->94.42% (7,824,768B) 0x46BE4B: std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->94.42% (7,824,768B) 0x46B93B: SingleAgentSolver::compute_heuristics() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->94.42% (7,824,768B) 0x413637: CBS::CBS(Instance const&, bool, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->94.42% (7,824,768B) 0x40806B: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       
+->02.13% (176,347B) in 91 places, all below massif's threshold (1.00%)
+| 
+->01.48% (122,264B) 0x44062E: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->01.48% (122,264B) 0x4489A0: Instance::loadMap() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->01.48% (122,264B) 0x44B79E: Instance::Instance(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, int, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->01.48% (122,264B) 0x407F52: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       
+->01.22% (101,360B) 0x470DBA: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  ->01.22% (101,360B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+    ->01.22% (101,360B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+      ->01.22% (101,360B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+        ->01.22% (101,360B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+          
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 55    206,644,085        8,370,200        8,290,027        66,765       13,408
+99.04% (8,290,027B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->93.48% (7,824,768B) 0x46BE4B: std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->93.48% (7,824,768B) 0x46B93B: SingleAgentSolver::compute_heuristics() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->93.48% (7,824,768B) 0x413637: CBS::CBS(Instance const&, bool, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->93.48% (7,824,768B) 0x40806B: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       
+->02.42% (202,675B) in 91 places, all below massif's threshold (1.00%)
+| 
+->01.68% (140,320B) 0x470DBA: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->01.68% (140,320B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->01.68% (140,320B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->01.68% (140,320B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->01.68% (140,320B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         
+->01.46% (122,264B) 0x44062E: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  ->01.46% (122,264B) 0x4489A0: Instance::loadMap() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+    ->01.46% (122,264B) 0x44B79E: Instance::Instance(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, int, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+      ->01.46% (122,264B) 0x407F52: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+        
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 56    207,264,285        8,454,000        8,359,435        81,157       13,408
+98.88% (8,359,435B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->92.56% (7,824,768B) 0x46BE4B: std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->92.56% (7,824,768B) 0x46B93B: SingleAgentSolver::compute_heuristics() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->92.56% (7,824,768B) 0x413637: CBS::CBS(Instance const&, bool, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->92.56% (7,824,768B) 0x40806B: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       
+->02.85% (240,803B) in 91 places, all below massif's threshold (1.00%)
+| 
+->02.03% (171,600B) 0x470DBA: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->02.03% (171,600B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->02.03% (171,600B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->02.03% (171,600B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->02.03% (171,600B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         
+->01.45% (122,264B) 0x44062E: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  ->01.45% (122,264B) 0x4489A0: Instance::loadMap() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+    ->01.45% (122,264B) 0x44B79E: Instance::Instance(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, int, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+      ->01.45% (122,264B) 0x407F52: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+        
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 57    207,826,197        8,538,656        8,425,907        99,341       13,408
+98.68% (8,425,907B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->91.64% (7,824,768B) 0x46BE4B: std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->91.64% (7,824,768B) 0x46B93B: SingleAgentSolver::compute_heuristics() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->91.64% (7,824,768B) 0x413637: CBS::CBS(Instance const&, bool, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->91.64% (7,824,768B) 0x40806B: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       
+->03.15% (268,635B) in 91 places, all below massif's threshold (1.00%)
+| 
+->02.46% (210,240B) 0x470DBA: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->02.46% (210,240B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->02.46% (210,240B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->02.46% (210,240B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->02.46% (210,240B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         
+->01.43% (122,264B) 0x44062E: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  ->01.43% (122,264B) 0x4489A0: Instance::loadMap() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+    ->01.43% (122,264B) 0x44B79E: Instance::Instance(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, int, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+      ->01.43% (122,264B) 0x407F52: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+        
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 58    208,318,234        8,624,056        8,493,515       117,261       13,280
+98.49% (8,493,515B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->90.73% (7,824,768B) 0x46BE4B: std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->90.73% (7,824,768B) 0x46B93B: SingleAgentSolver::compute_heuristics() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->90.73% (7,824,768B) 0x413637: CBS::CBS(Instance const&, bool, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->90.73% (7,824,768B) 0x40806B: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       
+->03.42% (294,803B) in 91 places, all below massif's threshold (1.00%)
+| 
+->02.92% (251,680B) 0x470DBA: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->02.92% (251,680B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->02.92% (251,680B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->02.92% (251,680B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->02.92% (251,680B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         
+->01.42% (122,264B) 0x44062E: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  ->01.42% (122,264B) 0x4489A0: Instance::loadMap() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+    ->01.42% (122,264B) 0x44B79E: Instance::Instance(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, int, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+      ->01.42% (122,264B) 0x407F52: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+        
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 59    208,874,746        8,710,392        8,561,243       135,741       13,408
+98.29% (8,561,243B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->89.83% (7,824,768B) 0x46BE4B: std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->89.83% (7,824,768B) 0x46B93B: SingleAgentSolver::compute_heuristics() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->89.83% (7,824,768B) 0x413637: CBS::CBS(Instance const&, bool, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->89.83% (7,824,768B) 0x40806B: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       
+->03.34% (291,360B) 0x470DBA: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->03.34% (291,360B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->03.34% (291,360B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->03.34% (291,360B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->03.34% (291,360B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         
+->01.69% (146,819B) in 89 places, all below massif's threshold (1.00%)
+| 
+->01.40% (122,264B) 0x44062E: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->01.40% (122,264B) 0x4489A0: Instance::loadMap() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->01.40% (122,264B) 0x44B79E: Instance::Instance(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, int, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->01.40% (122,264B) 0x407F52: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       
+->01.02% (88,600B) 0x470F4B: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->01.02% (88,600B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->01.02% (88,600B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->01.02% (88,600B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->01.02% (88,600B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         
+->01.00% (87,432B) 0x46C7BE: std::pair<boost::unordered::iterator_detail::c_iterator<boost::unordered::detail::ptr_node<AStarNode*> >, bool> boost::unordered::detail::table<boost::unordered::detail::set<std::allocator<AStarNode*>, AStarNode*, AStarNode::NodeHasher, AStarNode::eqnode> >::emplace_unique<AStarNode* const&>(AStarNode* const&, AStarNode* const&) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  ->01.00% (87,408B) 0x471019: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  | ->01.00% (87,408B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  |   ->01.00% (87,408B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  |     ->01.00% (87,408B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  |       ->01.00% (87,408B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  |         
+  ->00.00% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+  
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 60    209,383,479        8,852,888        8,687,403       152,077       13,408
+98.13% (8,687,403B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->88.39% (7,824,768B) 0x46BE4B: std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->88.39% (7,824,768B) 0x46B93B: SingleAgentSolver::compute_heuristics() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->88.39% (7,824,768B) 0x413637: CBS::CBS(Instance const&, bool, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->88.39% (7,824,768B) 0x40806B: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       
+->03.70% (327,680B) 0x470DBA: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->03.70% (327,680B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->03.70% (327,680B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->03.70% (327,680B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->03.70% (327,680B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         
+->01.38% (122,264B) 0x44062E: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->01.38% (122,264B) 0x4489A0: Instance::loadMap() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->01.38% (122,264B) 0x44B79E: Instance::Instance(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, int, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->01.38% (122,264B) 0x407F52: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       
+->01.32% (116,643B) in 88 places, all below massif's threshold (1.00%)
+| 
+->01.12% (99,400B) 0x470F4B: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->01.12% (99,400B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->01.12% (99,400B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->01.12% (99,400B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->01.12% (99,400B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         
+->01.11% (98,328B) 0x46C7BE: std::pair<boost::unordered::iterator_detail::c_iterator<boost::unordered::detail::ptr_node<AStarNode*> >, bool> boost::unordered::detail::table<boost::unordered::detail::set<std::allocator<AStarNode*>, AStarNode*, AStarNode::NodeHasher, AStarNode::eqnode> >::emplace_unique<AStarNode* const&>(AStarNode* const&, AStarNode* const&) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->01.11% (98,304B) 0x471019: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| | ->01.11% (98,304B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| |   ->01.11% (98,304B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| |     ->01.11% (98,304B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| |       ->01.11% (98,304B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| |         
+| ->00.00% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->01.11% (98,320B) 0x46C943: std::pair<boost::unordered::iterator_detail::c_iterator<boost::unordered::detail::ptr_node<AStarNode*> >, bool> boost::unordered::detail::table<boost::unordered::detail::set<std::allocator<AStarNode*>, AStarNode*, AStarNode::NodeHasher, AStarNode::eqnode> >::emplace_unique<AStarNode* const&>(AStarNode* const&, AStarNode* const&) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  ->01.11% (98,320B) 0x471019: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+    ->01.11% (98,320B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+      ->01.11% (98,320B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+        ->01.11% (98,320B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+          ->01.11% (98,320B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+            
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 61    210,439,145        8,941,584        8,750,339       177,837       13,408
+97.86% (8,750,339B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->87.51% (7,824,768B) 0x46BE4B: std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->87.51% (7,824,768B) 0x46B93B: SingleAgentSolver::compute_heuristics() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->87.51% (7,824,768B) 0x413637: CBS::CBS(Instance const&, bool, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->87.51% (7,824,768B) 0x40806B: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       
+->04.30% (384,800B) 0x470DBA: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->04.30% (384,800B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->04.30% (384,800B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->04.30% (384,800B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->04.30% (384,800B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         
+->02.08% (185,883B) in 89 places, all below massif's threshold (1.00%)
+| 
+->01.37% (122,264B) 0x44062E: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->01.37% (122,264B) 0x4489A0: Instance::loadMap() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->01.37% (122,264B) 0x44B79E: Instance::Instance(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, int, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->01.37% (122,264B) 0x407F52: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       
+->01.31% (117,160B) 0x470F4B: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->01.31% (117,160B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->01.31% (117,160B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->01.31% (117,160B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->01.31% (117,160B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         
+->01.29% (115,464B) 0x46C7BE: std::pair<boost::unordered::iterator_detail::c_iterator<boost::unordered::detail::ptr_node<AStarNode*> >, bool> boost::unordered::detail::table<boost::unordered::detail::set<std::allocator<AStarNode*>, AStarNode*, AStarNode::NodeHasher, AStarNode::eqnode> >::emplace_unique<AStarNode* const&>(AStarNode* const&, AStarNode* const&) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  ->01.29% (115,440B) 0x471019: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  | ->01.29% (115,440B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  |   ->01.29% (115,440B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  |     ->01.29% (115,440B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  |       ->01.29% (115,440B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  |         
+  ->00.00% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+  
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 62    212,927,588        8,584,400        8,456,651       114,477       13,272
+ 63    214,938,488        9,031,016        8,808,963       208,645       13,408
+97.54% (8,808,963B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->86.64% (7,824,768B) 0x46BE4B: std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->86.64% (7,824,768B) 0x46B93B: SingleAgentSolver::compute_heuristics() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->86.64% (7,824,768B) 0x413637: CBS::CBS(Instance const&, bool, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->86.64% (7,824,768B) 0x40806B: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       
+->03.87% (349,331B) in 92 places, all below massif's threshold (1.00%)
+| 
+->03.29% (297,520B) 0x470DBA: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->03.29% (297,520B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->03.29% (297,520B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->03.29% (297,520B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->03.29% (297,520B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         
+->01.35% (122,264B) 0x44062E: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->01.35% (122,264B) 0x4489A0: Instance::loadMap() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->01.35% (122,264B) 0x44B79E: Instance::Instance(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, int, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->01.35% (122,264B) 0x407F52: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       
+->01.29% (116,760B) 0x470F4B: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->01.29% (116,760B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->01.29% (116,760B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->01.29% (116,760B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->01.29% (116,760B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         
+->01.09% (98,320B) 0x46C943: std::pair<boost::unordered::iterator_detail::c_iterator<boost::unordered::detail::ptr_node<AStarNode*> >, bool> boost::unordered::detail::table<boost::unordered::detail::set<std::allocator<AStarNode*>, AStarNode*, AStarNode::NodeHasher, AStarNode::eqnode> >::emplace_unique<AStarNode* const&>(AStarNode* const&, AStarNode* const&) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  ->01.09% (98,320B) 0x471019: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+    ->01.09% (98,320B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+      ->01.09% (98,320B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+        ->01.09% (98,320B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+          ->01.09% (98,320B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+            
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 64    215,217,757        9,163,168        8,926,035       223,725       13,408
+97.41% (8,926,035B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->85.39% (7,824,768B) 0x46BE4B: std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->85.39% (7,824,768B) 0x46B93B: SingleAgentSolver::compute_heuristics() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->85.39% (7,824,768B) 0x413637: CBS::CBS(Instance const&, bool, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->85.39% (7,824,768B) 0x40806B: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       
+->03.58% (327,680B) 0x470DBA: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->03.58% (327,680B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->03.58% (327,680B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->03.58% (327,680B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->03.58% (327,680B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         
+->02.84% (260,331B) in 91 places, all below massif's threshold (1.00%)
+| 
+->01.79% (163,864B) 0x46C943: std::pair<boost::unordered::iterator_detail::c_iterator<boost::unordered::detail::ptr_node<AStarNode*> >, bool> boost::unordered::detail::table<boost::unordered::detail::set<std::allocator<AStarNode*>, AStarNode*, AStarNode::NodeHasher, AStarNode::eqnode> >::emplace_unique<AStarNode* const&>(AStarNode* const&, AStarNode* const&) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->01.79% (163,864B) 0x471019: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->01.79% (163,864B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->01.79% (163,864B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->01.79% (163,864B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         ->01.79% (163,864B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|           
+->01.41% (128,800B) 0x470F4B: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->01.41% (128,800B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->01.41% (128,800B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->01.41% (128,800B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->01.41% (128,800B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         
+->01.33% (122,264B) 0x44062E: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->01.33% (122,264B) 0x4489A0: Instance::loadMap() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->01.33% (122,264B) 0x44B79E: Instance::Instance(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, int, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->01.33% (122,264B) 0x407F52: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       
+->01.07% (98,328B) 0x46C7BE: std::pair<boost::unordered::iterator_detail::c_iterator<boost::unordered::detail::ptr_node<AStarNode*> >, bool> boost::unordered::detail::table<boost::unordered::detail::set<std::allocator<AStarNode*>, AStarNode*, AStarNode::NodeHasher, AStarNode::eqnode> >::emplace_unique<AStarNode* const&>(AStarNode* const&, AStarNode* const&) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  ->01.07% (98,304B) 0x471019: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  | ->01.07% (98,304B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  |   ->01.07% (98,304B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  |     ->01.07% (98,304B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  |       ->01.07% (98,304B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  |         
+  ->00.00% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+  
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 65    216,018,680        9,254,936        8,990,411       251,117       13,408
+97.14% (8,990,411B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->84.55% (7,824,768B) 0x46BE4B: std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->84.55% (7,824,768B) 0x46B93B: SingleAgentSolver::compute_heuristics() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->84.55% (7,824,768B) 0x413637: CBS::CBS(Instance const&, bool, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->84.55% (7,824,768B) 0x40806B: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       
+->04.14% (383,520B) 0x470DBA: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->04.14% (383,520B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->04.14% (383,520B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->04.14% (383,520B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->04.14% (383,520B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         
+->02.84% (262,691B) in 91 places, all below massif's threshold (1.00%)
+| 
+->01.63% (151,000B) 0x470F4B: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->01.63% (151,000B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->01.63% (151,000B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->01.63% (151,000B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->01.63% (151,000B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         
+->01.42% (131,088B) 0x46C943: std::pair<boost::unordered::iterator_detail::c_iterator<boost::unordered::detail::ptr_node<AStarNode*> >, bool> boost::unordered::detail::table<boost::unordered::detail::set<std::allocator<AStarNode*>, AStarNode*, AStarNode::NodeHasher, AStarNode::eqnode> >::emplace_unique<AStarNode* const&>(AStarNode* const&, AStarNode* const&) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->01.42% (131,088B) 0x471019: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->01.42% (131,088B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->01.42% (131,088B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->01.42% (131,088B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         ->01.42% (131,088B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|           
+->01.32% (122,264B) 0x44062E: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->01.32% (122,264B) 0x4489A0: Instance::loadMap() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->01.32% (122,264B) 0x44B79E: Instance::Instance(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, int, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->01.32% (122,264B) 0x407F52: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       
+->01.24% (115,080B) 0x46C7BE: std::pair<boost::unordered::iterator_detail::c_iterator<boost::unordered::detail::ptr_node<AStarNode*> >, bool> boost::unordered::detail::table<boost::unordered::detail::set<std::allocator<AStarNode*>, AStarNode*, AStarNode::NodeHasher, AStarNode::eqnode> >::emplace_unique<AStarNode* const&>(AStarNode* const&, AStarNode* const&) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  ->01.24% (115,056B) 0x471019: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  | ->01.24% (115,056B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  |   ->01.24% (115,056B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  |     ->01.24% (115,056B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  |       ->01.24% (115,056B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  |         
+  ->00.00% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+  
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 66    216,406,384        9,347,624        9,063,091       271,125       13,408
+96.96% (9,063,091B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->83.71% (7,824,768B) 0x46BE4B: std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->83.71% (7,824,768B) 0x46B93B: SingleAgentSolver::compute_heuristics() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->83.71% (7,824,768B) 0x413637: CBS::CBS(Instance const&, bool, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->83.71% (7,824,768B) 0x40806B: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       
+->04.55% (425,520B) 0x470DBA: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->04.55% (425,520B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->04.55% (425,520B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->04.55% (425,520B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->04.55% (425,520B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         
+->02.83% (264,171B) in 91 places, all below massif's threshold (1.00%)
+| 
+->01.79% (167,600B) 0x470F4B: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->01.79% (167,600B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->01.79% (167,600B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->01.79% (167,600B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->01.79% (167,600B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         
+->01.40% (131,088B) 0x46C943: std::pair<boost::unordered::iterator_detail::c_iterator<boost::unordered::detail::ptr_node<AStarNode*> >, bool> boost::unordered::detail::table<boost::unordered::detail::set<std::allocator<AStarNode*>, AStarNode*, AStarNode::NodeHasher, AStarNode::eqnode> >::emplace_unique<AStarNode* const&>(AStarNode* const&, AStarNode* const&) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->01.40% (131,088B) 0x471019: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->01.40% (131,088B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->01.40% (131,088B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->01.40% (131,088B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         ->01.40% (131,088B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|           
+->01.37% (127,680B) 0x46C7BE: std::pair<boost::unordered::iterator_detail::c_iterator<boost::unordered::detail::ptr_node<AStarNode*> >, bool> boost::unordered::detail::table<boost::unordered::detail::set<std::allocator<AStarNode*>, AStarNode*, AStarNode::NodeHasher, AStarNode::eqnode> >::emplace_unique<AStarNode* const&>(AStarNode* const&, AStarNode* const&) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->01.37% (127,656B) 0x471019: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| | ->01.37% (127,656B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| |   ->01.37% (127,656B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| |     ->01.37% (127,656B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| |       ->01.37% (127,656B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| |         
+| ->00.00% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->01.31% (122,264B) 0x44062E: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  ->01.31% (122,264B) 0x4489A0: Instance::loadMap() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+    ->01.31% (122,264B) 0x44B79E: Instance::Instance(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, int, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+      ->01.31% (122,264B) 0x407F52: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+        
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 67    216,815,670        9,441,208        9,136,499       291,301       13,408
+96.77% (9,136,499B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->82.88% (7,824,768B) 0x46BE4B: std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->82.88% (7,824,768B) 0x46B93B: SingleAgentSolver::compute_heuristics() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->82.88% (7,824,768B) 0x413637: CBS::CBS(Instance const&, bool, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->82.88% (7,824,768B) 0x40806B: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       
+->04.95% (467,760B) 0x470DBA: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->04.95% (467,760B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->04.95% (467,760B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->04.95% (467,760B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->04.95% (467,760B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         
+->02.82% (266,107B) in 91 places, all below massif's threshold (1.00%)
+| 
+->01.95% (184,160B) 0x470F4B: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->01.95% (184,160B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->01.95% (184,160B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->01.95% (184,160B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->01.95% (184,160B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         
+->01.49% (140,352B) 0x46C7BE: std::pair<boost::unordered::iterator_detail::c_iterator<boost::unordered::detail::ptr_node<AStarNode*> >, bool> boost::unordered::detail::table<boost::unordered::detail::set<std::allocator<AStarNode*>, AStarNode*, AStarNode::NodeHasher, AStarNode::eqnode> >::emplace_unique<AStarNode* const&>(AStarNode* const&, AStarNode* const&) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->01.49% (140,328B) 0x471019: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| | ->01.49% (140,328B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| |   ->01.49% (140,328B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| |     ->01.49% (140,328B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| |       ->01.49% (140,328B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| |         
+| ->00.00% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->01.39% (131,088B) 0x46C943: std::pair<boost::unordered::iterator_detail::c_iterator<boost::unordered::detail::ptr_node<AStarNode*> >, bool> boost::unordered::detail::table<boost::unordered::detail::set<std::allocator<AStarNode*>, AStarNode*, AStarNode::NodeHasher, AStarNode::eqnode> >::emplace_unique<AStarNode* const&>(AStarNode* const&, AStarNode* const&) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->01.39% (131,088B) 0x471019: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->01.39% (131,088B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->01.39% (131,088B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->01.39% (131,088B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         ->01.39% (131,088B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|           
+->01.30% (122,264B) 0x44062E: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  ->01.30% (122,264B) 0x4489A0: Instance::loadMap() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+    ->01.30% (122,264B) 0x44B79E: Instance::Instance(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, int, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+      ->01.30% (122,264B) 0x407F52: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+        
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 68    217,229,984        9,535,688        9,210,595       311,685       13,408
+96.59% (9,210,595B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->82.06% (7,824,768B) 0x46BE4B: std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->82.06% (7,824,768B) 0x46B93B: SingleAgentSolver::compute_heuristics() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->82.06% (7,824,768B) 0x413637: CBS::CBS(Instance const&, bool, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->82.06% (7,824,768B) 0x40806B: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       
+->05.35% (510,000B) 0x470DBA: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->05.35% (510,000B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->05.35% (510,000B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->05.35% (510,000B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->05.35% (510,000B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         
+->02.82% (268,731B) in 91 places, all below massif's threshold (1.00%)
+| 
+->02.10% (200,720B) 0x470F4B: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->02.10% (200,720B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->02.10% (200,720B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->02.10% (200,720B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->02.10% (200,720B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         
+->01.60% (153,024B) 0x46C7BE: std::pair<boost::unordered::iterator_detail::c_iterator<boost::unordered::detail::ptr_node<AStarNode*> >, bool> boost::unordered::detail::table<boost::unordered::detail::set<std::allocator<AStarNode*>, AStarNode*, AStarNode::NodeHasher, AStarNode::eqnode> >::emplace_unique<AStarNode* const&>(AStarNode* const&, AStarNode* const&) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->01.60% (153,000B) 0x471019: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| | ->01.60% (153,000B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| |   ->01.60% (153,000B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| |     ->01.60% (153,000B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| |       ->01.60% (153,000B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| |         
+| ->00.00% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->01.37% (131,088B) 0x46C943: std::pair<boost::unordered::iterator_detail::c_iterator<boost::unordered::detail::ptr_node<AStarNode*> >, bool> boost::unordered::detail::table<boost::unordered::detail::set<std::allocator<AStarNode*>, AStarNode*, AStarNode::NodeHasher, AStarNode::eqnode> >::emplace_unique<AStarNode* const&>(AStarNode* const&, AStarNode* const&) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->01.37% (131,088B) 0x471019: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->01.37% (131,088B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->01.37% (131,088B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->01.37% (131,088B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         ->01.37% (131,088B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|           
+->01.28% (122,264B) 0x44062E: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  ->01.28% (122,264B) 0x4489A0: Instance::loadMap() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+    ->01.28% (122,264B) 0x44B79E: Instance::Instance(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, int, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+      ->01.28% (122,264B) 0x407F52: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+        
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 69    217,642,399        9,631,088        9,285,291       332,389       13,408
+96.41% (9,285,291B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->81.24% (7,824,768B) 0x46BE4B: std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->81.24% (7,824,768B) 0x46B93B: SingleAgentSolver::compute_heuristics() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->81.24% (7,824,768B) 0x413637: CBS::CBS(Instance const&, bool, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->81.24% (7,824,768B) 0x40806B: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       
+->05.73% (551,920B) 0x470DBA: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->05.73% (551,920B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->05.73% (551,920B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->05.73% (551,920B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->05.73% (551,920B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         
+->02.83% (272,291B) in 91 places, all below massif's threshold (1.00%)
+| 
+->02.26% (217,360B) 0x470F4B: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->02.26% (217,360B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->02.26% (217,360B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->02.26% (217,360B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->02.26% (217,360B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         
+->01.72% (165,600B) 0x46C7BE: std::pair<boost::unordered::iterator_detail::c_iterator<boost::unordered::detail::ptr_node<AStarNode*> >, bool> boost::unordered::detail::table<boost::unordered::detail::set<std::allocator<AStarNode*>, AStarNode*, AStarNode::NodeHasher, AStarNode::eqnode> >::emplace_unique<AStarNode* const&>(AStarNode* const&, AStarNode* const&) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->01.72% (165,576B) 0x471019: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| | ->01.72% (165,576B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| |   ->01.72% (165,576B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| |     ->01.72% (165,576B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| |       ->01.72% (165,576B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| |         
+| ->00.00% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->01.36% (131,088B) 0x46C943: std::pair<boost::unordered::iterator_detail::c_iterator<boost::unordered::detail::ptr_node<AStarNode*> >, bool> boost::unordered::detail::table<boost::unordered::detail::set<std::allocator<AStarNode*>, AStarNode*, AStarNode::NodeHasher, AStarNode::eqnode> >::emplace_unique<AStarNode* const&>(AStarNode* const&, AStarNode* const&) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->01.36% (131,088B) 0x471019: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->01.36% (131,088B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->01.36% (131,088B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->01.36% (131,088B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         ->01.36% (131,088B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|           
+->01.27% (122,264B) 0x44062E: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  ->01.27% (122,264B) 0x4489A0: Instance::loadMap() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+    ->01.27% (122,264B) 0x44B79E: Instance::Instance(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, int, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+      ->01.27% (122,264B) 0x407F52: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+        
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 70    218,063,228        9,727,560        9,360,971       353,181       13,408
+96.23% (9,360,971B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->80.44% (7,824,768B) 0x46BE4B: std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->80.44% (7,824,768B) 0x46B93B: SingleAgentSolver::compute_heuristics() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->80.44% (7,824,768B) 0x413637: CBS::CBS(Instance const&, bool, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->80.44% (7,824,768B) 0x40806B: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       
+->06.12% (595,520B) 0x470DBA: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->06.12% (595,520B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->06.12% (595,520B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->06.12% (595,520B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->06.12% (595,520B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         
+->02.82% (274,171B) in 91 places, all below massif's threshold (1.00%)
+| 
+->02.41% (234,480B) 0x470F4B: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->02.41% (234,480B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->02.41% (234,480B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->02.41% (234,480B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->02.41% (234,480B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         
+->01.84% (178,680B) 0x46C7BE: std::pair<boost::unordered::iterator_detail::c_iterator<boost::unordered::detail::ptr_node<AStarNode*> >, bool> boost::unordered::detail::table<boost::unordered::detail::set<std::allocator<AStarNode*>, AStarNode*, AStarNode::NodeHasher, AStarNode::eqnode> >::emplace_unique<AStarNode* const&>(AStarNode* const&, AStarNode* const&) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->01.84% (178,656B) 0x471019: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| | ->01.84% (178,656B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| |   ->01.84% (178,656B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| |     ->01.84% (178,656B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| |       ->01.84% (178,656B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| |         
+| ->00.00% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->01.35% (131,088B) 0x46C943: std::pair<boost::unordered::iterator_detail::c_iterator<boost::unordered::detail::ptr_node<AStarNode*> >, bool> boost::unordered::detail::table<boost::unordered::detail::set<std::allocator<AStarNode*>, AStarNode*, AStarNode::NodeHasher, AStarNode::eqnode> >::emplace_unique<AStarNode* const&>(AStarNode* const&, AStarNode* const&) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->01.35% (131,088B) 0x471019: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->01.35% (131,088B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->01.35% (131,088B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->01.35% (131,088B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         ->01.35% (131,088B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|           
+->01.26% (122,264B) 0x44062E: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  ->01.26% (122,264B) 0x4489A0: Instance::loadMap() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+    ->01.26% (122,264B) 0x44B79E: Instance::Instance(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, int, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+      ->01.26% (122,264B) 0x407F52: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+        
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 71    218,487,147        9,824,840        9,437,643       373,917       13,280
+96.06% (9,437,643B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->79.64% (7,824,768B) 0x46BE4B: std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->79.64% (7,824,768B) 0x46B93B: SingleAgentSolver::compute_heuristics() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->79.64% (7,824,768B) 0x413637: CBS::CBS(Instance const&, bool, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->79.64% (7,824,768B) 0x40806B: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       
+->06.52% (640,640B) 0x470DBA: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->06.52% (640,640B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->06.52% (640,640B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->06.52% (640,640B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->06.52% (640,640B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         
+->02.79% (274,171B) in 91 places, all below massif's threshold (1.00%)
+| 
+->02.57% (252,520B) 0x470F4B: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->02.57% (252,520B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->02.57% (252,520B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->02.57% (252,520B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->02.57% (252,520B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         
+->01.96% (192,192B) 0x46C7BE: std::pair<boost::unordered::iterator_detail::c_iterator<boost::unordered::detail::ptr_node<AStarNode*> >, bool> boost::unordered::detail::table<boost::unordered::detail::set<std::allocator<AStarNode*>, AStarNode*, AStarNode::NodeHasher, AStarNode::eqnode> >::emplace_unique<AStarNode* const&>(AStarNode* const&, AStarNode* const&) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->01.96% (192,168B) 0x471019: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| | ->01.96% (192,168B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| |   ->01.96% (192,168B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| |     ->01.96% (192,168B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| |       ->01.96% (192,168B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| |         
+| ->00.00% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->01.33% (131,088B) 0x46C943: std::pair<boost::unordered::iterator_detail::c_iterator<boost::unordered::detail::ptr_node<AStarNode*> >, bool> boost::unordered::detail::table<boost::unordered::detail::set<std::allocator<AStarNode*>, AStarNode*, AStarNode::NodeHasher, AStarNode::eqnode> >::emplace_unique<AStarNode* const&>(AStarNode* const&, AStarNode* const&) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->01.33% (131,088B) 0x471019: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->01.33% (131,088B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->01.33% (131,088B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->01.33% (131,088B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         ->01.33% (131,088B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|           
+->01.24% (122,264B) 0x44062E: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  ->01.24% (122,264B) 0x4489A0: Instance::loadMap() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+    ->01.24% (122,264B) 0x44B79E: Instance::Instance(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, int, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+      ->01.24% (122,264B) 0x407F52: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+        
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 72    218,625,865        9,987,888        9,593,763       380,717       13,408
+96.05% (9,593,763B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->78.34% (7,824,768B) 0x46BE4B: std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->78.34% (7,824,768B) 0x46B93B: SingleAgentSolver::compute_heuristics() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->78.34% (7,824,768B) 0x413637: CBS::CBS(Instance const&, bool, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->78.34% (7,824,768B) 0x40806B: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       
+->06.56% (655,360B) 0x470DBA: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->06.56% (655,360B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->06.56% (655,360B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->06.56% (655,360B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->06.56% (655,360B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         
+->02.75% (274,171B) in 91 places, all below massif's threshold (1.00%)
+| 
+->02.62% (262,168B) 0x46C943: std::pair<boost::unordered::iterator_detail::c_iterator<boost::unordered::detail::ptr_node<AStarNode*> >, bool> boost::unordered::detail::table<boost::unordered::detail::set<std::allocator<AStarNode*>, AStarNode*, AStarNode::NodeHasher, AStarNode::eqnode> >::emplace_unique<AStarNode* const&>(AStarNode* const&, AStarNode* const&) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->02.62% (262,168B) 0x471019: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->02.62% (262,168B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->02.62% (262,168B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->02.62% (262,168B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         ->02.62% (262,168B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|           
+->02.59% (258,400B) 0x470F4B: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->02.59% (258,400B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->02.59% (258,400B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->02.59% (258,400B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->02.59% (258,400B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         
+->01.97% (196,632B) 0x46C7BE: std::pair<boost::unordered::iterator_detail::c_iterator<boost::unordered::detail::ptr_node<AStarNode*> >, bool> boost::unordered::detail::table<boost::unordered::detail::set<std::allocator<AStarNode*>, AStarNode*, AStarNode::NodeHasher, AStarNode::eqnode> >::emplace_unique<AStarNode* const&>(AStarNode* const&, AStarNode* const&) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->01.97% (196,608B) 0x471019: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| | ->01.97% (196,608B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| |   ->01.97% (196,608B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| |     ->01.97% (196,608B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| |       ->01.97% (196,608B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| |         
+| ->00.00% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->01.22% (122,264B) 0x44062E: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  ->01.22% (122,264B) 0x4489A0: Instance::loadMap() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+    ->01.22% (122,264B) 0x44B79E: Instance::Instance(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, int, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+      ->01.22% (122,264B) 0x407F52: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+        
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 73    219,935,890       10,087,776        9,658,107       416,389       13,280
+95.74% (9,658,107B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->77.57% (7,824,768B) 0x46BE4B: std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->77.57% (7,824,768B) 0x46B93B: SingleAgentSolver::compute_heuristics() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->77.57% (7,824,768B) 0x413637: CBS::CBS(Instance const&, bool, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->77.57% (7,824,768B) 0x40806B: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       
+->07.24% (730,000B) 0x470DBA: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->07.24% (730,000B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->07.24% (730,000B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->07.24% (730,000B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->07.24% (730,000B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         
+->02.85% (287,400B) 0x470F4B: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->02.85% (287,400B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->02.85% (287,400B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->02.85% (287,400B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->02.85% (287,400B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         
+->02.76% (278,051B) in 91 places, all below massif's threshold (1.00%)
+| 
+->02.17% (219,000B) 0x46C7BE: std::pair<boost::unordered::iterator_detail::c_iterator<boost::unordered::detail::ptr_node<AStarNode*> >, bool> boost::unordered::detail::table<boost::unordered::detail::set<std::allocator<AStarNode*>, AStarNode*, AStarNode::NodeHasher, AStarNode::eqnode> >::emplace_unique<AStarNode* const&>(AStarNode* const&, AStarNode* const&) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->02.17% (218,976B) 0x471019: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| | ->02.17% (218,976B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| |   ->02.17% (218,976B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| |     ->02.17% (218,976B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| |       ->02.17% (218,976B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| |         
+| ->00.00% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->01.95% (196,624B) 0x46C943: std::pair<boost::unordered::iterator_detail::c_iterator<boost::unordered::detail::ptr_node<AStarNode*> >, bool> boost::unordered::detail::table<boost::unordered::detail::set<std::allocator<AStarNode*>, AStarNode*, AStarNode::NodeHasher, AStarNode::eqnode> >::emplace_unique<AStarNode* const&>(AStarNode* const&, AStarNode* const&) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->01.95% (196,624B) 0x471019: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->01.95% (196,624B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->01.95% (196,624B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->01.95% (196,624B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         ->01.95% (196,624B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|           
+->01.21% (122,264B) 0x44062E: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  ->01.21% (122,264B) 0x4489A0: Instance::loadMap() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+    ->01.21% (122,264B) 0x44B79E: Instance::Instance(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, int, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+      ->01.21% (122,264B) 0x407F52: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+        
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 74    220,603,034       10,188,712        9,737,515       437,789       13,408
+95.57% (9,737,515B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->76.80% (7,824,768B) 0x46BE4B: std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->76.80% (7,824,768B) 0x46B93B: SingleAgentSolver::compute_heuristics() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->76.80% (7,824,768B) 0x413637: CBS::CBS(Instance const&, bool, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->76.80% (7,824,768B) 0x40806B: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       
+->07.63% (777,760B) 0x470DBA: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->07.63% (777,760B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->07.63% (777,760B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->07.63% (777,760B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->07.63% (777,760B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         
+->02.96% (301,600B) 0x470F4B: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->02.96% (301,600B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->02.96% (301,600B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->02.96% (301,600B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->02.96% (301,600B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         
+->02.76% (281,147B) in 91 places, all below massif's threshold (1.00%)
+| 
+->02.29% (233,352B) 0x46C7BE: std::pair<boost::unordered::iterator_detail::c_iterator<boost::unordered::detail::ptr_node<AStarNode*> >, bool> boost::unordered::detail::table<boost::unordered::detail::set<std::allocator<AStarNode*>, AStarNode*, AStarNode::NodeHasher, AStarNode::eqnode> >::emplace_unique<AStarNode* const&>(AStarNode* const&, AStarNode* const&) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->02.29% (233,328B) 0x471019: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| | ->02.29% (233,328B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| |   ->02.29% (233,328B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| |     ->02.29% (233,328B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| |       ->02.29% (233,328B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| |         
+| ->00.00% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->01.93% (196,624B) 0x46C943: std::pair<boost::unordered::iterator_detail::c_iterator<boost::unordered::detail::ptr_node<AStarNode*> >, bool> boost::unordered::detail::table<boost::unordered::detail::set<std::allocator<AStarNode*>, AStarNode*, AStarNode::NodeHasher, AStarNode::eqnode> >::emplace_unique<AStarNode* const&>(AStarNode* const&, AStarNode* const&) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->01.93% (196,624B) 0x471019: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->01.93% (196,624B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->01.93% (196,624B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->01.93% (196,624B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         ->01.93% (196,624B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|           
+->01.20% (122,264B) 0x44062E: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  ->01.20% (122,264B) 0x4489A0: Instance::loadMap() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+    ->01.20% (122,264B) 0x44B79E: Instance::Instance(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, int, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+      ->01.20% (122,264B) 0x407F52: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+        
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 75    221,267,743       10,290,656        9,817,803       459,445       13,408
+95.41% (9,817,803B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->76.04% (7,824,768B) 0x46BE4B: std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->76.04% (7,824,768B) 0x46B93B: SingleAgentSolver::compute_heuristics() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->76.04% (7,824,768B) 0x413637: CBS::CBS(Instance const&, bool, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->76.04% (7,824,768B) 0x40806B: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       
+->08.03% (825,840B) 0x470DBA: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->08.03% (825,840B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->08.03% (825,840B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->08.03% (825,840B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->08.03% (825,840B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         
+->03.07% (316,320B) 0x470F4B: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->03.07% (316,320B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->03.07% (316,320B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->03.07% (316,320B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->03.07% (316,320B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         
+->02.76% (284,211B) in 91 places, all below massif's threshold (1.00%)
+| 
+->02.41% (247,776B) 0x46C7BE: std::pair<boost::unordered::iterator_detail::c_iterator<boost::unordered::detail::ptr_node<AStarNode*> >, bool> boost::unordered::detail::table<boost::unordered::detail::set<std::allocator<AStarNode*>, AStarNode*, AStarNode::NodeHasher, AStarNode::eqnode> >::emplace_unique<AStarNode* const&>(AStarNode* const&, AStarNode* const&) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->02.41% (247,752B) 0x471019: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| | ->02.41% (247,752B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| |   ->02.41% (247,752B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| |     ->02.41% (247,752B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| |       ->02.41% (247,752B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| |         
+| ->00.00% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->01.91% (196,624B) 0x46C943: std::pair<boost::unordered::iterator_detail::c_iterator<boost::unordered::detail::ptr_node<AStarNode*> >, bool> boost::unordered::detail::table<boost::unordered::detail::set<std::allocator<AStarNode*>, AStarNode*, AStarNode::NodeHasher, AStarNode::eqnode> >::emplace_unique<AStarNode* const&>(AStarNode* const&, AStarNode* const&) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->01.91% (196,624B) 0x471019: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->01.91% (196,624B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->01.91% (196,624B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->01.91% (196,624B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         ->01.91% (196,624B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|           
+->01.19% (122,264B) 0x44062E: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  ->01.19% (122,264B) 0x4489A0: Instance::loadMap() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+    ->01.19% (122,264B) 0x44B79E: Instance::Instance(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, int, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+      ->01.19% (122,264B) 0x407F52: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+        
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 76    221,945,965       10,393,648        9,898,867       481,373       13,408
+95.24% (9,898,867B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->75.28% (7,824,768B) 0x46BE4B: std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->75.28% (7,824,768B) 0x46B93B: SingleAgentSolver::compute_heuristics() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->75.28% (7,824,768B) 0x413637: CBS::CBS(Instance const&, bool, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->75.28% (7,824,768B) 0x40806B: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       
+->08.41% (873,920B) 0x470DBA: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->08.41% (873,920B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->08.41% (873,920B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->08.41% (873,920B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->08.41% (873,920B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         
+->03.18% (330,920B) 0x470F4B: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->03.18% (330,920B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->03.18% (330,920B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->03.18% (330,920B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->03.18% (330,920B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         
+->02.77% (288,171B) in 91 places, all below massif's threshold (1.00%)
+| 
+->02.52% (262,200B) 0x46C7BE: std::pair<boost::unordered::iterator_detail::c_iterator<boost::unordered::detail::ptr_node<AStarNode*> >, bool> boost::unordered::detail::table<boost::unordered::detail::set<std::allocator<AStarNode*>, AStarNode*, AStarNode::NodeHasher, AStarNode::eqnode> >::emplace_unique<AStarNode* const&>(AStarNode* const&, AStarNode* const&) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->02.52% (262,176B) 0x471019: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| | ->02.52% (262,176B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| |   ->02.52% (262,176B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| |     ->02.52% (262,176B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| |       ->02.52% (262,176B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| |         
+| ->00.00% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->01.89% (196,624B) 0x46C943: std::pair<boost::unordered::iterator_detail::c_iterator<boost::unordered::detail::ptr_node<AStarNode*> >, bool> boost::unordered::detail::table<boost::unordered::detail::set<std::allocator<AStarNode*>, AStarNode*, AStarNode::NodeHasher, AStarNode::eqnode> >::emplace_unique<AStarNode* const&>(AStarNode* const&, AStarNode* const&) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->01.89% (196,624B) 0x471019: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->01.89% (196,624B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->01.89% (196,624B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->01.89% (196,624B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         ->01.89% (196,624B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|           
+->01.18% (122,264B) 0x44062E: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  ->01.18% (122,264B) 0x4489A0: Instance::loadMap() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+    ->01.18% (122,264B) 0x44B79E: Instance::Instance(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, int, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+      ->01.18% (122,264B) 0x407F52: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+        
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 77    222,650,896       10,497,672        9,980,763       503,501       13,408
+95.08% (9,980,763B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->74.54% (7,824,768B) 0x46BE4B: std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->74.54% (7,824,768B) 0x46B93B: SingleAgentSolver::compute_heuristics() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->74.54% (7,824,768B) 0x413637: CBS::CBS(Instance const&, bool, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->74.54% (7,824,768B) 0x40806B: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       
+->08.79% (923,040B) 0x470DBA: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->08.79% (923,040B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->08.79% (923,040B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->08.79% (923,040B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->08.79% (923,040B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         
+->03.29% (345,360B) 0x470F4B: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->03.29% (345,360B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->03.29% (345,360B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->03.29% (345,360B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->03.29% (345,360B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         
+->02.78% (291,771B) in 91 places, all below massif's threshold (1.00%)
+| 
+->02.64% (276,936B) 0x46C7BE: std::pair<boost::unordered::iterator_detail::c_iterator<boost::unordered::detail::ptr_node<AStarNode*> >, bool> boost::unordered::detail::table<boost::unordered::detail::set<std::allocator<AStarNode*>, AStarNode*, AStarNode::NodeHasher, AStarNode::eqnode> >::emplace_unique<AStarNode* const&>(AStarNode* const&, AStarNode* const&) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->02.64% (276,912B) 0x471019: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| | ->02.64% (276,912B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| |   ->02.64% (276,912B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| |     ->02.64% (276,912B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| |       ->02.64% (276,912B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| |         
+| ->00.00% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->01.87% (196,624B) 0x46C943: std::pair<boost::unordered::iterator_detail::c_iterator<boost::unordered::detail::ptr_node<AStarNode*> >, bool> boost::unordered::detail::table<boost::unordered::detail::set<std::allocator<AStarNode*>, AStarNode*, AStarNode::NodeHasher, AStarNode::eqnode> >::emplace_unique<AStarNode* const&>(AStarNode* const&, AStarNode* const&) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+| ->01.87% (196,624B) 0x471019: SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|   ->01.87% (196,624B) 0x4744D8: SpaceTimeAStar::findPath(CBSNode const&, ConstraintTable const&, std::vector<std::vector<PathEntry, std::allocator<PathEntry> >*, std::allocator<std::vector<PathEntry, std::allocator<PathEntry> >*> > const&, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|     ->01.87% (196,624B) 0x40FB60: CBS::generateRoot() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|       ->01.87% (196,624B) 0x4111F8: CBS::solve(double, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|         ->01.87% (196,624B) 0x408349: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+|           
+->01.16% (122,264B) 0x44062E: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  ->01.16% (122,264B) 0x4489A0: Instance::loadMap() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+    ->01.16% (122,264B) 0x44B79E: Instance::Instance(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, int, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+      ->01.16% (122,264B) 0x407F52: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+        
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 78    225,139,365        8,691,384        8,532,043       145,789       13,552
+ 79    227,627,825        8,289,840        8,283,803         3,325        2,712
+ 80    230,116,270        8,289,904        8,283,803         3,325        2,776
+ 81    232,604,712        8,289,840        8,283,803         3,325        2,712

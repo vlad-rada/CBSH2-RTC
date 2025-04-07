@@ -85,7 +85,7 @@ for filename in input_files:
             output_path = os.path.join(output_dir, f"{filename}{counter}")
             numAgents = str(agents)
             args = [executable, "-m", input_path, "-a", chosenScenTwo, "-o", "./cbs_output/runtests.csv", "--outputPaths=" + 
-                    output_path,"-k", numAgents, "-t", "60", "--heuristics", "Zero", "--prioritizingConflicts", "0", 
+                    output_path,"-k", numAgents, "-t", "10", "--heuristics", "Zero", "--prioritizingConflicts", "0", 
                     "--bypass", "0", "--disjointSplitting", "0", "--rectangleReasoning", "None", "--corridorReasoning", "None", 
                     "--mutexReasoning", "0", "--targetReasoning", "0", "--sip", "0"]
             

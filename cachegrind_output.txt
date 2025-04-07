@@ -1,0 +1,281 @@
+--------------------------------------------------------------------------------
+-- Metadata
+--------------------------------------------------------------------------------
+Invocation:       /usr/bin/cg_annotate cachegrind.out.650100
+I1 cache:         65536 B, 64 B, 8-way associative
+D1 cache:         32768 B, 64 B, 8-way associative
+LL cache:         37748736 B, 64 B, 18-way associative
+Command:          ./cbs -m orz900d.map -a orz900d-even-1.scen -o test.csv --outputPaths=paths.txt -k 2 -t 600 --heuristics Zero --prioritizingConflicts 0 --bypass 0 --disjointSplitting 0 --rectangleReasoning None --corridorReasoning None --mutexReasoning 0 --targetReasoning 0 --sipp 0
+Events recorded:  Ir I1mr ILmr Dr D1mr DLmr Dw D1mw DLmw
+Events shown:     Ir I1mr ILmr Dr D1mr DLmr Dw D1mw DLmw
+Event sort order: Ir I1mr ILmr Dr D1mr DLmr Dw D1mw DLmw
+Threshold:        0.1%
+Annotation:       on
+
+--------------------------------------------------------------------------------
+-- Summary
+--------------------------------------------------------------------------------
+Ir__________________ I1mr__________ ILmr__________ Dr_________________ D1mr____________ DLmr___________ Dw_________________ D1mw____________ DLmw____________ 
+
+312,762,255 (100.0%) 5,484 (100.0%) 4,657 (100.0%) 80,733,500 (100.0%) 490,761 (100.0%) 10,749 (100.0%) 49,707,222 (100.0%) 190,164 (100.0%) 164,677 (100.0%)  PROGRAM TOTALS
+
+--------------------------------------------------------------------------------
+-- File:function summary
+--------------------------------------------------------------------------------
+  Ir________________________ I1mr________________ ILmr________________ Dr_______________________ D1mr__________________ DLmr________________ Dw_______________________ D1mw__________________ DLmw__________________  file:function
+
+< 142,343,801 (45.5%, 45.5%)   195  (3.6%,  3.6%)   127  (2.7%,  2.7%) 40,367,391 (50.0%, 50.0%) 207,043 (42.2%, 42.2%)     2  (0.0%,  0.0%) 22,735,522 (45.7%, 45.7%)  40,403 (21.2%, 21.2%)  25,977 (15.8%, 15.8%)  /usr/src/debug/glibc-2.40-23.fc41.x86_64/malloc/malloc.c:
+   56,355,243 (18.0%)           14  (0.3%)            8  (0.2%)        15,553,048 (19.3%)         13,635  (2.8%)            0                 8,121,968 (16.3%)            214  (0.1%)            113  (0.1%)           _int_free
+   45,997,504 (14.7%)            8  (0.1%)            7  (0.2%)        12,266,001 (15.2%)            253  (0.1%)            1  (0.0%)         7,050,884 (14.2%)             29  (0.0%)              2  (0.0%)           malloc
+   28,620,695  (9.2%)            4  (0.1%)            4  (0.1%)        10,221,670 (12.7%)         24,250  (4.9%)            0                 6,133,006 (12.3%)            365  (0.2%)            220  (0.1%)           free
+    7,260,140  (2.3%)           73  (1.3%)           55  (1.2%)         1,192,784  (1.5%)          1,132  (0.2%)            0                   777,920  (1.6%)         39,664 (20.9%)         25,592 (15.5%)           _int_malloc
+    2,780,302  (0.9%)           15  (0.3%)            7  (0.2%)           554,120  (0.7%)        109,818 (22.4%)            0                   496,007  (1.0%)             63  (0.0%)              0                   malloc_consolidate
+    1,116,636  (0.4%)            2  (0.0%)            2  (0.0%)           475,159  (0.6%)         57,850 (11.8%)            0                   154,443  (0.3%)              0                      0                   unlink_chunk.isra.0
+
+< 133,201,595 (42.6%, 88.1%) 2,236 (40.8%, 44.3%) 2,046 (43.9%, 46.7%) 32,614,280 (40.4%, 90.4%) 258,494 (52.7%, 94.9%)    32  (0.3%,  0.3%) 18,581,359 (37.4%, 83.1%) 135,382 (71.2%, 92.4%) 129,846 (78.8%, 94.6%)  ???:
+   56,567,446 (18.1%)           33  (0.6%)           33  (0.7%)        14,841,376 (18.4%)         28,844  (5.9%)            0                11,146,000 (22.4%)          1,898  (1.0%)              0                   SingleAgentSolver::compute_heuristics()
+   42,427,014 (13.6%)            4  (0.1%)            4  (0.1%)         6,271,996  (7.8%)         17,576  (3.6%)            0                 4,057,404  (8.2%)             11  (0.0%)              0                   Instance::getNeighbors[abi:cxx11](int) const
+   13,810,127  (4.4%)          146  (2.7%)          146  (3.1%)         1,963,071  (2.4%)          1,928  (0.4%)            0                   979,038  (2.0%)              7  (0.0%)              0                   Instance::loadMap()
+    6,071,177  (1.9%)          403  (7.3%)          270  (5.8%)         6,069,991  (7.5%)            809  (0.2%)            3  (0.0%)               570  (0.0%)              1  (0.0%)              1  (0.0%)           ???
+    5,292,688  (1.7%)           81  (1.5%)           81  (1.7%)         1,393,076  (1.7%)         60,540 (12.3%)            0                   899,490  (1.8%)          6,485  (3.4%)          6,409  (3.9%)           SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int)
+    3,221,361  (1.0%)           31  (0.6%)           31  (0.7%)           694,790  (0.9%)         65,958 (13.4%)            0                   314,512  (0.6%)             17  (0.0%)              1  (0.0%)           std::pair<boost::unordered::iterator_detail::c_iterator<boost::unordered::detail::ptr_node<AStarNode*> >, bool> boost::unordered::detail::table<boost::unordered::detail::set<std::allocator<AStarNode*>, AStarNode*, AStarNode::NodeHasher, AStarNode::eqnode> >::emplace_unique<AStarNode* const&>(AStarNode* const&, AStarNode* const&) [clone .isra.0]
+    1,222,824  (0.4%)           11  (0.2%)           11  (0.2%)                28  (0.0%)              4  (0.0%)            0                   489,076  (1.0%)        122,265 (64.3%)        122,262 (74.2%)           std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&)
+      951,997  (0.3%)           18  (0.3%)           18  (0.4%)           312,889  (0.4%)             46  (0.0%)            0                   242,602  (0.5%)              0                      0                   boost::heap::pairing_heap<SingleAgentSolver::compute_heuristics()::Node, boost::heap::compare<SingleAgentSolver::compute_heuristics()::SingleAgentSolver::compute_heuristics()::Node::compare_node>, boost::parameter::void_, boost::parameter::void_, boost::parameter::void_, boost::parameter::void_>::merge_node_list(boost::intrusive::list<boost::heap::detail::heap_node_base<true>, boost::intrusive::constant_time_size<false> >&) [clone .isra.0]
+      669,228  (0.2%)            6  (0.1%)            6  (0.1%)           175,846  (0.2%)          2,696  (0.5%)            0                         0                      0                      0                   ConstraintTable::getNumOfConflictsForStep(unsigned long, unsigned long, int) const
+      654,982  (0.2%)            4  (0.1%)            4  (0.1%)           204,682  (0.3%)             10  (0.0%)            0                         0                      0                      0                   ConstraintTable::constrained(unsigned long, int) const
+      409,380  (0.1%)            3  (0.1%)            3  (0.1%)           163,752  (0.2%)              4  (0.0%)            0                   143,283  (0.3%)              0                      0                   ConstraintTable::updateUnsatisfiedPositiveConstraintSet(std::__cxx11::list<int, std::allocator<int> > const&, std::__cxx11::list<int, std::allocator<int> >&, int, int) const
+      320,249  (0.1%)           27  (0.5%)           27  (0.6%)            67,451  (0.1%)         48,130  (9.8%)            0                    33,840  (0.1%)             10  (0.0%)              0                   SpaceTimeAStar::releaseNodes()
+
+<  12,265,944  (3.9%, 92.0%)     3  (0.1%, 44.4%)     3  (0.1%, 46.7%)  2,044,324  (2.5%, 92.9%)       1  (0.0%, 94.9%)     0  (0.0%,  0.3%)  2,044,324  (4.1%, 87.2%)       4  (0.0%, 92.4%)       2  (0.0%, 94.6%)  /home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/libsupc++/../../../../libstdc++-v3/libsupc++/new_op.cc:operator new(unsigned long)
+
+<   5,367,271  (1.7%, 93.7%)     1  (0.0%, 44.4%)     1  (0.0%, 46.7%)  1,533,506  (1.9%, 94.8%)     479  (0.1%, 95.0%)     0  (0.0%,  0.3%)  3,067,012  (6.2%, 93.4%)       0  (0.0%, 92.4%)       0  (0.0%, 94.6%)  /home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/src/c++98/../../../../../libstdc++-v3/src/c++98/list.cc:std::__detail::_List_node_base::_M_hook(std::__detail::_List_node_base*)
+
+<   3,170,865  (1.0%, 94.8%)    10  (0.2%, 44.6%)    10  (0.2%, 47.0%)         10  (0.0%, 94.8%)       3  (0.0%, 95.0%)     1  (0.0%,  0.3%)         19  (0.0%, 93.4%)       1  (0.0%, 92.4%)       0  (0.0%, 94.6%)  /usr/src/debug/glibc-2.40-23.fc41.x86_64/malloc/arena.c:
+    3,066,492  (1.0%)            0                    0                         0                      0                    0                         0                      0                      0                   free
+
+<   2,044,324  (0.7%, 95.4%)     0  (0.0%, 44.6%)     0  (0.0%, 47.0%)          0  (0.0%, 94.8%)       0  (0.0%, 95.0%)     0  (0.0%,  0.3%)          0  (0.0%, 93.4%)       0  (0.0%, 92.4%)       0  (0.0%, 94.6%)  /home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/libsupc++/../../../../libstdc++-v3/libsupc++/del_op.cc:operator delete(void*)
+
+<   2,044,292  (0.7%, 96.1%)     1  (0.0%, 44.6%)     1  (0.0%, 47.0%)          0  (0.0%, 94.8%)       0  (0.0%, 95.0%)     0  (0.0%,  0.3%)          0  (0.0%, 93.4%)       0  (0.0%, 92.4%)       0  (0.0%, 94.6%)  /home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/libsupc++/../../../../libstdc++-v3/libsupc++/del_ops.cc:operator delete(void*, unsigned long)
+
+<   1,564,888  (0.5%, 96.6%)    57  (1.0%, 45.6%)    52  (1.1%, 48.1%)    483,924  (0.6%, 95.4%)   9,365  (1.9%, 96.9%) 1,581 (14.7%, 15.0%)    188,519  (0.4%, 93.8%)     223  (0.1%, 92.6%)      48  (0.0%, 94.7%)  /usr/src/debug/glibc-2.40-23.fc41.x86_64/elf/dl-lookup.c:
+    1,126,668  (0.4%)           34  (0.6%)           33  (0.7%)           352,206  (0.4%)          7,866  (1.6%)        1,083 (10.1%)           106,692  (0.2%)            107  (0.1%)             40  (0.0%)           do_lookup_x
+
+<   1,315,998  (0.4%, 97.0%)    37  (0.7%, 46.3%)    34  (0.7%, 48.8%)    300,186  (0.4%, 95.8%)      11  (0.0%, 96.9%)     0  (0.0%, 15.0%)    240,495  (0.5%, 94.3%)       0  (0.0%, 92.6%)       0  (0.0%, 94.7%)  /home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/include/bits/locale_facets.tcc:
+      685,930  (0.2%)            5  (0.1%)            5  (0.1%)           149,115  (0.2%)              0                    0                   149,115  (0.3%)              0                      0                   std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const
+      408,060  (0.1%)            3  (0.1%)            3  (0.1%)            40,806  (0.1%)              1  (0.0%)            0                    30,850  (0.1%)              0                      0                   int std::__int_to_char<char, unsigned long>(char*, unsigned long, char const*, std::_Ios_Fmtflags, bool)
+
+<   1,180,367  (0.4%, 97.4%)     9  (0.2%, 46.5%)     6  (0.1%, 49.0%)  1,040,290  (1.3%, 97.1%)      15  (0.0%, 96.9%)     3  (0.0%, 15.1%)  1,039,420  (2.1%, 96.4%)     181  (0.1%, 92.7%)      23  (0.0%, 94.7%)  /home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/include/bits/char_traits.h:
+      984,118  (0.3%)            1  (0.0%)            1  (0.0%)           980,430  (1.2%)              7  (0.0%)            1  (0.0%)           979,508  (2.0%)             26  (0.0%)             23  (0.0%)           std::char_traits<char>::copy(char*, char const*, unsigned long) [clone .isra.0]
+
+<   1,157,038  (0.4%, 97.7%)    28  (0.5%, 47.0%)    23  (0.5%, 49.5%)    359,119  (0.4%, 97.5%)      16  (0.0%, 96.9%)     0  (0.0%, 15.1%)    259,382  (0.5%, 96.9%)       1  (0.0%, 92.7%)       0  (0.0%, 94.7%)  /home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/include/bits/ostream.tcc:
+      598,323  (0.2%)            2  (0.0%)            2  (0.0%)           199,441  (0.2%)              4  (0.0%)            0                   149,581  (0.3%)              1  (0.0%)              0                   std::ostream::sentry::sentry(std::ostream&)
+      477,168  (0.2%)            5  (0.1%)            5  (0.1%)           149,115  (0.2%)              1  (0.0%)            0                   109,351  (0.2%)              0                      0                   std::ostream& std::ostream::_M_insert<long>(long)
+
+<     803,857  (0.3%, 98.0%)    53  (1.0%, 48.0%)    34  (0.7%, 50.2%)    250,907  (0.3%, 97.8%)       2  (0.0%, 96.9%)     0  (0.0%, 15.1%)    151,220  (0.3%, 97.2%)       4  (0.0%, 92.7%)       0  (0.0%, 94.7%)  /home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/include/bits/fstream.tcc:
+      796,936  (0.3%)            4  (0.1%)            3  (0.1%)           249,018  (0.3%)              0                    0                   149,424  (0.3%)              0                      0                   std::basic_filebuf<char, std::char_traits<char> >::xsputn(char const*, long)
+
+<     792,138  (0.3%, 98.2%)     6  (0.1%, 48.1%)     6  (0.1%, 50.3%)    254,082  (0.3%, 98.2%)       0  (0.0%, 96.9%)     0  (0.0%, 15.1%)    194,298  (0.4%, 97.6%)       0  (0.0%, 92.7%)       0  (0.0%, 94.7%)  /home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/include/bits/ostream_insert.h:
+      567,948  (0.2%)            5  (0.1%)            5  (0.1%)           164,406  (0.2%)              0                    0                   134,514  (0.3%)              0                      0                   std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)
+
+<     755,532  (0.2%, 98.5%)     3  (0.1%, 48.1%)     3  (0.1%, 50.4%)    125,462  (0.2%, 98.3%)   3,140  (0.6%, 97.5%) 2,394 (22.3%, 37.3%)          0  (0.0%, 97.6%)       0  (0.0%, 92.7%)       0  (0.0%, 94.7%)  /usr/src/debug/glibc-2.40-23.fc41.x86_64/elf/../sysdeps/generic/dl-new-hash.h:_dl_lookup_symbol_x
+
+<     721,981  (0.2%, 98.7%)     3  (0.1%, 48.2%)     3  (0.1%, 50.4%)    174,271  (0.2%, 98.5%)       0  (0.0%, 97.5%)     0  (0.0%, 37.3%)    124,477  (0.3%, 97.8%)       0  (0.0%, 92.7%)       0  (0.0%, 94.7%)  /home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/include/bits/streambuf.tcc:std::basic_streambuf<char, std::char_traits<char> >::xsputn(char const*, long)
+
+<     704,833  (0.2%, 98.9%)     5  (0.1%, 48.3%)     5  (0.1%, 50.5%)         68  (0.0%, 98.5%)      38  (0.0%, 97.5%)     0  (0.0%, 37.3%)    704,160  (1.4%, 99.2%)  11,112  (5.8%, 98.5%)   7,005  (4.3%, 98.9%)  /usr/src/debug/glibc-2.40-23.fc41.x86_64/string/../sysdeps/x86_64/multiarch/memset-vec-unaligned-erms.S:__memset_avx2_unaligned_erms
+
+<     324,316  (0.1%, 99.0%)    12  (0.2%, 48.5%)    10  (0.2%, 50.8%)    199,514  (0.2%, 98.8%)       1  (0.0%, 97.5%)     0  (0.0%, 37.3%)     74,856  (0.2%, 99.4%)       0  (0.0%, 98.5%)       0  (0.0%, 98.9%)  /home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/include/ostream:
+      324,099  (0.1%)            3  (0.1%)            2  (0.0%)           199,440  (0.2%)              0                    0                    74,792  (0.2%)              0                      0                   std::ostream::sentry::~sentry()
+
+--------------------------------------------------------------------------------
+-- Function:file summary
+--------------------------------------------------------------------------------
+  Ir_______________________ I1mr_____________ ILmr_____________ Dr_______________________ D1mr__________________ DLmr________________ Dw_______________________ D1mw__________________ DLmw__________________  function:file
+
+> 56,567,446 (18.1%, 18.1%)  33 (0.6%,  0.6%)  33 (0.7%,  0.7%) 14,841,376 (18.4%, 18.4%)  28,844  (5.9%,  5.9%)     0  (0.0%,  0.0%) 11,146,000 (22.4%, 22.4%)   1,898  (1.0%,  1.0%)       0  (0.0%,  0.0%)  SingleAgentSolver::compute_heuristics():???
+
+> 56,355,243 (18.0%, 36.1%)  14 (0.3%,  0.9%)   8 (0.2%,  0.9%) 15,553,048 (19.3%, 37.6%)  13,635  (2.8%,  8.7%)     0  (0.0%,  0.0%)  8,121,968 (16.3%, 38.8%)     214  (0.1%,  1.1%)     113  (0.1%,  0.1%)  _int_free:/usr/src/debug/glibc-2.40-23.fc41.x86_64/malloc/malloc.c
+
+> 46,101,805 (14.7%, 50.8%)   9 (0.2%,  1.0%)   8 (0.2%,  1.1%) 12,266,001 (15.2%, 52.8%)     253  (0.1%,  8.7%)     1  (0.0%,  0.0%)  7,050,885 (14.2%, 52.9%)      29  (0.0%,  1.1%)       2  (0.0%,  0.1%)  malloc:
+  45,997,504 (14.7%)          8 (0.1%)          7 (0.2%)        12,266,001 (15.2%)            253  (0.1%)            1  (0.0%)         7,050,884 (14.2%)             29  (0.0%)              2  (0.0%)           /usr/src/debug/glibc-2.40-23.fc41.x86_64/malloc/malloc.c
+
+> 42,427,014 (13.6%, 64.4%)   4 (0.1%,  1.1%)   4 (0.1%,  1.1%)  6,271,996  (7.8%, 60.6%)  17,576  (3.6%, 12.3%)     0  (0.0%,  0.0%)  4,057,404  (8.2%, 61.1%)      11  (0.0%,  1.1%)       0  (0.0%,  0.1%)  Instance::getNeighbors[abi:cxx11](int) const:???
+
+> 31,687,187 (10.1%, 74.5%)   4 (0.1%,  1.2%)   4 (0.1%,  1.2%) 10,221,670 (12.7%, 73.3%)  24,250  (4.9%, 17.2%)     0  (0.0%,  0.0%)  6,133,006 (12.3%, 73.4%)     365  (0.2%,  1.3%)     220  (0.1%,  0.2%)  free:
+  28,620,695  (9.2%)          4 (0.1%)          4 (0.1%)        10,221,670 (12.7%)         24,250  (4.9%)            0                 6,133,006 (12.3%)            365  (0.2%)            220  (0.1%)           /usr/src/debug/glibc-2.40-23.fc41.x86_64/malloc/malloc.c
+   3,066,492  (1.0%)          0                 0                        0                      0                    0                         0                      0                      0                   /usr/src/debug/glibc-2.40-23.fc41.x86_64/malloc/arena.c
+
+> 13,810,127  (4.4%, 79.0%) 146 (2.7%,  3.8%) 146 (3.1%,  4.4%)  1,963,071  (2.4%, 75.7%)   1,928  (0.4%, 17.6%)     0  (0.0%,  0.0%)    979,038  (2.0%, 75.4%)       7  (0.0%,  1.3%)       0  (0.0%,  0.2%)  Instance::loadMap():???
+
+> 12,265,944  (3.9%, 82.9%)   3 (0.1%,  3.9%)   3 (0.1%,  4.4%)  2,044,324  (2.5%, 78.2%)       1  (0.0%, 17.6%)     0  (0.0%,  0.0%)  2,044,324  (4.1%, 79.5%)       4  (0.0%,  1.3%)       2  (0.0%,  0.2%)  operator new(unsigned long):/home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/libsupc++/../../../../libstdc++-v3/libsupc++/new_op.cc
+
+>  7,260,140  (2.3%, 85.2%)  73 (1.3%,  5.2%)  55 (1.2%,  5.6%)  1,192,784  (1.5%, 79.7%)   1,132  (0.2%, 17.9%)     0  (0.0%,  0.0%)    777,920  (1.6%, 81.1%)  39,664 (20.9%, 22.2%)  25,592 (15.5%, 15.7%)  _int_malloc:/usr/src/debug/glibc-2.40-23.fc41.x86_64/malloc/malloc.c
+
+>  6,071,177  (1.9%, 87.1%) 403 (7.3%, 12.6%) 270 (5.8%, 11.4%)  6,069,991  (7.5%, 87.2%)     809  (0.2%, 18.0%)     3  (0.0%,  0.0%)        570  (0.0%, 81.1%)       1  (0.0%, 22.2%)       1  (0.0%, 15.7%)  ???:???
+
+>  5,367,271  (1.7%, 88.9%)   1 (0.0%, 12.6%)   1 (0.0%, 11.4%)  1,533,506  (1.9%, 89.1%)     479  (0.1%, 18.1%)     0  (0.0%,  0.0%)  3,067,012  (6.2%, 87.3%)       0  (0.0%, 22.2%)       0  (0.0%, 15.7%)  std::__detail::_List_node_base::_M_hook(std::__detail::_List_node_base*):/home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/src/c++98/../../../../../libstdc++-v3/src/c++98/list.cc
+
+>  5,292,688  (1.7%, 90.5%)  81 (1.5%, 14.1%)  81 (1.7%, 13.2%)  1,393,076  (1.7%, 90.9%)  60,540 (12.3%, 30.5%)     0  (0.0%,  0.0%)    899,490  (1.8%, 89.1%)   6,485  (3.4%, 25.6%)   6,409  (3.9%, 19.6%)  SpaceTimeAStar::findShortestPath(ConstraintTable&, std::pair<int, int>, int):???
+
+>  3,221,361  (1.0%, 91.6%)  31 (0.6%, 14.6%)  31 (0.7%, 13.8%)    694,790  (0.9%, 91.7%)  65,958 (13.4%, 43.9%)     0  (0.0%,  0.0%)    314,512  (0.6%, 89.7%)      17  (0.0%, 25.6%)       1  (0.0%, 19.6%)  std::pair<boost::unordered::iterator_detail::c_iterator<boost::unordered::detail::ptr_node<AStarNode*> >, bool> boost::unordered::detail::table<boost::unordered::detail::set<std::allocator<AStarNode*>, AStarNode*, AStarNode::NodeHasher, AStarNode::eqnode> >::emplace_unique<AStarNode* const&>(AStarNode* const&, AStarNode* const&) [clone .isra.0]:???
+
+>  2,780,302  (0.9%, 92.5%)  15 (0.3%, 14.9%)   7 (0.2%, 14.0%)    554,120  (0.7%, 92.4%) 109,818 (22.4%, 66.3%)     0  (0.0%,  0.0%)    496,007  (1.0%, 90.7%)      63  (0.0%, 25.6%)       0  (0.0%, 19.6%)  malloc_consolidate:/usr/src/debug/glibc-2.40-23.fc41.x86_64/malloc/malloc.c
+
+>  2,044,324  (0.7%, 93.1%)   0 (0.0%, 14.9%)   0 (0.0%, 14.0%)          0  (0.0%, 92.4%)       0  (0.0%, 66.3%)     0  (0.0%,  0.0%)          0  (0.0%, 90.7%)       0  (0.0%, 25.6%)       0  (0.0%, 19.6%)  operator delete(void*):/home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/libsupc++/../../../../libstdc++-v3/libsupc++/del_op.cc
+
+>  2,044,292  (0.7%, 93.8%)   1 (0.0%, 14.9%)   1 (0.0%, 14.0%)          0  (0.0%, 92.4%)       0  (0.0%, 66.3%)     0  (0.0%,  0.0%)          0  (0.0%, 90.7%)       0  (0.0%, 25.6%)       0  (0.0%, 19.6%)  operator delete(void*, unsigned long):/home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/libsupc++/../../../../libstdc++-v3/libsupc++/del_ops.cc
+
+>  1,222,824  (0.4%, 94.2%)  11 (0.2%, 15.1%)  11 (0.2%, 14.2%)         28  (0.0%, 92.4%)       4  (0.0%, 66.3%)     0  (0.0%,  0.0%)    489,076  (1.0%, 91.7%) 122,265 (64.3%, 89.9%) 122,262 (74.2%, 93.9%)  std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&):???
+
+>  1,150,995  (0.4%, 94.5%)  36 (0.7%, 15.8%)  35 (0.8%, 15.0%)    357,631  (0.4%, 92.8%)   7,869  (1.6%, 67.9%) 1,083 (10.1%, 10.1%)    109,426  (0.2%, 91.9%)     107  (0.1%, 90.0%)      40  (0.0%, 93.9%)  do_lookup_x:
+   1,126,668  (0.4%)         34 (0.6%)         33 (0.7%)           352,206  (0.4%)          7,866  (1.6%)        1,083 (10.1%)           106,692  (0.2%)            107  (0.1%)             40  (0.0%)           /usr/src/debug/glibc-2.40-23.fc41.x86_64/elf/dl-lookup.c
+
+>  1,116,636  (0.4%, 94.9%)   2 (0.0%, 15.8%)   2 (0.0%, 15.0%)    475,159  (0.6%, 93.4%)  57,850 (11.8%, 79.7%)     0  (0.0%, 10.1%)    154,443  (0.3%, 92.2%)       0  (0.0%, 90.0%)       0  (0.0%, 93.9%)  unlink_chunk.isra.0:/usr/src/debug/glibc-2.40-23.fc41.x86_64/malloc/malloc.c
+
+>  1,033,219  (0.3%, 95.2%)  19 (0.3%, 16.2%)  16 (0.3%, 15.4%)    206,773  (0.3%, 93.7%)   3,238  (0.7%, 80.3%) 2,395 (22.3%, 32.4%)     62,779  (0.1%, 92.3%)      72  (0.0%, 90.0%)       6  (0.0%, 93.9%)  _dl_lookup_symbol_x:
+     755,532  (0.2%)          3 (0.1%)          3 (0.1%)           125,462  (0.2%)          3,140  (0.6%)        2,394 (22.3%)                 0                      0                      0                   /usr/src/debug/glibc-2.40-23.fc41.x86_64/elf/../sysdeps/generic/dl-new-hash.h
+
+>  1,001,802  (0.3%, 95.5%)   3 (0.1%, 16.2%)   3 (0.1%, 15.4%)    279,827  (0.3%, 94.0%)       6  (0.0%, 80.3%)     1  (0.0%, 32.4%)    180,239  (0.4%, 92.7%)     155  (0.1%, 90.1%)       0  (0.0%, 93.9%)  std::basic_streambuf<char, std::char_traits<char> >::xsputn(char const*, long):
+     721,981  (0.2%)          3 (0.1%)          3 (0.1%)           174,271  (0.2%)              0                    0                   124,477  (0.3%)              0                      0                   /home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/include/bits/streambuf.tcc
+
+>    984,118  (0.3%, 95.9%)   1 (0.0%, 16.2%)   1 (0.0%, 15.5%)    980,430  (1.2%, 95.3%)       7  (0.0%, 80.3%)     1  (0.0%, 32.4%)    979,508  (2.0%, 94.7%)      26  (0.0%, 90.1%)      23  (0.0%, 93.9%)  std::char_traits<char>::copy(char*, char const*, unsigned long) [clone .isra.0]:/home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/include/bits/char_traits.h
+
+>    951,997  (0.3%, 96.2%)  18 (0.3%, 16.6%)  18 (0.4%, 15.8%)    312,889  (0.4%, 95.6%)      46  (0.0%, 80.3%)     0  (0.0%, 32.4%)    242,602  (0.5%, 95.2%)       0  (0.0%, 90.1%)       0  (0.0%, 93.9%)  boost::heap::pairing_heap<SingleAgentSolver::compute_heuristics()::Node, boost::heap::compare<SingleAgentSolver::compute_heuristics()::SingleAgentSolver::compute_heuristics()::Node::compare_node>, boost::parameter::void_, boost::parameter::void_, boost::parameter::void_, boost::parameter::void_>::merge_node_list(boost::intrusive::list<boost::heap::detail::heap_node_base<true>, boost::intrusive::constant_time_size<false> >&) [clone .isra.0]:???
+
+>    921,447  (0.3%, 96.5%)   4 (0.1%, 16.6%)   3 (0.1%, 15.9%)    273,925  (0.3%, 96.0%)       0  (0.0%, 80.3%)     0  (0.0%, 32.4%)    149,424  (0.3%, 95.5%)       0  (0.0%, 90.1%)       0  (0.0%, 93.9%)  std::basic_filebuf<char, std::char_traits<char> >::xsputn(char const*, long):
+     796,936  (0.3%)          4 (0.1%)          3 (0.1%)           249,018  (0.3%)              0                    0                   149,424  (0.3%)              0                      0                   /home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/include/bits/fstream.tcc
+
+>    765,458  (0.2%, 96.7%)   7 (0.1%, 16.8%)   6 (0.1%, 16.0%)    168,997  (0.2%, 96.2%)       0  (0.0%, 80.3%)     0  (0.0%, 32.4%)    168,997  (0.3%, 95.8%)       0  (0.0%, 90.1%)       0  (0.0%, 93.9%)  std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const:
+     685,930  (0.2%)          5 (0.1%)          5 (0.1%)           149,115  (0.2%)              0                    0                   149,115  (0.3%)              0                      0                   /home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/include/bits/locale_facets.tcc
+
+>    704,833  (0.2%, 96.9%)   5 (0.1%, 16.8%)   5 (0.1%, 16.1%)         68  (0.0%, 96.2%)      38  (0.0%, 80.3%)     0  (0.0%, 32.4%)    704,160  (1.4%, 97.2%)  11,112  (5.8%, 96.0%)   7,005  (4.3%, 98.2%)  __memset_avx2_unaligned_erms:/usr/src/debug/glibc-2.40-23.fc41.x86_64/string/../sysdeps/x86_64/multiarch/memset-vec-unaligned-erms.S
+
+>    669,228  (0.2%, 97.1%)   6 (0.1%, 17.0%)   6 (0.1%, 16.3%)    175,846  (0.2%, 96.4%)   2,696  (0.5%, 80.9%)     0  (0.0%, 32.4%)          0  (0.0%, 97.2%)       0  (0.0%, 96.0%)       0  (0.0%, 98.2%)  ConstraintTable::getNumOfConflictsForStep(unsigned long, unsigned long, int) const:???
+
+>    654,982  (0.2%, 97.3%)   4 (0.1%, 17.0%)   4 (0.1%, 16.4%)    204,682  (0.3%, 96.7%)      10  (0.0%, 80.9%)     0  (0.0%, 32.4%)          0  (0.0%, 97.2%)       0  (0.0%, 96.0%)       0  (0.0%, 98.2%)  ConstraintTable::constrained(unsigned long, int) const:???
+
+>    648,183  (0.2%, 97.6%)   3 (0.1%, 17.1%)   3 (0.1%, 16.4%)    249,301  (0.3%, 97.0%)       7  (0.0%, 80.9%)     0  (0.0%, 32.4%)    149,581  (0.3%, 97.5%)       1  (0.0%, 96.0%)       0  (0.0%, 98.2%)  std::ostream::sentry::sentry(std::ostream&):
+     598,323  (0.2%)          2 (0.0%)          2 (0.0%)           199,441  (0.2%)              4  (0.0%)            0                   149,581  (0.3%)              1  (0.0%)              0                   /home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/include/bits/ostream.tcc
+
+>    642,678  (0.2%, 97.8%)   5 (0.1%, 17.2%)   5 (0.1%, 16.5%)    194,298  (0.2%, 97.2%)       0  (0.0%, 80.9%)     0  (0.0%, 32.4%)    149,460  (0.3%, 97.8%)       0  (0.0%, 96.0%)       0  (0.0%, 98.2%)  std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long):
+     567,948  (0.2%)          5 (0.1%)          5 (0.1%)           164,406  (0.2%)              0                    0                   134,514  (0.3%)              0                      0                   /home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/include/bits/ostream_insert.h
+
+>    497,050  (0.2%, 97.9%)   5 (0.1%, 17.3%)   5 (0.1%, 16.6%)    149,115  (0.2%, 97.4%)       1  (0.0%, 80.9%)     0  (0.0%, 32.4%)    109,351  (0.2%, 98.0%)       0  (0.0%, 96.0%)       0  (0.0%, 98.2%)  std::ostream& std::ostream::_M_insert<long>(long):
+     477,168  (0.2%)          5 (0.1%)          5 (0.1%)           149,115  (0.2%)              1  (0.0%)            0                   109,351  (0.2%)              0                      0                   /home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/include/bits/ostream.tcc
+
+>    409,380  (0.1%, 98.1%)   3 (0.1%, 17.3%)   3 (0.1%, 16.7%)    163,752  (0.2%, 97.6%)       4  (0.0%, 80.9%)     0  (0.0%, 32.4%)    143,283  (0.3%, 98.3%)       0  (0.0%, 96.0%)       0  (0.0%, 98.2%)  ConstraintTable::updateUnsatisfiedPositiveConstraintSet(std::__cxx11::list<int, std::allocator<int> > const&, std::__cxx11::list<int, std::allocator<int> >&, int, int) const:???
+
+>    408,060  (0.1%, 98.2%)   3 (0.1%, 17.4%)   3 (0.1%, 16.8%)     40,806  (0.1%, 97.6%)       1  (0.0%, 80.9%)     0  (0.0%, 32.4%)     30,850  (0.1%, 98.4%)       0  (0.0%, 96.0%)       0  (0.0%, 98.2%)  int std::__int_to_char<char, unsigned long>(char*, unsigned long, char const*, std::_Ios_Fmtflags, bool):/home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/include/bits/locale_facets.tcc
+
+>    324,100  (0.1%, 98.3%)   3 (0.1%, 17.4%)   2 (0.0%, 16.8%)    199,441  (0.2%, 97.9%)       0  (0.0%, 80.9%)     0  (0.0%, 32.4%)     74,792  (0.2%, 98.5%)       0  (0.0%, 96.0%)       0  (0.0%, 98.2%)  std::ostream::sentry::~sentry():
+     324,099  (0.1%)          3 (0.1%)          2 (0.0%)           199,440  (0.2%)              0                    0                    74,792  (0.2%)              0                      0                   /home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/include/ostream
+
+>    320,249  (0.1%, 98.4%)  27 (0.5%, 17.9%)  27 (0.6%, 17.4%)     67,451  (0.1%, 98.0%)  48,130  (9.8%, 90.7%)     0  (0.0%, 32.4%)     33,840  (0.1%, 98.6%)      10  (0.0%, 96.0%)       0  (0.0%, 98.2%)  SpaceTimeAStar::releaseNodes():???
+
+--------------------------------------------------------------------------------
+-- Annotated source file: /home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/include/bits/char_traits.h
+--------------------------------------------------------------------------------
+Unannotated because one or more of these original files are unreadable:
+- /home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/include/bits/char_traits.h
+
+--------------------------------------------------------------------------------
+-- Annotated source file: /home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/include/bits/fstream.tcc
+--------------------------------------------------------------------------------
+Unannotated because one or more of these original files are unreadable:
+- /home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/include/bits/fstream.tcc
+
+--------------------------------------------------------------------------------
+-- Annotated source file: /home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/include/bits/locale_facets.tcc
+--------------------------------------------------------------------------------
+Unannotated because one or more of these original files are unreadable:
+- /home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/include/bits/locale_facets.tcc
+
+--------------------------------------------------------------------------------
+-- Annotated source file: /home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/include/bits/ostream.tcc
+--------------------------------------------------------------------------------
+Unannotated because one or more of these original files are unreadable:
+- /home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/include/bits/ostream.tcc
+
+--------------------------------------------------------------------------------
+-- Annotated source file: /home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/include/bits/ostream_insert.h
+--------------------------------------------------------------------------------
+Unannotated because one or more of these original files are unreadable:
+- /home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/include/bits/ostream_insert.h
+
+--------------------------------------------------------------------------------
+-- Annotated source file: /home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/include/bits/streambuf.tcc
+--------------------------------------------------------------------------------
+Unannotated because one or more of these original files are unreadable:
+- /home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/include/bits/streambuf.tcc
+
+--------------------------------------------------------------------------------
+-- Annotated source file: /home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/include/ostream
+--------------------------------------------------------------------------------
+Unannotated because one or more of these original files are unreadable:
+- /home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/include/ostream
+
+--------------------------------------------------------------------------------
+-- Annotated source file: /home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/libsupc++/../../../../libstdc++-v3/libsupc++/del_op.cc
+--------------------------------------------------------------------------------
+Unannotated because one or more of these original files are unreadable:
+- /home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/libsupc++/../../../../libstdc++-v3/libsupc++/del_op.cc
+
+--------------------------------------------------------------------------------
+-- Annotated source file: /home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/libsupc++/../../../../libstdc++-v3/libsupc++/del_ops.cc
+--------------------------------------------------------------------------------
+Unannotated because one or more of these original files are unreadable:
+- /home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/libsupc++/../../../../libstdc++-v3/libsupc++/del_ops.cc
+
+--------------------------------------------------------------------------------
+-- Annotated source file: /home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/libsupc++/../../../../libstdc++-v3/libsupc++/new_op.cc
+--------------------------------------------------------------------------------
+Unannotated because one or more of these original files are unreadable:
+- /home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/libsupc++/../../../../libstdc++-v3/libsupc++/new_op.cc
+
+--------------------------------------------------------------------------------
+-- Annotated source file: /home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/src/c++98/../../../../../libstdc++-v3/src/c++98/list.cc
+--------------------------------------------------------------------------------
+Unannotated because one or more of these original files are unreadable:
+- /home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/src/c++98/../../../../../libstdc++-v3/src/c++98/list.cc
+
+--------------------------------------------------------------------------------
+-- Annotated source file: /usr/src/debug/glibc-2.40-23.fc41.x86_64/elf/../sysdeps/generic/dl-new-hash.h
+--------------------------------------------------------------------------------
+Unannotated because one or more of these original files are unreadable:
+- /usr/src/debug/glibc-2.40-23.fc41.x86_64/elf/../sysdeps/generic/dl-new-hash.h
+
+--------------------------------------------------------------------------------
+-- Annotated source file: /usr/src/debug/glibc-2.40-23.fc41.x86_64/elf/dl-lookup.c
+--------------------------------------------------------------------------------
+Unannotated because one or more of these original files are unreadable:
+- /usr/src/debug/glibc-2.40-23.fc41.x86_64/elf/dl-lookup.c
+
+--------------------------------------------------------------------------------
+-- Annotated source file: /usr/src/debug/glibc-2.40-23.fc41.x86_64/malloc/arena.c
+--------------------------------------------------------------------------------
+Unannotated because one or more of these original files are unreadable:
+- /usr/src/debug/glibc-2.40-23.fc41.x86_64/malloc/arena.c
+
+--------------------------------------------------------------------------------
+-- Annotated source file: /usr/src/debug/glibc-2.40-23.fc41.x86_64/malloc/malloc.c
+--------------------------------------------------------------------------------
+Unannotated because one or more of these original files are unreadable:
+- /usr/src/debug/glibc-2.40-23.fc41.x86_64/malloc/malloc.c
+
+--------------------------------------------------------------------------------
+-- Annotated source file: /usr/src/debug/glibc-2.40-23.fc41.x86_64/string/../sysdeps/x86_64/multiarch/memset-vec-unaligned-erms.S
+--------------------------------------------------------------------------------
+Unannotated because one or more of these original files are unreadable:
+- /usr/src/debug/glibc-2.40-23.fc41.x86_64/string/../sysdeps/x86_64/multiarch/memset-vec-unaligned-erms.S
+
+--------------------------------------------------------------------------------
+-- Annotation summary
+--------------------------------------------------------------------------------
+Ir_________________ I1mr_________ ILmr_________ Dr________________ D1mr___________ DLmr_________ Dw________________ D1mw___________ DLmw___________ 
+
+          0             0             0                  0               0             0                  0               0               0            annotated: files known & above threshold & readable, line numbers known
+          0             0             0                  0               0             0                  0               0               0            annotated: files known & above threshold & readable, line numbers unknown
+          0             0             0                  0               0             0                  0               0               0          unannotated: files known & above threshold & two or more non-identical
+176,557,445 (56.5%)   423  (7.7%)   318  (6.8%) 47,133,054 (58.4%) 220,114 (44.9%) 3,981 (37.0%) 30,823,704 (62.0%)  51,929 (27.3%)  33,055 (20.1%)  unannotated: files known & above threshold & unreadable 
+  3,003,215  (1.0%) 2,825 (51.5%) 2,293 (49.2%)    986,166  (1.2%)  12,153  (2.5%) 6,736 (62.7%)    302,159  (0.6%)   2,853  (1.5%)   1,776  (1.1%)  unannotated: files known & below threshold
+133,201,595 (42.6%) 2,236 (40.8%) 2,046 (43.9%) 32,614,280 (40.4%) 258,494 (52.7%)    32  (0.3%) 18,581,359 (37.4%) 135,382 (71.2%) 129,846 (78.8%)  unannotated: files unknown
+
