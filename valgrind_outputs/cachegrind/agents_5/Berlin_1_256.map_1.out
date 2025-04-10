@@ -1,4 +1,4 @@
-cmd: ./cbs -m ./maps/maps/Berlin_1_256.map -a scenesinput/Berlin_1_256-even-1.scen -o ./cbs_output/runtests.csv --outputPaths=./cbs_output/paths.txt -k 5 -t 5 --heuristics Zero --prioritizingConflicts 0 --bypass 0 --disjointSplitting 0 --rectangleReasoning None --corridorReasoning None --mutexReasoning 0 --targetReasoning 0 --sip 0
+cmd: ./cbs -m ./maps/maps/Berlin_1_256.map -a ./scenesinput/Berlin_1_256/Berlin_1_256-even-1.scen -o ./cbs_output/runtests.csv --outputPaths=./cbs_output/paths.txt -k 5 -t 5 --heuristics Zero --prioritizingConflicts 0 --bypass 0 --disjointSplitting 0 --rectangleReasoning None --corridorReasoning None --mutexReasoning 0 --targetReasoning 0 --sip 0
 events: Ir
 fl=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/gcc/include/cpuid.h
 fn=__cpu_indicator_init@GCC_4.8.0
@@ -137,8 +137,6 @@ fn=__cpu_indicator_init@GCC_4.8.0
 60 7
 64 7
 fl=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/include/bits/basic_ios.h
-fn=std::basic_filebuf<char, std::char_traits<char> >::underflow()
-49 2
 fn=std::basic_ios<char, std::char_traits<char> >::basic_ios()
 464 12
 465 12
@@ -153,37 +151,37 @@ fn=std::basic_ios<wchar_t, std::char_traits<wchar_t> >::basic_ios()
 466 36
 467 8
 fn=std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, char)
-326 68
+326 66
 fn=std::ios_base::Init::Init()
 314 5
 fn=std::istream& std::istream::_M_extract<double>(double&)
 49 2
 fn=std::istream::sentry::sentry(std::istream&, bool)
-300 70
+300 68
 fn=std::istreambuf_iterator<char, std::char_traits<char> >::istreambuf_iterator(std::istream&)
 326 1
 fl=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/include/bits/basic_ios.tcc
 fn=std::basic_ios<char, std::char_traits<char> >::_M_cache_locale(std::locale const&)
-157 360
-159 180
-160 180
-161 180
-162 240
+157 348
+159 174
+160 174
+161 174
+162 232
 fn=std::basic_ios<char, std::char_traits<char> >::clear(std::_Ios_Iostate)
-41 83
-43 166
-47 83
-48 83
+41 82
+43 164
+47 82
+48 82
 fn=std::basic_ios<char, std::char_traits<char> >::init(std::basic_streambuf<char, std::char_traits<char> >*)
-126 360
-129 60
-132 180
-146 60
-149 120
-150 120
-151 60
-152 240
-153 240
+126 348
+129 58
+132 174
+146 58
+149 116
+150 116
+151 58
+152 232
+153 232
 fn=std::basic_ios<wchar_t, std::char_traits<wchar_t> >::_M_cache_locale(std::locale const&)
 157 24
 159 12
@@ -203,13 +201,13 @@ fn=std::basic_ios<wchar_t, std::char_traits<wchar_t> >::init(std::basic_streambu
 153 16
 fl=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/include/bits/basic_string.h
 fn=std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, unsigned long)
-223 37
-1077 37
+223 33
+1077 33
 fn=std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
 218 13
-223 81
+223 67
 255 39
-1084 81
+1084 67
 fn=std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_check_length(unsigned long, unsigned long, char const*) const
 402 72
 404 120
@@ -220,14 +218,14 @@ fn=std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>
 423 81
 424 34
 fn=std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_dispose()
-285 78
-287 78
-289 46
+285 66
+287 66
+289 40
 fn=std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_is_local() const
-246 214
-267 214
-269 428
-276 214
+246 190
+267 190
+269 380
+276 190
 fn=std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long)
 218 4
 255 8
@@ -239,42 +237,42 @@ fn=std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>
 223 7
 1077 7
 fn=std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_allocate(std::allocator<char>&, unsigned long)
-129 728
+129 596
 fn=std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_assign(char*, unsigned long, char)
 450 21
 452 14
 fn=std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_compare(unsigned long, unsigned long)
-493 6
-495 6
-497 12
-498 6
-502 18
-503 6
+493 1
+495 1
+497 2
+498 1
+502 3
+503 1
 fn=std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_copy(char*, char const*, unsigned long)
-430 134
-432 268
-435 112
+430 116
+432 232
+435 94
 436 22
 fn=std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(char const*, unsigned long) [clone .isra.0]
 404 104
 1470 26
 fn=std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::capacity() const
-1180 564
-1182 970
-1184 376
+1180 504
+1182 858
+1184 336
 fn=std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::compare(char const*) const
-1077 56
-3393 336
-3399 168
-3400 112
-3401 18
-3403 274
+1077 21
+3393 126
+3399 63
+3400 42
+3401 3
+3403 104
 fn=std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::find(char const*, unsigned long, unsigned long) const
 228 756
 1077 756
 fn=std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::find(char, unsigned long) const
-228 204
-1077 102
+228 138
+1077 69
 fn=std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::push_back(char)
 223 7
 1077 7
@@ -282,36 +280,36 @@ fn=std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>
 1575 28
 1579 42
 fn=std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, char)
-223 68
-228 34
+223 66
+228 33
 1399 21
 fl=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/include/bits/basic_string.tcc
 fn=std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, unsigned long)
-413 259
-416 74
-418 185
-420 66
-421 132
+413 231
+416 66
+418 165
+420 58
+421 116
 424 24
-428 222
+428 198
 fn=std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
-277 648
-280 162
-283 162
-285 162
+277 536
+280 134
+283 134
+285 134
 287 13
 288 52
 289 26
-294 136
-295 320
-299 486
+294 108
+295 264
+299 402
 fn=std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long)
-138 728
-143 2912
-149 3640
+138 596
+143 2384
+149 2980
 151 45
 153 30
-159 1456
+159 1192
 fn=std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long)
 325 52
 329 12
@@ -362,26 +360,26 @@ fn=std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>
 655 252
 658 6048
 fn=std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::find(char, unsigned long) const
-663 204
-666 204
-668 204
-671 204
-672 306
-673 204
+663 138
+666 138
+668 138
+671 138
+672 207
+673 138
 674 2
-677 306
+677 207
 fn=std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::reserve(unsigned long)
-304 54
-307 9
-312 18
-320 36
+304 42
+307 7
+312 14
+320 28
 fl=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/include/bits/char_traits.h
 fn=_ZNSs4_Rep26_M_set_length_and_sharableEm@@GLIBCXX_3.4.5
 350 2
 fn=std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, unsigned long)
-350 74
+350 66
 fn=std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
-350 162
+350 134
 fn=std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_replace(unsigned long, unsigned long, char const*, unsigned long)
 350 34
 fn=std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_replace_aux(unsigned long, unsigned long, unsigned long, char)
@@ -392,30 +390,30 @@ fn=std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>
 fn=std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_copy(char*, char const*, unsigned long)
 350 44
 fn=std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::compare(char const*) const
-391 224
+391 84
 fn=std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::push_back(char)
 350 28
 fn=std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, char)
-350 34
+350 33
 403 196
-450 34
+450 33
 fn=std::basic_streambuf<char, std::char_traits<char> >::sbumpc()
 450 14
 fn=std::basic_streambuf<char, std::char_traits<char> >::sgetc()
 450 42
 fn=std::char_traits<char>::compare(char const*, char const*, unsigned long)
-366 121
-368 242
-381 121
+366 86
+368 172
+381 86
 fn=std::char_traits<char>::copy(char*, char const*, unsigned long) [clone .isra.0]
-419 112
-421 224
-427 1235
-428 112
+419 94
+421 188
+427 1010
+428 94
 fn=std::char_traits<char>::find(char const*, unsigned long, char const&) [clone .isra.0]
-395 513
-397 1026
-403 1539
+395 480
+397 960
+403 1440
 fn=std::istreambuf_iterator<char, std::char_traits<char> >::equal(std::istreambuf_iterator<char, std::char_traits<char> > const&) const
 454 12
 fn=std::num_get<char, std::istreambuf_iterator<char, std::char_traits<char> > >::_M_extract_float(std::istreambuf_iterator<char, std::char_traits<char> >, std::istreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, std::_Ios_Iostate&, std::string&) const
@@ -423,59 +421,17 @@ fn=std::num_get<char, std::istreambuf_iterator<char, std::char_traits<char> > >:
 fn=std::string::push_back(char)
 350 1
 fl=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/include/bits/codecvt.h
-fn=std::__codecvt_abstract_base<char, char, __mbstate_t>::always_noconv() const
-213 1
-214 2
 fn=std::locale::_Impl::_Impl(unsigned long)
 484 3
 541 3
 599 3
 656 3
-fl=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/include/bits/fstream.tcc
-fn=std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer()
-49 2
-54 5
-56 3
-57 1
-59 2
-fn=std::basic_filebuf<char, std::char_traits<char> >::basic_filebuf()
-80 3
-81 17
-82 4
-83 5
-84 2
-85 4
-86 4
-87 6
-89 3
-90 2
-fn=std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode)
-178 8
-182 2
-184 5
-185 2
-187 2
-188 1
-191 1
-193 3
-196 3
-200 2
-208 6
-fn=std::basic_filebuf<char, std::char_traits<char> >::underflow()
-322 9
-327 2
-329 2
-339 2
-341 2
-345 5
-352 4
-354 4
 fl=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/include/bits/ios_base.h
 fn=std::__cxx11::basic_stringbuf<char, std::char_traits<char>, std::allocator<char> >::_M_sync(char*, unsigned long, unsigned long)
 135 78
 fn=std::basic_ios<char, std::char_traits<char> >::clear(std::_Ios_Iostate)
-182 83
-187 83
+182 82
+187 82
 fn=std::basic_ios<char, std::char_traits<char> >::setstate(std::_Ios_Iostate)
 187 81
 fn=std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, char)
@@ -483,7 +439,7 @@ fn=std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::ch
 fn=std::ios_base::Init::Init()
 105 2
 fn=std::ios_base::ios_base()
-629 1036
+629 1008
 fn=std::istream::get()
 187 2
 fn=std::istream::sentry::sentry(std::istream&, bool)
@@ -517,16 +473,16 @@ fn=std::istream::get()
 291 2
 292 3
 fn=std::istream::sentry::sentry(std::istream&, bool)
-46 496
-47 62
-49 62
-50 310
-54 70
-56 76
-84 372
-85 35
+46 488
+47 61
+49 61
+50 305
+54 68
+56 74
+84 366
+85 34
 89 27
-91 345
+91 339
 fl=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/include/bits/locale_classes.h
 fn=_GLOBAL__sub_I_cxx11_locale_inst.cc
 825 4
@@ -689,18 +645,12 @@ fn=void std::locale::_Impl::_M_init_facet_unchecked<std::time_get<wchar_t, std::
 646 4
 647 4
 fl=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/include/bits/locale_classes.tcc
-fn=std::codecvt<char, char, __mbstate_t> const* std::__try_use_facet<std::codecvt<char, char, __mbstate_t> >(std::locale const&)
-94 3
-96 3
-97 1
-108 1
-149 3
 fn=std::ctype<char> const* std::__try_use_facet<std::ctype<char> >(std::locale const&)
-94 180
-96 180
-97 60
-105 60
-149 180
+94 174
+96 174
+97 58
+105 58
+149 174
 fn=std::ctype<wchar_t> const* std::__try_use_facet<std::ctype<wchar_t> >(std::locale const&)
 94 12
 96 12
@@ -708,11 +658,11 @@ fn=std::ctype<wchar_t> const* std::__try_use_facet<std::ctype<wchar_t> >(std::lo
 120 4
 149 12
 fn=std::num_get<char, std::istreambuf_iterator<char, std::char_traits<char> > > const* std::__try_use_facet<std::num_get<char, std::istreambuf_iterator<char, std::char_traits<char> > > >(std::locale const&)
-94 180
-96 180
-97 60
-106 60
-149 180
+94 174
+96 174
+97 58
+106 58
+149 174
 fn=std::num_get<wchar_t, std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t> > > const* std::__try_use_facet<std::num_get<wchar_t, std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t> > > >(std::locale const&)
 94 12
 96 12
@@ -720,11 +670,11 @@ fn=std::num_get<wchar_t, std::istreambuf_iterator<wchar_t, std::char_traits<wcha
 121 4
 149 12
 fn=std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > > const* std::__try_use_facet<std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > > >(std::locale const&)
-94 180
-96 180
-97 60
-107 60
-149 180
+94 174
+96 174
+97 58
+107 58
+149 174
 fn=std::num_put<wchar_t, std::ostreambuf_iterator<wchar_t, std::char_traits<wchar_t> > > const* std::__try_use_facet<std::num_put<wchar_t, std::ostreambuf_iterator<wchar_t, std::char_traits<wchar_t> > > >(std::locale const&)
 94 12
 96 12
@@ -752,11 +702,6 @@ fn=std::__cxx11::numpunct<wchar_t>::numpunct(std::__numpunct_cache<wchar_t>*, un
 1716 5
 1717 4
 1718 6
-fn=std::ctype<char>::do_widen(char const*, char const*, char*) const
-1115 3
-1117 2
-1118 260
-1120 1
 fn=std::locale::_Impl::_Impl(unsigned long)
 1630 6
 1631 2
@@ -904,11 +849,11 @@ fn=std::moneypunct<wchar_t, true>::moneypunct(std::__moneypunct_cache<wchar_t, t
 1106 7
 fl=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/include/bits/new_allocator.h
 fn=std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_dispose()
-172 12
+172 8
 fn=std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_allocate(std::allocator<char>&, unsigned long)
-134 1456
-140 728
-151 728
+134 1192
+140 596
+151 596
 fn=std::string::_Rep::_M_destroy(std::allocator<char> const&)
 172 1
 fn=std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&)
@@ -936,7 +881,7 @@ fl=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/b
 fn=_GLOBAL__sub_I_eh_alloc.cc
 238 4
 fn=std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::compare(char const*) const
-238 168
+238 63
 fn=std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, char)
 238 66
 fl=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/include/bits/stl_pair.h
@@ -1004,20 +949,6 @@ fn=__gnu_cxx::stdio_sync_filebuf<wchar_t, std::char_traits<wchar_t> >::stdio_syn
 80 18
 81 18
 82 12
-fl=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/include/fstream
-fn=std::basic_filebuf<char, std::char_traits<char> >::_M_destroy_pback()
-226 1
-228 2
-235 1
-fn=std::basic_filebuf<char, std::char_traits<char> >::_M_set_buffer(long)
-499 1
-501 1
-505 4
-506 1
-510 4
-514 1
-fn=std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode)
-276 5
 fl=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/include/istream
 fn=std::basic_istream<char, std::char_traits<char> >::basic_istream(std::basic_streambuf<char, std::char_traits<char> >*)
 95 6
@@ -1083,22 +1014,13 @@ fn=std::__cxx11::basic_stringbuf<char, std::char_traits<char>, std::allocator<ch
 539 26
 fn=std::__cxx11::basic_stringbuf<char, std::char_traits<char>, std::allocator<char> >::underflow()
 492 26
-fn=std::basic_filebuf<char, std::char_traits<char> >::_M_set_buffer(long)
-518 1
-519 1
-520 1
-564 2
-565 1
-566 2
-fn=std::basic_filebuf<char, std::char_traits<char> >::underflow()
-492 1
 fn=std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, char)
 492 33
 802 26
 fn=std::basic_streambuf<char, std::char_traits<char> >::basic_streambuf()
-470 4
-472 28
-473 20
+470 3
+472 21
+473 15
 fn=std::basic_streambuf<char, std::char_traits<char> >::sbumpc()
 323 14
 326 28
@@ -1111,11 +1033,11 @@ fn=std::basic_streambuf<char, std::char_traits<char> >::sbumpc() [clone .isra.0]
 492 1
 505 2
 fn=std::basic_streambuf<char, std::char_traits<char> >::sgetc()
-345 70
-348 140
-351 56
+345 69
+348 138
+351 54
 353 42
-492 70
+492 69
 fn=std::basic_streambuf<char, std::char_traits<char> >::snextc()
 305 14
 308 28
@@ -1134,7 +1056,7 @@ fn=_GLOBAL__sub_I_eh_alloc.cc
 142 4
 fl=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/include/x86_64-conda-linux-gnu/bits/gthr-default.h
 fn=std::locale::_S_initialize()
-713 468
+713 456
 fn=std::locale::facet::_S_get_c_locale()
 713 48
 fl=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/include/x86_64-conda-linux-gnu/bits/messages_members.h
@@ -1171,12 +1093,12 @@ fn=std::__timepunct<wchar_t>::__timepunct(std::__timepunct_cache<wchar_t>*, unsi
 51 7
 fl=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/libsupc++/../../../../libstdc++-v3/libsupc++/del_op.cc
 fn=operator delete(void*)
-48 978
-49 978
+48 771
+49 771
 fl=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/libsupc++/../../../../libstdc++-v3/libsupc++/del_ops.cc
 fn=operator delete(void*, unsigned long)
-32 971
-33 971
+32 766
+33 766
 fl=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/libsupc++/../../../../libstdc++-v3/libsupc++/eh_alloc.cc
 fn=_GLOBAL__sub_I_eh_alloc.cc
 138 3
@@ -1197,29 +1119,25 @@ fn=_GLOBAL__sub_I_eh_alloc.cc
 456 12
 fl=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/libsupc++/../../../../libstdc++-v3/libsupc++/guard.cc
 fn=__cxa_guard_acquire
-149 3
-273 15
-278 6
-289 6
-296 6
-311 15
-392 12
+149 2
+273 10
+278 4
+289 4
+296 4
+311 10
+392 8
 fn=__cxa_guard_release
-443 6
-448 6
-459 6
-461 6
-488 3
+443 4
+448 4
+459 4
+461 4
+488 2
 fl=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/libsupc++/../../../../libstdc++-v3/libsupc++/new_op.cc
 fn=operator new(unsigned long)
-43 2478
-47 4956
-50 4956
-59 2478
-fl=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/libsupc++/../../../../libstdc++-v3/libsupc++/new_opv.cc
-fn=operator new[](unsigned long)
-31 1
-32 1
+43 2062
+47 4124
+50 4124
+59 2062
 fl=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/src/../../../../libstdc++-v3/src/c++11/compatibility-c++0x.cc
 fn=_GLOBAL__sub_I_compatibility_c__0x.cc
 188 4
@@ -1270,14 +1188,6 @@ fn=std::locale::_Impl::_M_init_extra(std::locale::facet**)
 135 4
 137 8
 fl=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/src/c++11/../../../../../libstdc++-v3/src/c++11/ctype.cc
-fn=std::ctype<char>::_M_widen_init() const
-90 6
-92 769
-93 256
-94 7
-98 4
-99 4
-100 5
 fn=std::ctype<wchar_t>::ctype(unsigned long)
 103 5
 105 6
@@ -1301,10 +1211,10 @@ fn=std::ios_base::_M_dispose_callbacks()
 185 56
 186 112
 fn=std::ios_base::ios_base()
-76 37
-77 148
-78 74
-79 1258
+76 36
+77 144
+78 72
+79 1224
 fn=std::ios_base::~ios_base()
 87 168
 89 56
@@ -1361,10 +1271,10 @@ fn=std::locale::_Impl::_Impl(unsigned long)
 606 5
 608 8
 fn=std::locale::_S_initialize()
-340 312
-342 312
-345 468
-347 312
+340 304
+342 304
+345 456
+347 304
 fn=std::locale::_S_initialize_once()
 324 4
 328 3
@@ -1378,38 +1288,15 @@ fn=std::locale::classic()
 319 10
 320 20
 fn=std::locale::locale()
-269 1022
-271 146
-282 438
-283 438
-289 584
+269 994
+271 142
+282 426
+283 426
+289 568
 fl=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/src/c++11/../../../../../libstdc++-v3/src/c++11/system_error.cc
 fn=_GLOBAL__sub_I_system_error.cc
 145 9
 640 3
-fl=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/src/c++11/basic_file.cc
-fn=(anonymous namespace)::fopen_mode(std::_Ios_Openmode)
-93 12
-101 1
-120 1
-122 1
-fn=std::__basic_file<char>::__basic_file(pthread_mutex_t*)
-207 1
-208 4
-fn=std::__basic_file<char>::fd()
-309 3
-fn=std::__basic_file<char>::is_open() const
-304 16
-fn=std::__basic_file<char>::open(char const*, std::_Ios_Openmode, int)
-255 6
-257 1
-258 8
-260 6
-262 1
-267 5
-fn=std::__basic_file<char>::xsgetn(char*, long)
-334 9
-342 6
 fl=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/src/c++11/ctype_configure_char.cc
 fn=std::ctype<char>::ctype(unsigned short const*, bool, unsigned long)
 121 7
@@ -1469,8 +1356,6 @@ fn=std::codecvt<char, char, __mbstate_t>::codecvt(unsigned long)
 38 5
 41 5
 42 4
-fn=std::codecvt<char, char, __mbstate_t>::do_always_noconv() const
-100 3
 fn=std::codecvt<wchar_t, char, __mbstate_t>::codecvt(unsigned long)
 118 10
 121 10
@@ -1503,21 +1388,21 @@ fn=std::ios_base::Init::Init()
 121 32
 fl=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/src/c++98/../../../../../libstdc++-v3/src/c++98/ios_locale.cc
 fn=std::ios_base::_M_init()
-39 320
-41 64
-42 128
-43 64
-44 512
-45 256
+39 310
+41 62
+42 124
+43 62
+44 496
+45 248
 fl=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/src/c++98/../../../../../libstdc++-v3/src/c++98/istream-string.cc
 fn=std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, char)
-124 720
+124 708
 133 33
 135 104
-136 240
-137 120
-144 34
-145 68
+136 236
+137 118
+144 33
+145 66
 148 132
 149 179
 152 66
@@ -1562,21 +1447,21 @@ fn=std::locale::facet::_S_initialize_once()
 212 3
 216 3
 fn=std::locale::id::_M_id() const
-507 256
-508 512
+507 249
+508 498
 521 144
 528 192
-545 512
-546 256
+545 498
+546 249
 fn=std::locale::locale(std::locale::_Impl*)
 88 2
 89 1
 fn=std::locale::operator=(std::locale const&)
-120 384
-121 256
-123 192
-125 128
-127 320
+120 372
+121 248
+123 186
+125 124
+127 310
 fn=std::locale::operator==(std::locale const&) const
 99 60
 105 40
@@ -1584,110 +1469,62 @@ fn=std::locale::operator==(std::locale const&) const
 115 10
 116 70
 fn=std::locale::~locale()
-91 130
-93 520
-95 130
+91 128
+93 512
+95 128
 fl=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/src/c++98/../../../../../libstdc++-v3/src/c++98/parallel_settings.cc
 fn=_GLOBAL__sub_I_parallel_settings.cc
 42 2
 fl=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/src/c++98/../../../../../libstdc++-v3/src/c++98/tree.cc
 fn=std::_Rb_tree_decrement(std::_Rb_tree_node_base*)
-122 19
-123 19
-fn=std::_Rb_tree_increment(std::_Rb_tree_node_base const*)
-89 34
-fn=std::_Rb_tree_increment(std::_Rb_tree_node_base*)
-84 25
-85 25
+122 2
+123 2
 fn=std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
-199 114
-200 57
-203 57
-205 171
-206 114
-212 114
-214 24
-216 48
-218 4
-219 4
-221 40
-222 12
-226 33
-228 66
-229 58
-232 102
-233 480
-235 45
-237 135
-239 6
-240 20
-242 2
-243 2
-245 26
-249 8
-251 3
-252 3
-254 8
-255 8
-256 8
-262 132
-264 22
-265 22
-266 72
-271 34
-273 2
-274 2
-276 34
-277 34
-278 51
-282 57
-283 57
+199 32
+200 16
+203 16
+205 48
+206 32
+212 32
+214 6
+216 12
+218 2
+219 2
+221 8
+222 8
+226 10
+228 20
+229 16
+232 22
+233 98
+235 6
+237 18
+245 4
+262 20
+264 4
+265 4
+266 12
+271 4
+276 4
+277 4
+278 6
+282 16
+283 16
 fn=std::local_Rb_tree_decrement(std::_Rb_tree_node_base*)
-97 38
-98 24
-100 57
-103 33
-109 14
-110 40
-112 6
-113 12
-118 14
-fn=std::local_Rb_tree_increment(std::_Rb_tree_node_base*)
-62 126
-65 148
-70 26
-71 86
-73 17
-74 34
-76 53
-80 26
+97 4
+100 6
+103 14
 fn=std::local_Rb_tree_rotate_left(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*&)
-136 20
-138 40
-139 40
-140 7
-141 40
-143 40
-144 4
-145 36
-146 6
-148 15
-149 20
-150 20
-151 20
-fn=std::local_Rb_tree_rotate_right(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*&)
-167 6
-169 12
-170 12
-171 3
-172 12
-174 12
-175 4
-176 8
-177 8
-180 6
-181 6
-182 6
+136 2
+138 4
+139 4
+141 4
+143 4
+145 4
+148 2
+149 2
+150 2
+151 2
 fl=/home/conda/feedstock_root/build_artifacts/gcc_compilers_1729025086244/work/build/x86_64-conda-linux-gnu/libstdc++-v3/src/c++98/c++locale.cc
 fn=std::locale::facet::_S_create_c_locale(__locale_struct*&, char const*, __locale_struct*)
 134 3
@@ -2175,9 +2012,9 @@ fn=__ctype_init
 36 1
 fl=/usr/src/debug/glibc-2.40-23.fc41.x86_64/ctype/ctype.c
 fn=tolower
-45 12
-46 48
-47 6
+45 2
+46 8
+47 1
 fl=/usr/src/debug/glibc-2.40-23.fc41.x86_64/debug/../sysdeps/x86_64/multiarch/ifunc-memmove.h
 fn=__memcpy_chk
 56 2
@@ -2450,24 +2287,24 @@ fn=__rtld_malloc_init_real
 72 1
 fl=/usr/src/debug/glibc-2.40-23.fc41.x86_64/elf/../sysdeps/generic/dl-new-hash.h
 fn=_dl_lookup_symbol_x
-69 2659
-70 5318
-74 61961
-77 123922
-80 60645
-81 121290
-87 1343
-88 1343
-89 2686
-90 1343
-99 59302
-101 59302
-102 118604
-104 59302
-105 59302
+69 2639
+70 5278
+74 61493
+77 122986
+80 60184
+81 120368
+87 1330
+88 1330
+89 2660
+90 1330
+99 58854
+101 58854
+102 117708
+104 58854
+105 58854
 fl=/usr/src/debug/glibc-2.40-23.fc41.x86_64/elf/../sysdeps/generic/dl-protected.h
 fn=do_lookup_x
-29 10568
+29 10488
 fl=/usr/src/debug/glibc-2.40-23.fc41.x86_64/elf/../sysdeps/generic/ldsodefs.h
 fn=_dl_new_object
 1328 48
@@ -2477,8 +2314,8 @@ fn=_dl_relocate_object
 fn=_dl_start
 79 6
 fn=do_lookup_x
-139 5250
-140 7875
+139 5210
+140 7815
 fl=/usr/src/debug/glibc-2.40-23.fc41.x86_64/elf/../sysdeps/nptl/dl-mutex.c
 fn=__rtld_mutex_init
 30 7
@@ -2571,8 +2408,8 @@ fn=_dl_sysdep_parse_arguments
 80 2
 81 2
 82 3
-83 106
-84 214
+83 107
+84 216
 87 2
 91 56
 94 2
@@ -3054,10 +2891,10 @@ fn=_dl_hwcaps_subdirs_active
 52 1
 fl=/usr/src/debug/glibc-2.40-23.fc41.x86_64/elf/../sysdeps/x86_64/dl-irel.h
 fn=_dl_fixup
-32 6
+32 5
 fl=/usr/src/debug/glibc-2.40-23.fc41.x86_64/elf/../sysdeps/x86_64/dl-machine.h
 fn=_dl_fixup
-223 188
+223 168
 fn=_dl_relocate_object
 78 36
 84 20
@@ -3117,50 +2954,50 @@ fn=_dl_sysdep_start
 209 1
 fl=/usr/src/debug/glibc-2.40-23.fc41.x86_64/elf/../sysdeps/x86_64/dl-runtime.h
 fn=_dl_fixup
-28 188
+28 168
 fl=/usr/src/debug/glibc-2.40-23.fc41.x86_64/elf/../sysdeps/x86_64/dl-trampoline.h
 fn=_dl_runtime_resolve_xsave
-39 188
-44 188
-47 188
-49 188
-59 188
-65 188
-66 188
-67 188
-68 188
-69 188
-70 188
-71 188
-75 188
-76 188
-79 188
-80 188
-82 188
-83 188
-84 188
-85 188
-86 188
-87 188
-89 188
-96 188
-97 188
-98 188
-99 188
-104 188
-105 188
-106 188
-108 188
-109 188
-110 188
-111 188
-112 188
-113 188
-114 188
-116 188
-118 188
-122 188
-124 188
+39 168
+44 168
+47 168
+49 168
+59 168
+65 168
+66 168
+67 168
+68 168
+69 168
+70 168
+71 168
+75 168
+76 168
+79 168
+80 168
+82 168
+83 168
+84 168
+85 168
+86 168
+87 168
+89 168
+96 168
+97 168
+98 168
+99 168
+104 168
+105 168
+106 168
+108 168
+109 168
+110 168
+111 168
+112 168
+113 168
+114 168
+116 168
+118 168
+122 168
+124 168
 fl=/usr/src/debug/glibc-2.40-23.fc41.x86_64/elf/./dl-find_object.h
 fn=_dl_find_object_from_map
 95 28
@@ -3538,13 +3375,13 @@ fl=/usr/src/debug/glibc-2.40-23.fc41.x86_64/elf/dl-environ.c
 fn=_dl_next_ld_env_entry
 28 2
 29 2
-32 322
-34 212
+32 325
+34 214
 35 16
 37 1
 40 2
 42 1
-45 105
+45 106
 fl=/usr/src/debug/glibc-2.40-23.fc41.x86_64/elf/dl-find_object.c
 fn=_dl_find_object_init
 562 5
@@ -4125,49 +3962,49 @@ fn=check_match
 64 27
 fl=/usr/src/debug/glibc-2.40-23.fc41.x86_64/elf/dl-lookup.c
 fn=_dl_lookup_symbol_x
-772 34567
-774 10636
-776 23931
-778 2659
-782 9792
-784 3081
-785 5318
-791 21442
-792 63782
-797 5318
+772 34307
+774 10556
+776 23751
+778 2639
+782 9716
+784 3059
+785 5278
+791 21282
+792 63302
+797 5278
 799 204
-816 5318
+816 5278
 817 102
-820 5318
-821 18363
-856 23625
-870 7875
+820 5278
+821 18223
+856 23445
+870 7815
 871 2
-873 5250
+873 5210
 880 136
-892 23931
+892 23751
 fn=check_match
-70 39450
-73 21040
+70 39150
+73 20880
 78 9
-86 13150
-89 8242
-93 2627
-94 5254
-96 4478
-115 4478
-116 17912
-117 11180
+86 13050
+89 8136
+93 2607
+94 5214
+96 4442
+115 4442
+116 17768
+117 11090
 118 6
 119 6
-144 776
-146 2328
-147 1552
+144 772
+146 2316
+147 1544
 150 8
 151 28
 153 16
-161 2621
-162 21040
+161 2601
+162 20880
 fn=do_lookup_x
 170 300
 171 307
@@ -4215,50 +4052,50 @@ fn=do_lookup_x
 331 168
 333 252
 334 168
-347 37226
-348 2659
-353 2659
-354 2659
-358 35504
-361 35504
-365 46560
-386 35438
-390 35438
-396 53157
-400 17719
-401 17719
-404 88595
-405 53157
-408 17719
-409 35438
-411 17719
-412 35438
-413 17719
-416 70876
-419 124033
-422 6642
-423 9963
-424 6642
-426 6322
-429 37185
-431 7890
-432 68430
-433 5260
-436 7890
-439 14466
-448 3780
-453 20968
-470 1084
+347 36946
+348 2639
+353 2639
+354 2639
+358 35216
+361 35216
+365 46192
+386 35150
+390 35150
+396 52725
+400 17575
+401 17575
+404 87875
+405 52725
+408 17575
+409 35150
+411 17575
+412 35150
+413 17575
+416 70300
+419 123025
+422 6592
+423 9888
+424 6592
+426 6278
+429 36885
+431 7830
+432 67930
+433 5220
+436 7830
+439 14346
+448 3766
+453 20808
+470 1080
 472 8
-476 5250
-483 14240
-487 4944
-499 5082
-500 2541
-501 2625
-518 45381
+476 5210
+483 14108
+487 4923
+499 5042
+500 2521
+501 2605
+518 45009
 521 34
-522 21273
+522 21113
 fl=/usr/src/debug/glibc-2.40-23.fc41.x86_64/elf/dl-minimal-malloc.c
 fn=__minimal_calloc
 80 155
@@ -4480,31 +4317,31 @@ fn=_dl_relocate_object
 350 120
 fl=/usr/src/debug/glibc-2.40-23.fc41.x86_64/elf/dl-runtime.c
 fn=_dl_fixup
-46 2068
-48 940
-49 564
-54 188
-55 752
-56 1316
-58 376
-63 376
-67 376
-69 208
-71 564
-75 564
-76 752
-77 564
-84 188
-85 564
-95 2068
-99 940
-109 1880
-124 752
-125 12
-133 564
-159 564
-162 376
-163 1504
+46 1848
+48 840
+49 504
+54 168
+55 672
+56 1176
+58 336
+63 336
+67 336
+69 186
+71 504
+75 504
+76 672
+77 504
+84 168
+85 504
+95 1848
+99 840
+109 1680
+124 672
+125 10
+133 504
+159 504
+162 336
+163 1344
 fl=/usr/src/debug/glibc-2.40-23.fc41.x86_64/elf/dl-setup_hash.c
 fn=_dl_setup_hash
 25 28
@@ -4564,18 +4401,18 @@ fn=__GI___tunable_set_val
 163 36
 165 6
 fn=__GI___tunables_init
-43 535
-46 106
-49 12664
-53 212
-57 424
+43 540
+46 107
+49 12714
+53 214
+57 428
 294 11
 300 3
 304 32
-317 2968
-319 5724
-320 2862
-322 2862
+317 2996
+319 5778
+320 2889
+322 2889
 340 6
 343 27
 346 27
@@ -4605,8 +4442,8 @@ fn=do_tunable_update_val
 119 12
 fl=/usr/src/debug/glibc-2.40-23.fc41.x86_64/elf/dl-tunables.h
 fn=__GI___tunables_init
-160 1706
-161 4706
+160 1717
+161 4747
 fn=do_tunable_update_val
 142 12
 fl=/usr/src/debug/glibc-2.40-23.fc41.x86_64/elf/dl-version.c
@@ -5127,12 +4964,6 @@ fn=fstatat
 160 8
 161 19
 162 1
-fl=/usr/src/debug/glibc-2.40-23.fc41.x86_64/io/../sysdeps/unix/sysv/linux/open64.c
-fn=open
-30 9
-33 9
-41 9
-43 8
 fl=/usr/src/debug/glibc-2.40-23.fc41.x86_64/io/../sysdeps/unix/sysv/linux/open64_nocancel.c
 fn=__open_nocancel
 28 88
@@ -5144,10 +4975,6 @@ fn=__pread64_nocancel
 25 4
 26 8
 27 2
-fl=/usr/src/debug/glibc-2.40-23.fc41.x86_64/io/../sysdeps/unix/sysv/linux/read.c
-fn=read
-25 1
-26 4
 fl=/usr/src/debug/glibc-2.40-23.fc41.x86_64/io/../sysdeps/unix/sysv/linux/read_nocancel.c
 fn=__read_nocancel
 25 12
@@ -5163,87 +4990,24 @@ fn=__vsprintf_internal
 126 1
 127 1
 128 1
-fl=/usr/src/debug/glibc-2.40-23.fc41.x86_64/libio/fileno.c
-fn=fileno
-32 1
-35 5
-42 1
-fl=/usr/src/debug/glibc-2.40-23.fc41.x86_64/libio/fileops.c
-fn=_IO_file_fopen@@GLIBC_2.2.5
-213 12
-214 2
-222 2
-224 5
-227 1
-228 1
-237 1
-245 1
-247 13
-281 5
-284 2
-287 4
-288 2
-357 12
-fn=_IO_file_open
-182 12
-184 2
-185 1
-188 2
-189 2
-191 1
-192 6
-195 3
-205 2
-206 1
-207 6
-fn=_IO_new_file_init_internal
-106 6
-110 1
-111 1
-113 1
-114 1
-115 3
 fl=/usr/src/debug/glibc-2.40-23.fc41.x86_64/libio/genops.c
-fn=_IO_link_in
-108 14
-109 10
-111 2
-113 7
-114 9
-115 1
-116 10
-118 2
-121 2
-122 2
-123 2
-125 1
-127 8
-128 1
-129 6
-130 2
-133 19
 fn=_IO_no_init
-590 22
-591 2
-592 2
-593 4
-595 1
-599 6
-606 1
-608 1
+590 11
+591 1
+592 1
+593 2
 613 2
-614 2
-615 12
+614 1
+615 6
 fn=_IO_old_init
-558 2
-559 4
-561 12
-566 14
-571 2
-577 4
-582 6
-583 2
-585 2
+558 1
+559 2
+561 6
+566 7
+571 1
+577 2
+582 3
+585 1
 fn=_IO_setb
 356 11
 357 4
@@ -5260,21 +5024,6 @@ fn=_IO_sputbackc
 674 6
 675 12
 678 30
-fl=/usr/src/debug/glibc-2.40-23.fc41.x86_64/libio/iofopen.c
-fn=__fopen_internal
-37 2
-57 12
-65 2
-67 3
-70 2
-72 7
-73 2
-74 2
-75 7
-81 9
-fn=fopen@@GLIBC_2.2.5
-85 1
-86 2
 fl=/usr/src/debug/glibc-2.40-23.fc41.x86_64/libio/iovsprintf.c
 fn=__vsprintf_internal
 37 13
@@ -5338,9 +5087,9 @@ fn=ptmalloc_init.part.0
 100 6
 fl=/usr/src/debug/glibc-2.40-23.fc41.x86_64/malloc/arena.c
 fn=free
-153 2934
+153 2313
 fn=malloc
-153 768
+153 650
 264 1
 fn=ptmalloc_init.part.0
 262 8
@@ -5363,112 +5112,112 @@ fn=ptmalloc_init.part.0
 326 8
 fl=/usr/src/debug/glibc-2.40-23.fc41.x86_64/malloc/malloc.c
 fn=_int_free
-1792 115
-1992 336
-3163 1726
-3165 3452
-3166 863
-3167 1726
-4495 6846
-4499 2934
-4505 3912
-4506 1956
-4510 4890
-4517 1956
-4518 5868
-4521 975
-4527 2925
-4547 4875
-4550 863
-4561 230
-4572 448
-4574 336
-4593 112
-4595 112
-4596 112
-4600 336
-4602 224
-4606 224
-4608 336
-4609 112
-4628 448
-4637 6
-4640 6
-4643 6
-4646 6
-4658 5865
+1792 60
+1992 174
+3163 1422
+3165 2844
+3166 711
+3167 1422
+4495 5397
+4499 2313
+4505 3084
+4506 1542
+4510 3855
+4517 1542
+4518 4626
+4521 769
+4527 2307
+4547 3845
+4550 711
+4561 120
+4572 232
+4574 174
+4593 58
+4595 58
+4596 58
+4600 174
+4602 116
+4606 116
+4608 174
+4609 58
+4628 232
+4637 4
+4640 4
+4643 4
+4646 4
+4658 4624
 fn=_int_free_create_chunk
-4713 30
-4714 6
-4720 6
-4724 3
-4732 3
-4733 12
-4734 6
-4736 3
-4738 6
-4740 6
-4743 3
-4744 3
-4746 9
-4747 3
-4763 18
+4713 20
+4714 4
+4720 4
+4724 2
+4732 2
+4733 8
+4734 4
+4736 2
+4738 4
+4740 4
+4743 2
+4744 2
+4746 6
+4747 2
+4763 12
 fn=_int_free_merge_chunk
-1992 9
-4665 24
-4666 3
-4670 18
-4673 12
-4675 9
-4678 9
-4681 6
-4682 6
-4683 6
-4689 6
-4700 18
-4702 24
-4776 6
+1992 6
+4665 16
+4666 2
+4670 12
+4673 8
+4675 6
+4678 6
+4681 4
+4682 4
+4683 4
+4689 4
+4700 12
+4702 16
+4776 4
 fn=_int_malloc
-1326 770
-1345 1540
-1794 384
-1985 60
-3159 8
-3163 52
-3165 92
-3166 26
-3167 68
-3168 44
+1326 652
+1345 1304
+1794 325
+1985 45
+3159 6
+3163 42
+3165 73
+3166 21
+3167 55
+3168 41
 3178 6
 3182 4
 3186 8
 3190 2
 3191 4
 3199 2
-3846 3850
-3887 770
-3914 773
-3916 1368
-3917 4
-3919 344
-3921 686
-3923 8
-3926 8
-3927 20
-3930 1017
-3932 8
-3933 8
-3939 8
-3940 24
-3945 20
-3946 97
-3948 32
-3950 32
-3951 96
-3977 84
-3979 900
-3980 750
-3982 1125
+3846 3260
+3887 652
+3914 655
+3916 1140
+3917 2
+3919 287
+3921 572
+3923 4
+3926 4
+3927 10
+3930 852
+3932 4
+3933 4
+3939 4
+3940 12
+3945 15
+3946 72
+3948 26
+3950 26
+3951 78
+3977 80
+3979 780
+3980 638
+3982 957
 3984 2
 3985 4
 3987 2
@@ -5477,205 +5226,205 @@ fn=_int_malloc
 3991 6
 3997 4
 3998 12
-4003 24
-4004 50
-4006 16
-4008 8
-4009 8
-4010 16
-4012 8
-4013 8
+4003 20
+4004 40
+4006 12
+4008 6
+4009 6
+4010 12
+4012 6
+4013 6
 4020 2
-4039 50
-4040 18
-4041 9
-4058 1135
-4059 1137
-4060 1137
-4069 80
-4070 2045
-4072 76
-4073 152
-4074 76
-4076 152
-4077 228
-4079 76
-4080 304
-4082 304
-4084 152
-4085 152
-4087 152
-4098 304
-4099 74
-4100 68
-4101 34
-4104 26
-4105 26
-4106 26
-4107 78
-4108 78
-4109 52
+4039 40
+4040 15
+4041 6
+4058 964
+4059 966
+4060 966
+4069 50
+4070 1676
+4072 36
+4073 72
+4074 36
+4076 72
+4077 108
+4079 36
+4080 144
+4082 144
+4084 72
+4085 72
+4087 72
+4098 144
+4099 46
+4100 42
+4101 21
+4104 14
+4105 14
+4106 14
+4107 42
+4108 42
+4109 28
 4111 6
-4115 208
-4117 78
-4118 26
-4121 28
-4122 26
-4127 50
-4128 50
-4132 100
+4115 112
+4117 42
+4118 14
+4121 16
+4122 14
+4127 22
+4128 22
+4132 44
 4134 4
 4135 6
 4140 4
 4141 12
 4144 2
 4145 2
-4161 100
-4163 88
-4164 176
-4165 44
-4169 32
-4170 12
-4171 4
-4174 8
-4218 1384
-4221 288
-4222 48
-4223 48
-4224 48
-4225 48
-4230 96
-4231 144
-4240 144
-4246 42
+4161 42
+4163 36
+4164 72
+4165 18
+4169 16
+4170 6
+4171 2
+4174 4
+4218 1200
+4221 120
+4222 20
+4223 20
+4224 20
+4225 20
+4230 40
+4231 60
+4240 60
+4246 33
 4248 2
-4257 1053
-4259 24
-4262 18
-4263 351
-4330 351
-4331 702
-4332 702
-4333 702
-4334 2106
-4339 1443
-4343 4005
-4346 4985
-4348 15
-4349 10
-4353 284
-4355 116
-4357 232
-4361 26
-4364 52
-4366 60
-4367 12
-4368 12
-4373 42
-4376 28
-4378 42
-4381 42
-4384 56
-4386 3
-4387 9
-4394 11
-4399 44
-4400 22
-4403 11
-4404 11
-4405 11
-4408 22
-4409 10
-4410 22
+4257 918
+4259 20
+4262 15
+4263 306
+4330 306
+4331 612
+4332 612
+4333 612
+4334 1836
+4339 1248
+4343 3504
+4346 4362
+4348 9
+4349 6
+4353 218
+4355 90
+4357 180
+4361 19
+4364 38
+4366 40
+4367 8
+4368 8
+4373 33
+4376 22
+4378 33
+4381 33
+4384 44
+4386 1
+4387 3
+4394 10
+4399 40
+4400 20
+4403 10
+4404 10
+4405 10
+4408 20
+4409 9
+4410 20
 4412 2
-4415 88
-4417 33
-4418 11
-4421 14
-4443 337
-4444 674
-4446 674
-4449 1011
-4451 336
-4452 336
-4453 336
-4454 2688
-4456 672
-4459 336
-4460 336
+4415 80
+4417 30
+4418 10
+4421 11
+4443 295
+4444 590
+4446 590
+4449 885
+4451 294
+4452 294
+4453 294
+4454 2352
+4456 588
+4459 294
+4460 294
 4466 4
 4481 4
 4482 2
-4483 2178
-4487 3465
+4483 1854
+4487 2934
 fn=alloc_perturb
-1985 1089
-1987 363
+1985 927
+1987 309
 fn=free
-3359 6846
-3363 1956
-3371 1956
-3373 978
-3375 2934
-3392 2934
-3398 2934
-3401 978
-3402 5868
+3359 5397
+3363 1542
+3371 1542
+3373 771
+3375 2313
+3392 2313
+3398 2313
+3401 771
+3402 4626
 fn=malloc
-1326 2482
-1345 6204
-3178 1714
-3182 1714
-3186 3428
-3190 1714
-3191 857
+1326 2064
+1345 5159
+3178 1414
+3182 1414
+3186 2828
+3190 1414
+3191 707
 3248 4
-3294 9928
-3301 2482
-3311 2480
-3313 4964
-3316 2482
-3318 3708
-3326 768
-3328 1536
-3329 1920
-3354 7446
+3294 8256
+3301 2064
+3311 2062
+3313 4128
+3316 2064
+3318 3084
+3326 650
+3328 1300
+3329 1625
+3354 6192
 fn=malloc_consolidate
-4811 27
-4826 3
-4828 6
-4839 3
-4841 60
-4842 60
-4845 184
-4849 276
-4850 368
-4855 460
-4858 184
-4859 92
-4860 276
-4862 184
-4863 24
-4864 24
-4865 24
-4866 96
-4868 288
-4871 184
-4874 184
-4875 64
-4876 192
-4878 120
-4880 92
-4881 184
-4882 184
-4884 184
-4885 10
-4889 276
-4891 92
-4892 92
-4901 269
-4904 90
-4905 24
+4811 18
+4826 2
+4828 4
+4839 2
+4841 40
+4842 40
+4845 64
+4849 96
+4850 128
+4855 160
+4858 64
+4859 32
+4860 96
+4862 64
+4863 8
+4864 8
+4865 8
+4866 32
+4868 96
+4871 64
+4874 64
+4875 26
+4876 78
+4878 38
+4880 32
+4881 64
+4882 64
+4884 64
+4885 6
+4889 96
+4891 32
+4892 32
+4901 92
+4904 60
+4905 16
 fn=ptmalloc_init.part.0
 1946 386
 1949 381
@@ -5742,20 +5491,20 @@ fn=tcache_init.part.0
 3270 2
 3274 3
 fn=unlink_chunk.isra.0
-1608 140
-1610 350
-1613 140
-1614 140
-1616 280
-1619 70
-1620 70
-1621 161
-1623 6
-1624 9
-1627 6
-1641 3
-1642 3
-1645 140
+1608 64
+1610 160
+1613 64
+1614 64
+1616 128
+1619 32
+1620 32
+1621 79
+1623 4
+1624 6
+1627 4
+1641 2
+1642 2
+1645 64
 fl=/usr/src/debug/glibc-2.40-23.fc41.x86_64/malloc/morecore.c
 fn=__glibc_morecore
 25 6
@@ -5975,21 +5724,21 @@ fn=_pthread_cleanup_push@@GLIBC_2.34
 33 2
 fl=/usr/src/debug/glibc-2.40-23.fc41.x86_64/nptl/libc-cleanup.c
 fn=__libc_cleanup_pop_restore
-54 2
-55 2
-57 4
-59 2
-60 6
-71 2
+54 1
+55 1
+57 2
+59 1
+60 3
+71 1
 fn=__libc_cleanup_push_defer
-24 2
-25 2
-27 4
-29 4
-32 4
-46 6
-48 2
-49 2
+24 1
+25 1
+27 2
+29 2
+32 2
+46 3
+48 1
+49 1
 fl=/usr/src/debug/glibc-2.40-23.fc41.x86_64/nptl/pthread_mutex_conf.c
 fn=__pthread_tunables_init
 55 5
@@ -6011,11 +5760,11 @@ fn=__pthread_once_slow.isra.0
 124 2
 132 18
 fn=pthread_once@@GLIBC_2.34
-136 176
-139 172
-140 344
+136 172
+139 168
+140 336
 143 2
-144 346
+144 338
 fl=/usr/src/debug/glibc-2.40-23.fc41.x86_64/posix/../sysdeps/unix/syscall-template.S
 fn=uname
 120 5
@@ -6536,39 +6285,39 @@ fn=__mpn_cmp
 47 5
 fl=/usr/src/debug/glibc-2.40-23.fc41.x86_64/stdlib/cxa_atexit.c
 fn=__cxa_atexit
-67 23
-68 46
+67 22
+68 44
 fn=__internal_atexit
-36 184
-41 46
-43 184
-44 46
-46 46
-52 69
-53 23
-54 23
-55 23
-56 23
-57 92
-58 23
-59 161
+36 176
+41 44
+43 176
+44 44
+46 44
+52 66
+53 22
+54 22
+55 22
+56 22
+57 88
+58 22
+59 154
 fn=__new_exitfn
-80 115
-81 23
-86 46
-91 142
-93 92
-94 110
+80 110
+81 22
+86 44
+91 136
+93 88
+94 105
 101 1
-104 44
+104 42
 122 1
 123 1
-129 66
-130 44
+129 63
+130 42
 134 1
-136 23
-137 23
-141 115
+136 22
+137 22
+141 110
 fl=/usr/src/debug/glibc-2.40-23.fc41.x86_64/stdlib/divrem.c
 fn=__mpn_divrem
 46 39
@@ -6591,10 +6340,10 @@ fn=getenv
 46 4
 47 1
 49 3
-50 107
-52 107
-53 214
-58 318
+50 108
+52 108
+53 216
+58 321
 59 132
 72 3
 157 8
@@ -6717,23 +6466,15 @@ fn=strcspn
 53 4
 54 4
 56 4
-61 12
-62 24
-63 24
-64 24
-65 12
-67 72
+61 13
+62 26
+63 26
+64 26
+65 13
+67 78
 69 1
 70 4
 71 3
-fl=/usr/src/debug/glibc-2.40-23.fc41.x86_64/string/../string/strstr.c
-fn=__GI_strstr
-45 1
-77 13
-82 3
-84 5
-85 2
-161 12
 fl=/usr/src/debug/glibc-2.40-23.fc41.x86_64/string/../sysdeps/x86/cacheinfo.c
 fn=__x86_cacheinfo
 86 3
@@ -6888,46 +6629,46 @@ fn=index
 147 15
 fl=/usr/src/debug/glibc-2.40-23.fc41.x86_64/string/../sysdeps/x86_64/multiarch/../multiarch/strcmp-sse2.S
 fn=strcmp
-98 4621
-131 4621
-132 4621
-134 4621
-135 4621
-156 4621
-157 4621
-158 3819
-159 3819
-160 3119
-161 3119
-162 3119
-163 3119
-180 3119
-181 3119
-182 3119
-183 3119
-184 3119
-185 3119
-186 3119
-191 199
-192 597
-201 1701
-202 1701
-203 1701
-204 1701
-205 1701
-206 1701
-207 1701
-208 1701
-209 1119
-210 751
-211 751
-212 751
-214 1119
-215 1119
-216 1119
-217 1119
-218 1119
-219 1119
+98 4592
+131 4592
+132 4592
+134 4592
+135 4592
+156 4592
+157 4592
+158 3794
+159 3794
+160 3095
+161 3095
+162 3095
+163 3095
+180 3095
+181 3095
+182 3095
+183 3095
+184 3095
+185 3095
+186 3095
+191 195
+192 585
+201 1692
+202 1692
+203 1692
+204 1692
+205 1692
+206 1692
+207 1692
+208 1692
+209 1110
+210 746
+211 746
+212 746
+214 1110
+215 1110
+216 1110
+217 1110
+218 1110
+219 1110
 229 582
 230 582
 231 582
@@ -7053,39 +6794,39 @@ fn=strcmp
 508 3
 509 3
 510 3
-542 20
-543 20
-544 20
-545 20
-546 20
-548 20
-549 20
-550 20
-551 20
-552 20
-553 20
-554 20
-555 20
-559 20
-560 20
-561 20
-567 20
-568 20
-569 40
-573 31
-574 31
-577 31
-578 31
-579 31
-581 31
-582 31
-583 31
-587 31
-588 31
-589 31
-590 31
-591 31
-592 31
+542 19
+543 19
+544 19
+545 19
+546 19
+548 19
+549 19
+550 19
+551 19
+552 19
+553 19
+554 19
+555 19
+559 19
+560 19
+561 19
+567 19
+568 19
+569 38
+573 30
+574 30
+577 30
+578 30
+579 30
+581 30
+582 30
+583 30
+587 30
+588 30
+589 30
+590 30
+591 30
+592 30
 599 14
 600 14
 602 14
@@ -7209,58 +6950,58 @@ fn=strcmp
 865 9
 866 9
 867 9
-899 48
-900 48
-901 48
-902 48
-903 48
-905 48
-906 48
-907 48
-908 48
-909 48
-910 48
-911 48
-912 25
-916 25
-917 25
-918 25
-924 25
-925 25
-926 50
-930 30
-931 30
-934 30
-935 30
-936 30
-938 30
-939 30
-940 30
-944 30
-945 30
-946 30
-947 30
-948 30
-949 30
-956 15
-957 15
-959 15
-960 15
-962 15
-963 15
-964 15
-966 15
-967 15
-968 15
-972 15
-973 15
-974 15
-975 15
-976 15
-977 15
-984 5
-985 5
-986 5
+899 47
+900 47
+901 47
+902 47
+903 47
+905 47
+906 47
+907 47
+908 47
+909 47
+910 47
+911 47
+912 24
+916 24
+917 24
+918 24
+924 24
+925 24
+926 48
+930 27
+931 27
+934 27
+935 27
+936 27
+938 27
+939 27
+940 27
+944 27
+945 27
+946 27
+947 27
+948 27
+949 27
+956 12
+957 12
+959 12
+960 12
+962 12
+963 12
+964 12
+966 12
+967 12
+968 12
+972 12
+973 12
+974 12
+975 12
+976 12
+977 12
+984 3
+985 3
+986 3
 1018 40
 1019 40
 1020 40
@@ -7476,122 +7217,122 @@ fn=strcmp
 1460 14
 1461 14
 1462 14
-1494 61
-1495 61
-1496 61
-1497 61
-1498 61
-1500 61
-1501 61
-1502 61
-1503 61
-1504 61
-1505 61
-1506 61
-1507 35
-1511 35
-1512 35
-1513 35
-1519 35
-1520 35
-1521 70
-1525 54
-1526 54
-1529 54
-1530 54
-1531 54
-1533 54
-1534 54
-1535 54
-1539 54
-1540 54
-1541 54
-1542 54
-1543 54
-1544 54
-1551 27
-1552 27
-1554 27
-1555 27
-1557 27
-1558 27
-1559 27
-1561 27
-1562 27
-1563 27
-1567 27
-1568 27
-1569 27
-1570 27
-1571 27
-1572 27
-1579 19
-1580 19
-1581 19
-1613 181
-1614 181
-1615 181
-1616 181
-1617 181
-1619 181
-1620 181
-1621 181
-1622 181
-1623 181
-1624 181
-1625 181
-1626 105
-1630 105
-1631 105
-1632 105
-1638 105
-1639 105
-1640 210
-1644 116
-1645 116
-1648 116
-1649 116
-1650 116
-1652 116
-1653 116
-1654 116
-1658 116
-1659 116
-1660 116
-1661 116
-1662 116
-1663 116
-1670 25
-1671 25
-1673 25
-1674 25
-1676 25
-1677 25
-1678 25
-1680 25
-1681 25
-1682 25
-1686 25
-1687 25
-1688 25
-1689 25
-1690 25
-1691 25
-1698 11
-1699 11
-1700 11
-1732 120
-1733 120
-1734 120
-1735 120
-1736 120
-1738 120
-1739 120
-1740 120
-1741 120
-1742 120
-1743 120
-1744 120
+1494 60
+1495 60
+1496 60
+1497 60
+1498 60
+1500 60
+1501 60
+1502 60
+1503 60
+1504 60
+1505 60
+1506 60
+1507 34
+1511 34
+1512 34
+1513 34
+1519 34
+1520 34
+1521 68
+1525 51
+1526 51
+1529 51
+1530 51
+1531 51
+1533 51
+1534 51
+1535 51
+1539 51
+1540 51
+1541 51
+1542 51
+1543 51
+1544 51
+1551 25
+1552 25
+1554 25
+1555 25
+1557 25
+1558 25
+1559 25
+1561 25
+1562 25
+1563 25
+1567 25
+1568 25
+1569 25
+1570 25
+1571 25
+1572 25
+1579 17
+1580 17
+1581 17
+1613 178
+1614 178
+1615 178
+1616 178
+1617 178
+1619 178
+1620 178
+1621 178
+1622 178
+1623 178
+1624 178
+1625 178
+1626 102
+1630 102
+1631 102
+1632 102
+1638 102
+1639 102
+1640 204
+1644 110
+1645 110
+1648 110
+1649 110
+1650 110
+1652 110
+1653 110
+1654 110
+1658 110
+1659 110
+1660 110
+1661 110
+1662 110
+1663 110
+1670 19
+1671 19
+1673 19
+1674 19
+1676 19
+1677 19
+1678 19
+1680 19
+1681 19
+1682 19
+1686 19
+1687 19
+1688 19
+1689 19
+1690 19
+1691 19
+1698 8
+1699 8
+1700 8
+1732 119
+1733 119
+1734 119
+1735 119
+1736 119
+1738 119
+1739 119
+1740 119
+1741 119
+1742 119
+1743 119
+1744 119
 1745 53
 1749 53
 1750 53
@@ -7632,39 +7373,39 @@ fn=strcmp
 1817 18
 1818 18
 1819 18
-1851 120
-1852 120
-1853 120
-1854 120
-1855 120
-1857 120
-1858 120
-1859 120
-1860 120
-1861 120
-1862 120
-1863 120
-1864 62
-1868 62
-1869 62
-1870 62
-1876 62
-1877 62
-1878 124
-1882 78
-1883 78
-1886 78
-1887 78
-1888 78
-1890 78
-1891 78
-1892 78
-1896 78
-1897 78
-1898 78
-1899 78
-1900 78
-1901 78
+1851 119
+1852 119
+1853 119
+1854 119
+1855 119
+1857 119
+1858 119
+1859 119
+1860 119
+1861 119
+1862 119
+1863 119
+1864 61
+1868 61
+1869 61
+1870 61
+1876 61
+1877 61
+1878 122
+1882 77
+1883 77
+1886 77
+1887 77
+1888 77
+1890 77
+1891 77
+1892 77
+1896 77
+1897 77
+1898 77
+1899 77
+1900 77
+1901 77
 1908 30
 1909 30
 1911 30
@@ -7684,55 +7425,55 @@ fn=strcmp
 1936 16
 1937 16
 1938 16
-1970 122
-1971 122
-1972 122
-1973 122
-1974 122
-1976 122
-1977 122
-1978 122
-1979 122
-1980 122
-1981 122
-1982 122
-1984 46
-1988 46
-1989 46
-1990 46
-1996 46
-1997 46
-1999 92
-2003 66
-2004 66
-2007 66
-2008 66
-2009 66
-2011 66
-2012 66
-2013 66
-2017 66
-2018 66
-2019 66
-2020 66
-2021 66
-2022 66
-2029 37
-2030 37
-2032 37
-2033 37
-2035 37
-2036 37
-2037 37
-2039 37
-2040 37
-2041 37
-2045 37
-2046 37
-2047 37
-2048 37
-2049 37
-2050 37
+1970 121
+1971 121
+1972 121
+1973 121
+1974 121
+1976 121
+1977 121
+1978 121
+1979 121
+1980 121
+1981 121
+1982 121
+1984 45
+1988 45
+1989 45
+1990 45
+1996 45
+1997 45
+1999 90
+2003 65
+2004 65
+2007 65
+2008 65
+2009 65
+2011 65
+2012 65
+2013 65
+2017 65
+2018 65
+2019 65
+2020 65
+2021 65
+2022 65
+2029 36
+2030 36
+2032 36
+2033 36
+2035 36
+2036 36
+2037 36
+2039 36
+2040 36
+2041 36
+2045 36
+2046 36
+2047 36
+2048 36
+2049 36
+2050 36
 2057 20
 2058 20
 2059 20
@@ -7747,17 +7488,17 @@ fn=strcmp
 2087 1
 2088 1
 2089 2
-2093 1100
-2095 1701
-2096 1701
-2097 1701
-2098 1701
-2099 1502
-2104 4621
-2110 4621
-2111 4621
-2119 4621
-2120 4621
+2093 1092
+2095 1692
+2096 1692
+2097 1692
+2098 1692
+2099 1492
+2104 4592
+2110 4592
+2111 4592
+2119 4592
+2120 4592
 fn=strncmp
 98 5
 125 5
@@ -7950,14 +7691,14 @@ fn=memchr
 54 12
 fl=/usr/src/debug/glibc-2.40-23.fc41.x86_64/string/../sysdeps/x86_64/multiarch/ifunc-memcmp.h
 fn=bcmp
-34 25
-35 10
-36 10
-37 15
-40 10
-41 10
-44 15
-47 20
+34 20
+35 8
+36 8
+37 12
+40 8
+41 8
+44 12
+47 16
 fl=/usr/src/debug/glibc-2.40-23.fc41.x86_64/string/../sysdeps/x86_64/multiarch/ifunc-memmove.h
 fn=memcpy@@GLIBC_2.14
 56 4
@@ -8079,233 +7820,181 @@ fn=strncpy
 46 8
 fl=/usr/src/debug/glibc-2.40-23.fc41.x86_64/string/../sysdeps/x86_64/multiarch/memchr-avx2.S
 fn=__memchr_avx2
-61 539
-68 539
-70 539
-73 539
-74 539
-76 539
-77 539
-78 539
-79 539
-82 539
-83 539
-86 539
-87 539
+61 506
+68 506
+70 506
+73 506
+74 506
+76 506
+77 506
+78 506
+79 506
+82 506
+83 506
+86 506
+87 506
 89 1
 90 1
 91 1
 92 1
 94 2
-101 538
-106 538
-113 538
-114 538
+101 505
+106 505
+113 505
+114 505
 115 72
 116 72
-128 466
-129 466
+128 433
+129 433
 fl=/usr/src/debug/glibc-2.40-23.fc41.x86_64/string/../sysdeps/x86_64/multiarch/memchr.c
 fn=memchr
 29 6
 fl=/usr/src/debug/glibc-2.40-23.fc41.x86_64/string/../sysdeps/x86_64/multiarch/memcmp-avx2-movbe.S
 fn=__memcmp_avx2_movbe
-73 878
-80 878
-81 878
-84 1
-85 1
-86 1
-90 1
-91 1
-93 1
-94 1
-97 1
-98 1
-99 1
-102 1
-103 1
-106 1
-107 1
-110 1
-111 1
-112 1
-113 1
-114 1
-115 1
-116 1
-117 1
-118 1
-119 1
-122 1
-123 1
-129 1
-130 1
-131 1
-132 1
-136 1
-137 1
-139 1
-140 1
-141 1
-142 1
-145 1
-146 1
-147 1
-148 1
-149 1
-150 1
-152 2
-156 566
-166 566
-167 566
-168 566
-171 1132
-401 877
-402 877
-407 827
-408 827
-409 827
-410 827
-411 827
-414 707
-415 707
-416 707
-417 707
-420 707
-421 707
-422 142
-423 284
-429 120
-430 120
-432 117
-433 117
-435 92
-436 92
-438 66
-439 66
-440 66
-441 66
-442 66
-443 66
-444 66
-445 66
-446 66
-448 66
-450 6
-454 50
-455 50
-456 50
-457 50
-459 50
-463 83
-464 83
-466 83
-476 25
-477 25
-478 25
-479 25
-480 2
-481 2
-482 2
-484 2
-486 2
+73 337
+80 337
+81 337
+156 257
+166 257
+167 257
+168 257
+171 514
+401 337
+402 337
+407 322
+408 322
+409 322
+410 322
+411 322
+414 311
+415 311
+416 311
+417 311
+420 311
+421 311
+422 56
+423 112
+429 11
+430 11
+432 8
+433 8
+435 8
+436 8
+438 4
+439 4
+440 4
+441 4
+442 4
+443 4
+444 4
+445 4
+446 4
+448 4
+450 3
+454 15
+455 15
+456 15
+457 15
+459 15
+463 1
+464 1
+466 1
 512 3
 513 3
 514 3
 515 3
 516 3
-520 2
-521 2
-522 2
-523 2
-524 2
-525 2
-527 2
-529 2
-553 26
-554 26
-555 26
-556 26
-557 26
-558 26
-559 26
-560 26
-561 26
-562 26
-564 26
-566 26
+520 1
+521 1
+522 1
+523 1
+524 1
+525 1
+527 1
+529 1
+553 4
+554 4
+555 4
+556 4
+557 4
+558 4
+559 4
+560 4
+561 4
+562 4
+564 4
+566 4
 fl=/usr/src/debug/glibc-2.40-23.fc41.x86_64/string/../sysdeps/x86_64/multiarch/memcmp.c
 fn=bcmp
-29 20
+29 16
 fl=/usr/src/debug/glibc-2.40-23.fc41.x86_64/string/../sysdeps/x86_64/multiarch/memcmpeq.c
 fn=memcpy@@GLIBC_2.14
 29 2
 fl=/usr/src/debug/glibc-2.40-23.fc41.x86_64/string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
 fn=__memcpy_avx_unaligned_erms
-255 93
-256 93
-262 93
-263 93
-265 6
-266 6
-267 6
-270 6
-271 6
-272 6
-275 12
-305 87
-306 87
-308 59
-309 59
-311 43
-315 43
-316 24
-317 24
-318 24
-319 24
-320 24
-321 24
-323 24
-325 24
-331 19
-332 19
-333 19
-334 19
-335 19
-342 28
-343 28
-344 28
-345 28
-347 28
-364 16
-365 16
-366 16
-367 16
-368 16
+255 79
+256 79
+262 79
+263 79
+265 5
+266 5
+267 5
+270 5
+271 5
+272 5
+275 10
+305 74
+306 74
+308 49
+309 49
+311 37
+315 37
+316 22
+317 22
+318 22
+319 22
+320 22
+321 22
+323 22
+325 22
+331 15
+332 15
+333 15
+334 15
+335 15
+342 25
+343 25
+344 25
+345 25
+347 25
+364 12
+365 12
+366 12
+367 12
+368 12
 fn=__memcpy_sse2_unaligned_erms
-308 2851
-309 2851
-311 1836
-315 1836
-316 873
-317 873
-318 873
-319 873
-320 873
-321 873
-323 873
-325 873
-331 963
-332 963
-333 963
-334 963
-335 963
-364 1015
-365 1015
-366 1015
-367 1015
-368 1015
+308 2513
+309 2513
+311 1633
+315 1633
+316 813
+317 813
+318 813
+319 813
+320 813
+321 813
+323 813
+325 813
+331 820
+332 820
+333 820
+334 820
+335 820
+364 880
+365 880
+366 880
+367 880
+368 880
 375 24
 376 24
 377 24
@@ -8431,17 +8120,17 @@ fn=memcpy
 501 2
 505 2
 fn=memcpy@GLIBC_2.2.5
-210 3530
-211 3530
-217 3530
-218 3530
-220 679
-221 679
-222 679
-224 653
-225 653
-226 653
-230 653
+210 3064
+211 3064
+217 3064
+218 3064
+220 551
+221 551
+222 551
+224 525
+225 525
+226 525
+230 525
 fn=mempcpy
 197 60
 198 60
@@ -8475,27 +8164,6 @@ fl=/usr/src/debug/glibc-2.40-23.fc41.x86_64/string/../sysdeps/x86_64/multiarch/s
 fn=strcat
 29 3
 fl=/usr/src/debug/glibc-2.40-23.fc41.x86_64/string/../sysdeps/x86_64/multiarch/strchr-avx2.S
-fn=__strchr_avx2
-53 1
-55 1
-56 1
-57 1
-58 1
-59 1
-62 1
-63 1
-67 1
-68 1
-69 1
-70 1
-71 1
-72 1
-73 1
-74 1
-77 1
-85 1
-93 1
-94 2
 fn=__strchrnul_avx2
 53 2
 55 2
@@ -8581,38 +8249,38 @@ fn=strcspn
 29 2
 fl=/usr/src/debug/glibc-2.40-23.fc41.x86_64/string/../sysdeps/x86_64/multiarch/strlen-avx2.S
 fn=__strlen_avx2
-52 234
-65 234
-66 234
-67 234
-70 234
-72 234
-73 234
-76 234
-77 234
-85 234
-86 234
-87 223
-92 446
-118 7
-131 7
-132 7
-133 7
-139 14
-143 4
-156 4
-157 4
-158 4
-164 8
+52 182
+65 182
+66 182
+67 182
+70 182
+72 182
+73 182
+76 182
+77 182
+85 182
+86 182
+87 171
+92 342
+118 6
+131 6
+132 6
+133 6
+139 12
+143 5
+156 5
+157 5
+158 5
+164 10
 221 11
 236 11
 242 11
 243 11
 244 11
-246 4
-247 4
-248 4
-249 4
+246 5
+247 5
+248 5
+249 5
 fl=/usr/src/debug/glibc-2.40-23.fc41.x86_64/string/../sysdeps/x86_64/multiarch/strlen.c
 fn=strlen
 29 15
@@ -8842,11 +8510,7 @@ fl=???
 fn=(below main)
 0 12
 fn=???
-0 10067
-fn=Instance::Instance(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, int, int, int)
-0 102
-fn=Instance::loadMap()
-0 96
+0 8718
 fn=_GLOBAL__sub_I.32767_operations.cpp
 0 1
 fn=_GLOBAL__sub_I.32768_path.cpp
@@ -8859,28 +8523,6 @@ fn=_GLOBAL__sub_I_convert.cpp
 0 15
 fn=_GLOBAL__sub_I_value_semantic.cpp
 0 10
-fn=bool std::operator==<char, std::char_traits<char>, std::allocator<char> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, char const*)
-0 75
-fn=boost::any::holder<bool>::clone() const
-0 18
-fn=boost::any::holder<bool>::type() const
-0 14
-fn=boost::any::holder<bool>::~holder()
-0 2
-fn=boost::any::holder<double>::type() const
-0 2
-fn=boost::any::holder<int>::clone() const
-0 144
-fn=boost::any::holder<int>::type() const
-0 28
-fn=boost::any::holder<int>::~holder()
-0 16
-fn=boost::any::holder<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::clone() const
-0 56
-fn=boost::any::holder<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::type() const
-0 28
-fn=boost::any::holder<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::~holder()
-0 11
 fn=boost::detail::function::function_obj_invoker1<boost::_bi::bind_t<std::vector<boost::program_options::basic_option<char>, std::allocator<boost::program_options::basic_option<char> > >, boost::_mfi::mf1<std::vector<boost::program_options::basic_option<char>, std::allocator<boost::program_options::basic_option<char> > >, boost::program_options::detail::cmdline, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&>, boost::_bi::list2<boost::_bi::value<boost::program_options::detail::cmdline*>, boost::arg<1> > >, std::vector<boost::program_options::basic_option<char>, std::allocator<boost::program_options::basic_option<char> > >, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&>::invoke(boost::detail::function::function_buffer&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&)
 0 1302
 fn=boost::filesystem::detail::(anonymous namespace)::syscall_initializer::syscall_initializer() [clone .constprop.0]
@@ -8891,8 +8533,6 @@ fn=boost::function1<std::vector<boost::program_options::basic_option<char>, std:
 0 42
 fn=boost::program_options::abstract_variables_map::abstract_variables_map()
 0 5
-fn=boost::program_options::abstract_variables_map::operator[](std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const
-0 235
 fn=boost::program_options::basic_command_line_parser<char>::basic_command_line_parser(int, char const* const*)
 0 2171
 fn=boost::program_options::basic_command_line_parser<char>::extra_parser(boost::function1<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>)
@@ -8933,18 +8573,14 @@ fn=boost::program_options::detail::cmdline::style(int)
 0 16
 fn=boost::program_options::detail::utf8_codecvt_facet::utf8_codecvt_facet(unsigned long)
 0 8
-fn=boost::program_options::notify(boost::program_options::variables_map&)
-0 1
-fn=boost::program_options::option_description::canonical_display_name[abi:cxx11](int) const
-0 52
 fn=boost::program_options::option_description::key(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const
-0 1656
+0 1062
 fn=boost::program_options::option_description::match(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool, bool, bool) const
-0 130209
+0 113662
 fn=boost::program_options::option_description::option_description(char const*, boost::program_options::value_semantic const*, char const*)
 0 1534
 fn=boost::program_options::option_description::semantic() const
-0 1413
+0 801
 fn=boost::program_options::option_description::set_names(char const*)
 0 5613
 fn=boost::program_options::options_description::add(boost::shared_ptr<boost::program_options::option_description>)
@@ -8952,11 +8588,9 @@ fn=boost::program_options::options_description::add(boost::shared_ptr<boost::pro
 fn=boost::program_options::options_description::add_options()
 0 13
 fn=boost::program_options::options_description::find(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool, bool, bool) const
-0 405
+0 230
 fn=boost::program_options::options_description::find_nothrow(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool, bool, bool) const
-0 30179
-fn=boost::program_options::options_description::options() const
-0 2
+0 26188
 fn=boost::program_options::options_description::options_description(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int, unsigned int)
 0 27
 fn=boost::program_options::options_description_easy_init::operator()(char const*, boost::program_options::value_semantic const*, char const*)
@@ -8966,125 +8600,79 @@ fn=boost::program_options::options_description_easy_init::operator()(char const*
 fn=boost::program_options::options_description_easy_init::options_description_easy_init(boost::program_options::options_description*)
 0 2
 fn=boost::program_options::store(boost::program_options::basic_parsed_options<char> const&, boost::program_options::variables_map&, bool)
-0 8674
+0 1584
 fn=boost::program_options::to_internal(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
 0 1192
 fn=boost::program_options::typed_value<bool, char>* boost::program_options::value<bool>(bool*)
 0 189
-fn=boost::program_options::typed_value<bool, char>::apply_default(boost::any&) const
-0 14
 fn=boost::program_options::typed_value<bool, char>::default_value(bool const&)
 0 490
 fn=boost::program_options::typed_value<bool, char>::is_composing() const
-0 12
-fn=boost::program_options::typed_value<bool, char>::is_required() const
-0 14
+0 2
 fn=boost::program_options::typed_value<bool, char>::max_tokens() const
 0 84
 fn=boost::program_options::typed_value<bool, char>::min_tokens() const
 0 84
-fn=boost::program_options::typed_value<bool, char>::notify(boost::any const&) const
-0 196
 fn=boost::program_options::typed_value<bool, char>::xparse(boost::any&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) const
-0 66
+0 11
 fn=boost::program_options::typed_value<double, char>::is_composing() const
-0 2
-fn=boost::program_options::typed_value<double, char>::is_required() const
 0 2
 fn=boost::program_options::typed_value<double, char>::max_tokens() const
 0 21
 fn=boost::program_options::typed_value<double, char>::min_tokens() const
 0 14
-fn=boost::program_options::typed_value<double, char>::notify(boost::any const&) const
-0 28
 fn=boost::program_options::typed_value<double, char>::xparse(boost::any&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) const
 0 131
 fn=boost::program_options::typed_value<int, char>* boost::program_options::value<int>(int*)
 0 243
-fn=boost::program_options::typed_value<int, char>::apply_default(boost::any&) const
-0 112
 fn=boost::program_options::typed_value<int, char>::default_value(int const&)
 0 1178
 fn=boost::program_options::typed_value<int, char>::is_composing() const
 0 2
-fn=boost::program_options::typed_value<int, char>::is_required() const
-0 18
 fn=boost::program_options::typed_value<int, char>::max_tokens() const
 0 21
 fn=boost::program_options::typed_value<int, char>::min_tokens() const
 0 14
-fn=boost::program_options::typed_value<int, char>::notify(boost::any const&) const
-0 252
 fn=boost::program_options::typed_value<int, char>::xparse(boost::any&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) const
 0 9
 fn=boost::program_options::typed_value<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char>* boost::program_options::value<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*)
 0 216
-fn=boost::program_options::typed_value<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char>::apply_default(boost::any&) const
-0 14
 fn=boost::program_options::typed_value<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char>::default_value(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
 0 303
 fn=boost::program_options::typed_value<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char>::is_composing() const
-0 14
-fn=boost::program_options::typed_value<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char>::is_required() const
-0 16
+0 10
 fn=boost::program_options::typed_value<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char>::max_tokens() const
 0 119
 fn=boost::program_options::typed_value<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char>::min_tokens() const
 0 98
-fn=boost::program_options::typed_value<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char>::notify(boost::any const&) const
-0 216
 fn=boost::program_options::typed_value<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char>::xparse(boost::any&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) const
-0 77
+0 55
 fn=boost::program_options::validate(boost::any&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&, bool*, int)
-0 576
+0 96
 fn=boost::program_options::validate(boost::any&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*, int)
-0 210
+0 150
 fn=boost::program_options::validators::check_first_occurrence(boost::any const&)
-0 225
+0 120
 fn=boost::program_options::value_semantic_codecvt_helper<char>::parse(boost::any&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&, bool) const
-0 420
-fn=boost::program_options::variables_map::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const
-0 235
-fn=boost::program_options::variables_map::notify()
-0 628
+0 224
 fn=boost::program_options::variables_map::variables_map()
 0 26
-fn=int const& boost::any_cast<int const&>(boost::any&)
-0 90
 fn=main
-0 664
-fn=std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_erase(std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >*) [clone .isra.0]
-0 279
-fn=std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_get_insert_hint_unique_pos(std::_Rb_tree_const_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
-0 576
+0 492
 fn=std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_get_insert_unique_pos(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
-0 1512
+0 582
 fn=std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, boost::program_options::variable_value>, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, boost::program_options::variable_value> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, boost::program_options::variable_value> > >::_M_get_insert_hint_unique_pos(std::_Rb_tree_const_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, boost::program_options::variable_value> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
-0 1416
+0 371
 fn=std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, boost::program_options::variable_value>, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, boost::program_options::variable_value> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, boost::program_options::variable_value> > >::_M_get_insert_unique_pos(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
 0 26
-fn=std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, boost::program_options::variable_value>, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, boost::program_options::variable_value> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, boost::program_options::variable_value> > >::find(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const
-0 4627
-fn=std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, boost::program_options::variable_value>, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, boost::program_options::variable_value> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, boost::program_options::variable_value> > >::find(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const [clone .isra.0]
-0 124
-fn=std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::_M_get_insert_hint_unique_pos(std::_Rb_tree_const_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
-0 68
-fn=std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::_M_get_insert_unique_pos(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
-0 26
 fn=std::_Rb_tree_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_insert_<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Alloc_node>(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Alloc_node&) [clone .isra.0]
-0 1664
+0 440
 fn=std::_Rb_tree_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, boost::program_options::variable_value> > std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, boost::program_options::variable_value>, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, boost::program_options::variable_value> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, boost::program_options::variable_value> > >::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>, std::tuple<> >(std::_Rb_tree_const_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, boost::program_options::variable_value> >, std::piecewise_construct_t const&, std::tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>&&, std::tuple<>&&) [clone .isra.0]
-0 1443
-fn=std::_Rb_tree_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>, std::tuple<> >(std::_Rb_tree_const_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::piecewise_construct_t const&, std::tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>&&, std::tuple<>&&) [clone .isra.0]
-0 100
-fn=std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const& boost::any_cast<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(boost::any&)
-0 102
+0 496
 fn=std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const& boost::program_options::validators::get_single_string<char>(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&, bool)
-0 523
-fn=std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
-0 76
+0 285
 fn=std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) [clone .isra.0]
-0 629
+0 179
 fn=std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&)
 0 78
 fn=std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&) [clone .constprop.0]
@@ -9093,8 +8681,6 @@ fn=std::vector<bool, std::allocator<bool> >::_M_insert_aux(std::_Bit_iterator, b
 0 84
 fn=std::vector<boost::program_options::basic_option<char>, std::allocator<boost::program_options::basic_option<char> > >::push_back(boost::program_options::basic_option<char> const&)
 0 2331
-fn=std::vector<boost::program_options::basic_option<char>, std::allocator<boost::program_options::basic_option<char> > >::~vector()
-0 850
 fn=std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_erase(__gnu_cxx::__normal_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >)
 0 9833
 fn=void boost::program_options::validate<int, char>(boost::any&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&, int*, long) [clone .isra.0]
@@ -9102,7 +8688,7 @@ fn=void boost::program_options::validate<int, char>(boost::any&, std::vector<std
 fn=void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [clone .isra.0]
 0 2947
 fn=void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char*>(char*, char*, std::forward_iterator_tag) [clone .isra.0]
-0 162660
+0 139530
 fn=void std::vector<boost::function1<std::vector<boost::program_options::basic_option<char>, std::allocator<boost::program_options::basic_option<char> > >, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&>, std::allocator<boost::function1<std::vector<boost::program_options::basic_option<char>, std::allocator<boost::program_options::basic_option<char> > >, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&> > >::_M_realloc_insert<boost::function1<std::vector<boost::program_options::basic_option<char>, std::allocator<boost::program_options::basic_option<char> > >, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&> >(__gnu_cxx::__normal_iterator<boost::function1<std::vector<boost::program_options::basic_option<char>, std::allocator<boost::program_options::basic_option<char> > >, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&>*, std::vector<boost::function1<std::vector<boost::program_options::basic_option<char>, std::allocator<boost::program_options::basic_option<char> > >, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&>, std::allocator<boost::function1<std::vector<boost::program_options::basic_option<char>, std::allocator<boost::program_options::basic_option<char> > >, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&> > > >, boost::function1<std::vector<boost::program_options::basic_option<char>, std::allocator<boost::program_options::basic_option<char> > >, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&>&&)
 0 371
 fn=void std::vector<boost::program_options::basic_option<char>, std::allocator<boost::program_options::basic_option<char> > >::_M_realloc_insert<boost::program_options::basic_option<char> const&>(__gnu_cxx::__normal_iterator<boost::program_options::basic_option<char>*, std::vector<boost::program_options::basic_option<char>, std::allocator<boost::program_options::basic_option<char> > > >, boost::program_options::basic_option<char> const&)
@@ -9112,5 +8698,5 @@ fn=void std::vector<boost::shared_ptr<boost::program_options::option_description
 fn=void std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_realloc_append<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&)
 0 1202
 fn=void std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_realloc_insert<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(__gnu_cxx::__normal_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
-0 10637
-summary: 4041303
+0 10084
+summary: 3873900

@@ -89,7 +89,7 @@ for filename in input_files:
         ### pull y agents randomly from a randomly chosen scen file
 
         chosenScen = filename.split(".")[0] + "-even-" + str(scene) + ".scen"
-        chosenScenTwo = os.path.join("scenesinput", chosenScen)
+        chosenScenTwo = os.path.join("./scenesinput/"+ filename.split(".")[0], chosenScen)
         print(filename)
         
         for agents in range(1,850):
@@ -101,6 +101,8 @@ for filename in input_files:
                     output_path,"-k", numAgents, "-t", "10", "--heuristics", "Zero", "--prioritizingConflicts", "0", 
                     "--bypass", "0", "--disjointSplitting", "0", "--rectangleReasoning", "None", "--corridorReasoning", "None", 
                     "--mutexReasoning", "0", "--targetReasoning", "0", "--sip", "0"]
+            print(args)
+            print(numAgents)
             
             #run process.
             process = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
