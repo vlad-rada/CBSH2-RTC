@@ -18,3 +18,25 @@ cbs command to run:
 -1 = timeout
 -2 = no solution
 -3 = nodes out
+
+
+algorithm plan:
+1. run cbs normally. append data from normal cbs into a new text file (important)
+2. run cachesim normal. Send data to cachegrind/[agent-num]
+3. run cache grind with cachesim. send data to cachesim/[agent-num]
+4. run massif normal. send data to massif/[agent-num]
+5. run massif with stacks on. send data to massif-stacks/[agent-num]
+6. aggregate data with valgrind aggregate command, send to text file, later calculate average per agent
+increase agent number, continue loops
+
+
+1. run cbs normally. append data from normal cbs into a new text file (important)
+2. run cachesim normal. Send data to cachegrind/[agent-num]
+3. run cache grind with cachesim. send data to cachesim/[agent-num]
+4. run massif normal. send data to massif/[agent-num]
+5. run massif with stacks on. send data to massif-stacks/[agent-num]
+6. aggregate data with valgrind aggregate command, send to text file, later calculate average per agent
+7. increase agent number, continue loops
+
+
+./cbs -m maps/maps/Berlin_1_256.map -a ./scenesinput/Berlin_1_256/Berlin_1_256-even-1.scen -o ./test123.csv --outputPaths=paths.txt -k 2 -t 6

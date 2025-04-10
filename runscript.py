@@ -5,9 +5,12 @@ import psutil
 import time
 import csv
 
-results_csv = "./cbs_output/memory_results.csv"
+results_csv = "./cbs_output/final_results.csv"
 write_header = not os.path.exists(results_csv)
 runtest_path = "./cbs_output/runtests.csv"
+not_valgrind_path = "./cbs_output/runtests_not_valgrind.csv"
+
+processes = []
 
 
 """
@@ -38,26 +41,35 @@ headers = ["runtime", "#high-level expanded", "#high-level generated", "#low-lev
 		   "runtime of path finding", "runtime of generating child nodes",
 		   "preprocessing runtime", "solver name", "instance name", "num_agents"]
 
+
 with open(runtest_path, "w", newline="") as csvfile:
+	writer = csv.writer(csvfile)
+	writer.writerow(headers)
+
+with open(not_valgrind_path, "w", newline="") as csvfile:
 	writer = csv.writer(csvfile)
 	writer.writerow(headers)
 
 #look into psutil to get peak memory usage 
 #take in 
 
-input_dir = "inputs"
+input_dir = "./maps/maps"
+
 input_files = sorted(os.listdir(input_dir))
 
 output_dir = "outputs"
 os.makedirs(output_dir, exist_ok=True)
 
-
 executable = "./cbs"
 
-counter = 0
 
 #loop through "input" folder to grab each map file 
 for filename in input_files:
+    if not filename.endswith(".map"):
+        continue
+    # Skip files that are not .map
+    
+    
     input_path = os.path.join(input_dir, filename)
 
     # agents folder will be in ./inputs/(filename)/
@@ -65,8 +77,10 @@ for filename in input_files:
 
     #run the command
     #loop to increase number of agents
+    process = None
 
-    for scene in range(1,26):
+    #TODO: CHANGE TO 25
+    for scene in range(1,6):
         timeoutCounter = 0
 
         
@@ -76,25 +90,24 @@ for filename in input_files:
 
         chosenScen = filename.split(".")[0] + "-even-" + str(scene) + ".scen"
         chosenScenTwo = os.path.join("scenesinput", chosenScen)
-
-        for agents in range(1,150):
-            if timeoutCounter > 0:
-                break
+        print(filename)
+        
+        for agents in range(1,850):
 
             print("Running " + filename + " with scene " + chosenScenTwo + " and " + str(agents) + " agents")
-            output_path = os.path.join(output_dir, f"{filename}{counter}")
+            output_path = "./cbs_output/paths.txt"
             numAgents = str(agents)
-            args = [executable, "-m", input_path, "-a", chosenScenTwo, "-o", "./cbs_output/runtests.csv", "--outputPaths=" + 
+            args = [executable, "-m", input_path, "-a", chosenScenTwo, "-o", "./cbs_output/runtests_not_valgrind.csv", "--outputPaths=" + 
                     output_path,"-k", numAgents, "-t", "10", "--heuristics", "Zero", "--prioritizingConflicts", "0", 
                     "--bypass", "0", "--disjointSplitting", "0", "--rectangleReasoning", "None", "--corridorReasoning", "None", 
                     "--mutexReasoning", "0", "--targetReasoning", "0", "--sip", "0"]
             
-            #run process. collect resource data with psutil
+            #run process.
             process = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-            p = psutil.Process(process.pid)
-            peak_memory = 0  
-            
-        
+            processes.append(process)
+
+            '''
+            old memory logging:
 
             while process.poll() is None:
                 try:
@@ -103,29 +116,21 @@ for filename in input_files:
                 except psutil.NoSuchProcess:
                     break
                 time.sleep(0.1)  # frequency of polling
-
-            # try:
-            #     stdout, stderr = process.communicate(timeout=2)
-             
-            # except psutil.TimeoutExpired:
-            #     print(f"Process timed out for {filename} with {y} agents.")
-            #     exit()            # Check if the process completed successfully
                 
             # bytes to MB
             peak_memory_MB = peak_memory / (1024 ** 2)
+            '''
 
-            # If this is the first iteration, open file in write mode to clear existing content
-            if counter == 0:
-                with open(results_csv, mode="w", newline="") as file:
-                    writer = csv.writer(file)
-                    writer.writerow(["Filename", "AgentCount", "RunID", "PeakMemoryMB"])
-            
-            # Now append the actual data
-            with open(results_csv, mode="a", newline="") as file:
-                writer = csv.writer(file)
-                writer.writerow([filename, agents, counter, peak_memory_MB])
-            counter += 1
 
+            # copy last line from runtest.csv to final_results.csv  -- important to stop data from being overriden 
+            # by valgrind later
+
+            with open(runtest_path, "r") as src, open(results_csv, "a", newline="") as dst:
+                last_line = list(csv.reader(src))[-1]
+                csv.writer(dst).writerow(last_line)
+
+            # NOW SAFE TO RUN VALGRIND
+            # FIRST CHECK FOR TIMEOUT -- IF IT TIMES OUT WE DONT CARE ABT VALGRIND OUTPUT
 
             # Check if the solution cost is -2 (timeout)
             try:
@@ -138,9 +143,76 @@ for filename in input_files:
                         if len(last_row) > solution_cost_index:
                             solution_cost = last_row[solution_cost_index]
                             if solution_cost == "-2" or solution_cost == "-1":
-                                timeoutCounter += 1
                                 print(f"Timeout occurred. Timeout counter: {timeoutCounter}")
+                                break
             except Exception as e:
                 print(f"Error reading runtests.csv: {e}")
+
+            #RUN CACHEGRIND W NO ARGS
+            
+            # teststring = f"{filename} {scene} {numAgents}"
+            # /valgrind_outputs/cachegrind/[numAgents]/Boston_0_256.map.S1.out
+            os.makedirs(f"./valgrind_outputs/cachegrind/agents_{numAgents}", exist_ok=True)
+            cachegrindoutfile = f"--cachegrind-out-file=./valgrind_outputs/cachegrind/agents_{numAgents}/{filename}_{scene}.out"
             
             
+            
+            args = ["valgrind", "--tool=cachegrind", cachegrindoutfile, executable, "-m", input_path, "-a", chosenScenTwo, "-o", "./cbs_output/runtests.csv", "--outputPaths=" + 
+                    output_path,"-k", numAgents, "-t", "5", "--heuristics", "Zero", "--prioritizingConflicts", "0", 
+                    "--bypass", "0", "--disjointSplitting", "0", "--rectangleReasoning", "None", "--corridorReasoning", "None", 
+                    "--mutexReasoning", "0", "--targetReasoning", "0", "--sip", "0"]
+            
+            
+            
+            #run process.
+            process = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            processes.append(process)
+
+            # print(stderr.decode())
+            # p = psutil.Process(process.pid)  
+
+            #RUN CACHEGRIND W CACHE SIM ARGS
+            # /valgrind_outputs/cachesim/[numAgents]/Boston_0_256.map.S1.out
+            os.makedirs(f"./valgrind_outputs/cachesim/agents_{numAgents}", exist_ok=True)
+            cachesimoutfile = f"--cachegrind-out-file=./valgrind_outputs/cachesim/agents_{numAgents}/{filename}_{scene}.out"
+
+
+            args = ["valgrind", "--tool=cachegrind", "--cache-sim=yes", cachesimoutfile, executable, "-m", input_path, "-a", chosenScenTwo, "-o", "./cbs_output/runtests.csv", "--outputPaths=" + 
+                    output_path,"-k", numAgents, "-t", "5", "--heuristics", "Zero", "--prioritizingConflicts", "0", 
+                    "--bypass", "0", "--disjointSplitting", "0", "--rectangleReasoning", "None", "--corridorReasoning", "None", 
+                    "--mutexReasoning", "0", "--targetReasoning", "0", "--sip", "0"]
+            
+            #run process.
+            process = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)    
+            processes.append(process)
+      
+
+            #RUN MASSIF W NO ARGS
+            os.makedirs(f"./valgrind_outputs/massif/agents_{numAgents}", exist_ok=True)
+            massifoutfile = f"--massif-out-file=./valgrind_outputs/massif/agents_{numAgents}/{filename}_{scene}.out"
+
+            args = ["valgrind", "--tool=massif", massifoutfile, executable, "-m", input_path, "-a", chosenScenTwo, "-o", "./cbs_output/runtests.csv", "--outputPaths=" + 
+                    output_path,"-k", numAgents, "-t", "5", "--heuristics", "Zero", "--prioritizingConflicts", "0", 
+                    "--bypass", "0", "--disjointSplitting", "0", "--rectangleReasoning", "None", "--corridorReasoning", "None", 
+                    "--mutexReasoning", "0", "--targetReasoning", "0", "--sip", "0"]
+            
+            #run process.
+            process = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            processes.append(process)
+
+
+            #RUN MASSIF W STACKS ON
+            os.makedirs(f"./valgrind_outputs/massif_stacks/agents_{numAgents}", exist_ok=True)
+            massif_stacksoutfile = f"--massif-out-file=./valgrind_outputs/massif_stacks/agents_{numAgents}/{filename}_{scene}.out"
+
+            args = ["valgrind", "--tool=massif", "--stacks=yes", massif_stacksoutfile, executable, "-m", input_path, "-a", chosenScenTwo, "-o", "./cbs_output/runtests.csv", "--outputPaths=" + 
+                    output_path,"-k", numAgents, "-t", "5", "--heuristics", "Zero", "--prioritizingConflicts", "0", 
+                    "--bypass", "0", "--disjointSplitting", "0", "--rectangleReasoning", "None", "--corridorReasoning", "None", 
+                    "--mutexReasoning", "0", "--targetReasoning", "0", "--sip", "0"]
+            
+            #run process.
+            process = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            processes.append(process)
+
+for process in processes:
+    stdout, stderr = process.communicate()
