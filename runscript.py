@@ -92,7 +92,7 @@ for filename in input_files:
         chosenScenTwo = os.path.join("./scenesinput/"+ filename.split(".")[0], chosenScen)
         print(filename)
         
-        for agents in range(1,850):
+        for agents in range(1,150):
 
             print("Running " + filename + " with scene " + chosenScenTwo + " and " + str(agents) + " agents")
             output_path = "./cbs_output/paths.txt"
@@ -218,3 +218,4 @@ for filename in input_files:
 
 for process in processes:
     stdout, stderr = process.communicate()
+    process.wait()

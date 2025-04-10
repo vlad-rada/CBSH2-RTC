@@ -1,0 +1,1340 @@
+desc: --stacks=yes --massif-out-file=./valgrind_outputs/massif_stacks/agents_7/Berlin_1_256.map_2.out
+cmd: ./cbs -m ./maps/maps/Berlin_1_256.map -a ./scenesinput/Berlin_1_256/Berlin_1_256-even-2.scen -o ./cbs_output/runtests.csv --outputPaths=./cbs_output/paths.txt -k 7 -t 5 --heuristics Zero --prioritizingConflicts 0 --bypass 0 --disjointSplitting 0 --rectangleReasoning None --corridorReasoning None --mutexReasoning 0 --targetReasoning 0 --sip 0
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=2344266
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=1288
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=7274175
+mem_heap_B=364838
+mem_heap_extra_B=4522
+mem_stacks_B=2616
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=10996276
+mem_heap_B=365998
+mem_heap_extra_B=4938
+mem_stacks_B=2616
+heap_tree=detailed
+n5: 365998 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 262144 0x46BE4B: std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  n1: 262144 0x46B93B: SingleAgentSolver::compute_heuristics() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+   n1: 262144 0x413637: CBS::CBS(Instance const&, bool, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+    n0: 262144 0x40806B: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+ n1: 73728 0x498771B: pool (eh_alloc.cc:235)
+  n1: 73728 0x498771B: __static_initialization_and_destruction_0 (eh_alloc.cc:373)
+   n1: 73728 0x498771B: _GLOBAL__sub_I_eh_alloc.cc (eh_alloc.cc:456)
+    n1: 73728 0x4004556: call_init (dl-init.c:74)
+     n1: 73728 0x4004556: call_init (dl-init.c:26)
+      n1: 73728 0x400464C: _dl_init (dl-init.c:121)
+       n1: 73728 0x401CE5F: ??? (in /usr/lib64/ld-linux-x86-64.so.2)
+        n1: 73728 0x1D: ???
+         n1: 73728 0x1FFEFFF1AE: ???
+          n1: 73728 0x1FFEFFF1B4: ???
+           n1: 73728 0x1FFEFFF1B7: ???
+            n1: 73728 0x1FFEFFF1D4: ???
+             n1: 73728 0x1FFEFFF1D7: ???
+              n1: 73728 0x1FFEFFF20B: ???
+               n1: 73728 0x1FFEFFF20E: ???
+                n1: 73728 0x1FFEFFF228: ???
+                 n1: 73728 0x1FFEFFF24D: ???
+                  n1: 73728 0x1FFEFFF250: ???
+                   n1: 73728 0x1FFEFFF252: ???
+                    n1: 73728 0x1FFEFFF255: ???
+                     n1: 73728 0x1FFEFFF257: ???
+                      n1: 73728 0x1FFEFFF264: ???
+                       n1: 73728 0x1FFEFFF269: ???
+                        n1: 73728 0x1FFEFFF281: ???
+                         n1: 73728 0x1FFEFFF283: ???
+                          n1: 73728 0x1FFEFFF28C: ???
+                           n1: 73728 0x1FFEFFF28E: ???
+                            n1: 73728 0x1FFEFFF2A2: ???
+                             n1: 73728 0x1FFEFFF2A4: ???
+                              n1: 73728 0x1FFEFFF2B9: ???
+                               n1: 73728 0x1FFEFFF2BE: ???
+                                n1: 73728 0x1FFEFFF2D2: ???
+                                 n0: 73728 0x1FFEFFF2D7: ???
+ n0: 17734 in 75 places, all below massif's threshold (1.00%)
+ n1: 8192 0x44062E: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  n1: 8192 0x4489A0: Instance::loadMap() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+   n1: 8192 0x44B79E: Instance::Instance(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, int, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+    n0: 8192 0x407F52: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+ n1: 4200 0x46B7CE: SingleAgentSolver::compute_heuristics() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  n1: 4200 0x413637: CBS::CBS(Instance const&, bool, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+   n0: 4200 0x40806B: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+#-----------
+snapshot=4
+#-----------
+time=13876565
+mem_heap_B=367014
+mem_heap_extra_B=5418
+mem_stacks_B=2784
+heap_tree=detailed
+n5: 367014 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 262144 0x46BE4B: std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  n1: 262144 0x46B93B: SingleAgentSolver::compute_heuristics() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+   n1: 262144 0x413637: CBS::CBS(Instance const&, bool, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+    n0: 262144 0x40806B: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+ n1: 73728 0x498771B: pool (eh_alloc.cc:235)
+  n1: 73728 0x498771B: __static_initialization_and_destruction_0 (eh_alloc.cc:373)
+   n1: 73728 0x498771B: _GLOBAL__sub_I_eh_alloc.cc (eh_alloc.cc:456)
+    n1: 73728 0x4004556: call_init (dl-init.c:74)
+     n1: 73728 0x4004556: call_init (dl-init.c:26)
+      n1: 73728 0x400464C: _dl_init (dl-init.c:121)
+       n1: 73728 0x401CE5F: ??? (in /usr/lib64/ld-linux-x86-64.so.2)
+        n1: 73728 0x1D: ???
+         n1: 73728 0x1FFEFFF1AE: ???
+          n1: 73728 0x1FFEFFF1B4: ???
+           n1: 73728 0x1FFEFFF1B7: ???
+            n1: 73728 0x1FFEFFF1D4: ???
+             n1: 73728 0x1FFEFFF1D7: ???
+              n1: 73728 0x1FFEFFF20B: ???
+               n1: 73728 0x1FFEFFF20E: ???
+                n1: 73728 0x1FFEFFF228: ???
+                 n1: 73728 0x1FFEFFF24D: ???
+                  n1: 73728 0x1FFEFFF250: ???
+                   n1: 73728 0x1FFEFFF252: ???
+                    n1: 73728 0x1FFEFFF255: ???
+                     n1: 73728 0x1FFEFFF257: ???
+                      n1: 73728 0x1FFEFFF264: ???
+                       n1: 73728 0x1FFEFFF269: ???
+                        n1: 73728 0x1FFEFFF281: ???
+                         n1: 73728 0x1FFEFFF283: ???
+                          n1: 73728 0x1FFEFFF28C: ???
+                           n1: 73728 0x1FFEFFF28E: ???
+                            n1: 73728 0x1FFEFFF2A2: ???
+                             n1: 73728 0x1FFEFFF2A4: ???
+                              n1: 73728 0x1FFEFFF2B9: ???
+                               n1: 73728 0x1FFEFFF2BE: ???
+                                n1: 73728 0x1FFEFFF2D2: ???
+                                 n0: 73728 0x1FFEFFF2D7: ???
+ n0: 17830 in 75 places, all below massif's threshold (1.00%)
+ n1: 8192 0x44062E: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  n1: 8192 0x4489A0: Instance::loadMap() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+   n1: 8192 0x44B79E: Instance::Instance(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, int, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+    n0: 8192 0x407F52: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+ n1: 5120 0x46B7CE: SingleAgentSolver::compute_heuristics() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  n1: 5120 0x413637: CBS::CBS(Instance const&, bool, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+   n0: 5120 0x40806B: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+#-----------
+snapshot=5
+#-----------
+time=16413127
+mem_heap_B=367958
+mem_heap_extra_B=5770
+mem_stacks_B=2616
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=20134774
+mem_heap_B=368286
+mem_heap_extra_B=5898
+mem_stacks_B=2616
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=25079193
+mem_heap_B=366998
+mem_heap_extra_B=5354
+mem_stacks_B=2616
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=29459951
+mem_heap_B=370358
+mem_heap_extra_B=6714
+mem_stacks_B=2616
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=32804355
+mem_heap_B=369310
+mem_heap_extra_B=6330
+mem_stacks_B=2688
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=36154921
+mem_heap_B=368038
+mem_heap_extra_B=5834
+mem_stacks_B=2784
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=38760734
+mem_heap_B=369558
+mem_heap_extra_B=6426
+mem_stacks_B=2616
+heap_tree=detailed
+n5: 369558 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 262144 0x46BE4B: std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  n1: 262144 0x46B93B: SingleAgentSolver::compute_heuristics() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+   n1: 262144 0x413637: CBS::CBS(Instance const&, bool, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+    n0: 262144 0x40806B: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+ n1: 73728 0x498771B: pool (eh_alloc.cc:235)
+  n1: 73728 0x498771B: __static_initialization_and_destruction_0 (eh_alloc.cc:373)
+   n1: 73728 0x498771B: _GLOBAL__sub_I_eh_alloc.cc (eh_alloc.cc:456)
+    n1: 73728 0x4004556: call_init (dl-init.c:74)
+     n1: 73728 0x4004556: call_init (dl-init.c:26)
+      n1: 73728 0x400464C: _dl_init (dl-init.c:121)
+       n1: 73728 0x401CE5F: ??? (in /usr/lib64/ld-linux-x86-64.so.2)
+        n1: 73728 0x1D: ???
+         n1: 73728 0x1FFEFFF1AE: ???
+          n1: 73728 0x1FFEFFF1B4: ???
+           n1: 73728 0x1FFEFFF1B7: ???
+            n1: 73728 0x1FFEFFF1D4: ???
+             n1: 73728 0x1FFEFFF1D7: ???
+              n1: 73728 0x1FFEFFF20B: ???
+               n1: 73728 0x1FFEFFF20E: ???
+                n1: 73728 0x1FFEFFF228: ???
+                 n1: 73728 0x1FFEFFF24D: ???
+                  n1: 73728 0x1FFEFFF250: ???
+                   n1: 73728 0x1FFEFFF252: ???
+                    n1: 73728 0x1FFEFFF255: ???
+                     n1: 73728 0x1FFEFFF257: ???
+                      n1: 73728 0x1FFEFFF264: ???
+                       n1: 73728 0x1FFEFFF269: ???
+                        n1: 73728 0x1FFEFFF281: ???
+                         n1: 73728 0x1FFEFFF283: ???
+                          n1: 73728 0x1FFEFFF28C: ???
+                           n1: 73728 0x1FFEFFF28E: ???
+                            n1: 73728 0x1FFEFFF2A2: ???
+                             n1: 73728 0x1FFEFFF2A4: ???
+                              n1: 73728 0x1FFEFFF2B9: ???
+                               n1: 73728 0x1FFEFFF2BE: ???
+                                n1: 73728 0x1FFEFFF2D2: ???
+                                 n0: 73728 0x1FFEFFF2D7: ???
+ n0: 17734 in 75 places, all below massif's threshold (1.00%)
+ n1: 8192 0x44062E: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  n1: 8192 0x4489A0: Instance::loadMap() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+   n1: 8192 0x44B79E: Instance::Instance(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, int, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+    n0: 8192 0x407F52: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+ n1: 7760 0x46B7CE: SingleAgentSolver::compute_heuristics() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  n1: 7760 0x413637: CBS::CBS(Instance const&, bool, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+   n0: 7760 0x40806B: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+#-----------
+snapshot=12
+#-----------
+time=42111191
+mem_heap_B=366750
+mem_heap_extra_B=5338
+mem_stacks_B=2704
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=45461499
+mem_heap_B=365046
+mem_heap_extra_B=4650
+mem_stacks_B=2784
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=50153635
+mem_heap_B=362558
+mem_heap_extra_B=3594
+mem_stacks_B=2616
+heap_tree=detailed
+n4: 362558 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 262144 0x46BE4B: std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  n1: 262144 0x46B93B: SingleAgentSolver::compute_heuristics() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+   n1: 262144 0x413637: CBS::CBS(Instance const&, bool, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+    n0: 262144 0x40806B: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+ n1: 73728 0x498771B: pool (eh_alloc.cc:235)
+  n1: 73728 0x498771B: __static_initialization_and_destruction_0 (eh_alloc.cc:373)
+   n1: 73728 0x498771B: _GLOBAL__sub_I_eh_alloc.cc (eh_alloc.cc:456)
+    n1: 73728 0x4004556: call_init (dl-init.c:74)
+     n1: 73728 0x4004556: call_init (dl-init.c:26)
+      n1: 73728 0x400464C: _dl_init (dl-init.c:121)
+       n1: 73728 0x401CE5F: ??? (in /usr/lib64/ld-linux-x86-64.so.2)
+        n1: 73728 0x1D: ???
+         n1: 73728 0x1FFEFFF1AE: ???
+          n1: 73728 0x1FFEFFF1B4: ???
+           n1: 73728 0x1FFEFFF1B7: ???
+            n1: 73728 0x1FFEFFF1D4: ???
+             n1: 73728 0x1FFEFFF1D7: ???
+              n1: 73728 0x1FFEFFF20B: ???
+               n1: 73728 0x1FFEFFF20E: ???
+                n1: 73728 0x1FFEFFF228: ???
+                 n1: 73728 0x1FFEFFF24D: ???
+                  n1: 73728 0x1FFEFFF250: ???
+                   n1: 73728 0x1FFEFFF252: ???
+                    n1: 73728 0x1FFEFFF255: ???
+                     n1: 73728 0x1FFEFFF257: ???
+                      n1: 73728 0x1FFEFFF264: ???
+                       n1: 73728 0x1FFEFFF269: ???
+                        n1: 73728 0x1FFEFFF281: ???
+                         n1: 73728 0x1FFEFFF283: ???
+                          n1: 73728 0x1FFEFFF28C: ???
+                           n1: 73728 0x1FFEFFF28E: ???
+                            n1: 73728 0x1FFEFFF2A2: ???
+                             n1: 73728 0x1FFEFFF2A4: ???
+                              n1: 73728 0x1FFEFFF2B9: ???
+                               n1: 73728 0x1FFEFFF2BE: ???
+                                n1: 73728 0x1FFEFFF2D2: ???
+                                 n0: 73728 0x1FFEFFF2D7: ???
+ n0: 18494 in 76 places, all below massif's threshold (1.00%)
+ n1: 8192 0x44062E: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  n1: 8192 0x4489A0: Instance::loadMap() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+   n1: 8192 0x44B79E: Instance::Instance(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, int, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+    n0: 8192 0x407F52: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+#-----------
+snapshot=15
+#-----------
+time=52368949
+mem_heap_B=627398
+mem_heap_extra_B=4690
+mem_stacks_B=2784
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=57119796
+mem_heap_B=629190
+mem_heap_extra_B=5378
+mem_stacks_B=2616
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=60104185
+mem_heap_B=630398
+mem_heap_extra_B=5858
+mem_stacks_B=2696
+heap_tree=detailed
+n4: 630398 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 524288 0x46BE4B: std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  n1: 524288 0x46B93B: SingleAgentSolver::compute_heuristics() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+   n1: 524288 0x413637: CBS::CBS(Instance const&, bool, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+    n0: 524288 0x40806B: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+ n1: 73728 0x498771B: pool (eh_alloc.cc:235)
+  n1: 73728 0x498771B: __static_initialization_and_destruction_0 (eh_alloc.cc:373)
+   n1: 73728 0x498771B: _GLOBAL__sub_I_eh_alloc.cc (eh_alloc.cc:456)
+    n1: 73728 0x4004556: call_init (dl-init.c:74)
+     n1: 73728 0x4004556: call_init (dl-init.c:26)
+      n1: 73728 0x400464C: _dl_init (dl-init.c:121)
+       n1: 73728 0x401CE5F: ??? (in /usr/lib64/ld-linux-x86-64.so.2)
+        n1: 73728 0x1D: ???
+         n1: 73728 0x1FFEFFF1AE: ???
+          n1: 73728 0x1FFEFFF1B4: ???
+           n1: 73728 0x1FFEFFF1B7: ???
+            n1: 73728 0x1FFEFFF1D4: ???
+             n1: 73728 0x1FFEFFF1D7: ???
+              n1: 73728 0x1FFEFFF20B: ???
+               n1: 73728 0x1FFEFFF20E: ???
+                n1: 73728 0x1FFEFFF228: ???
+                 n1: 73728 0x1FFEFFF24D: ???
+                  n1: 73728 0x1FFEFFF250: ???
+                   n1: 73728 0x1FFEFFF252: ???
+                    n1: 73728 0x1FFEFFF255: ???
+                     n1: 73728 0x1FFEFFF257: ???
+                      n1: 73728 0x1FFEFFF264: ???
+                       n1: 73728 0x1FFEFFF269: ???
+                        n1: 73728 0x1FFEFFF281: ???
+                         n1: 73728 0x1FFEFFF283: ???
+                          n1: 73728 0x1FFEFFF28C: ???
+                           n1: 73728 0x1FFEFFF28E: ???
+                            n1: 73728 0x1FFEFFF2A2: ???
+                             n1: 73728 0x1FFEFFF2A4: ???
+                              n1: 73728 0x1FFEFFF2B9: ???
+                               n1: 73728 0x1FFEFFF2BE: ???
+                                n1: 73728 0x1FFEFFF2D2: ???
+                                 n0: 73728 0x1FFEFFF2D7: ???
+ n0: 24190 in 76 places, all below massif's threshold (1.00%)
+ n1: 8192 0x44062E: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  n1: 8192 0x4489A0: Instance::loadMap() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+   n1: 8192 0x44B79E: Instance::Instance(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, int, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+    n0: 8192 0x407F52: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+#-----------
+snapshot=18
+#-----------
+time=63685407
+mem_heap_B=630830
+mem_heap_extra_B=6018
+mem_stacks_B=2616
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=68460321
+mem_heap_B=629878
+mem_heap_extra_B=5634
+mem_stacks_B=2696
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=72041425
+mem_heap_B=630366
+mem_heap_extra_B=5874
+mem_stacks_B=2616
+heap_tree=detailed
+n4: 630366 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 524288 0x46BE4B: std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  n1: 524288 0x46B93B: SingleAgentSolver::compute_heuristics() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+   n1: 524288 0x413637: CBS::CBS(Instance const&, bool, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+    n0: 524288 0x40806B: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+ n1: 73728 0x498771B: pool (eh_alloc.cc:235)
+  n1: 73728 0x498771B: __static_initialization_and_destruction_0 (eh_alloc.cc:373)
+   n1: 73728 0x498771B: _GLOBAL__sub_I_eh_alloc.cc (eh_alloc.cc:456)
+    n1: 73728 0x4004556: call_init (dl-init.c:74)
+     n1: 73728 0x4004556: call_init (dl-init.c:26)
+      n1: 73728 0x400464C: _dl_init (dl-init.c:121)
+       n1: 73728 0x401CE5F: ??? (in /usr/lib64/ld-linux-x86-64.so.2)
+        n1: 73728 0x1D: ???
+         n1: 73728 0x1FFEFFF1AE: ???
+          n1: 73728 0x1FFEFFF1B4: ???
+           n1: 73728 0x1FFEFFF1B7: ???
+            n1: 73728 0x1FFEFFF1D4: ???
+             n1: 73728 0x1FFEFFF1D7: ???
+              n1: 73728 0x1FFEFFF20B: ???
+               n1: 73728 0x1FFEFFF20E: ???
+                n1: 73728 0x1FFEFFF228: ???
+                 n1: 73728 0x1FFEFFF24D: ???
+                  n1: 73728 0x1FFEFFF250: ???
+                   n1: 73728 0x1FFEFFF252: ???
+                    n1: 73728 0x1FFEFFF255: ???
+                     n1: 73728 0x1FFEFFF257: ???
+                      n1: 73728 0x1FFEFFF264: ???
+                       n1: 73728 0x1FFEFFF269: ???
+                        n1: 73728 0x1FFEFFF281: ???
+                         n1: 73728 0x1FFEFFF283: ???
+                          n1: 73728 0x1FFEFFF28C: ???
+                           n1: 73728 0x1FFEFFF28E: ???
+                            n1: 73728 0x1FFEFFF2A2: ???
+                             n1: 73728 0x1FFEFFF2A4: ???
+                              n1: 73728 0x1FFEFFF2B9: ???
+                               n1: 73728 0x1FFEFFF2BE: ???
+                                n1: 73728 0x1FFEFFF2D2: ???
+                                 n0: 73728 0x1FFEFFF2D7: ???
+ n0: 24158 in 76 places, all below massif's threshold (1.00%)
+ n1: 8192 0x44062E: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) [clone .isra.0] (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  n1: 8192 0x4489A0: Instance::loadMap() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+   n1: 8192 0x44B79E: Instance::Instance(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, int, int, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+    n0: 8192 0x407F52: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+#-----------
+snapshot=21
+#-----------
+time=75025656
+mem_heap_B=632678
+mem_heap_extra_B=6754
+mem_stacks_B=2696
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=79203573
+mem_heap_B=631630
+mem_heap_extra_B=6354
+mem_stacks_B=2616
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=82337484
+mem_heap_B=630030
+mem_heap_extra_B=5666
+mem_stacks_B=2696
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=86516307
+mem_heap_B=629710
+mem_heap_extra_B=5554
+mem_stacks_B=2616
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=91739451
+mem_heap_B=627350
+mem_heap_extra_B=4610
+mem_stacks_B=2784
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=95943620
+mem_heap_B=886422
+mem_heap_extra_B=3210
+mem_stacks_B=2800
+heap_tree=detailed
+n3: 886422 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 786432 0x46BE4B: std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  n1: 786432 0x46B93B: SingleAgentSolver::compute_heuristics() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+   n1: 786432 0x413637: CBS::CBS(Instance const&, bool, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+    n0: 786432 0x40806B: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+ n1: 73728 0x498771B: pool (eh_alloc.cc:235)
+  n1: 73728 0x498771B: __static_initialization_and_destruction_0 (eh_alloc.cc:373)
+   n1: 73728 0x498771B: _GLOBAL__sub_I_eh_alloc.cc (eh_alloc.cc:456)
+    n1: 73728 0x4004556: call_init (dl-init.c:74)
+     n1: 73728 0x4004556: call_init (dl-init.c:26)
+      n1: 73728 0x400464C: _dl_init (dl-init.c:121)
+       n1: 73728 0x401CE5F: ??? (in /usr/lib64/ld-linux-x86-64.so.2)
+        n1: 73728 0x1D: ???
+         n1: 73728 0x1FFEFFF1AE: ???
+          n1: 73728 0x1FFEFFF1B4: ???
+           n1: 73728 0x1FFEFFF1B7: ???
+            n1: 73728 0x1FFEFFF1D4: ???
+             n1: 73728 0x1FFEFFF1D7: ???
+              n1: 73728 0x1FFEFFF20B: ???
+               n1: 73728 0x1FFEFFF20E: ???
+                n1: 73728 0x1FFEFFF228: ???
+                 n1: 73728 0x1FFEFFF24D: ???
+                  n1: 73728 0x1FFEFFF250: ???
+                   n1: 73728 0x1FFEFFF252: ???
+                    n1: 73728 0x1FFEFFF255: ???
+                     n1: 73728 0x1FFEFFF257: ???
+                      n1: 73728 0x1FFEFFF264: ???
+                       n1: 73728 0x1FFEFFF269: ???
+                        n1: 73728 0x1FFEFFF281: ???
+                         n1: 73728 0x1FFEFFF283: ???
+                          n1: 73728 0x1FFEFFF28C: ???
+                           n1: 73728 0x1FFEFFF28E: ???
+                            n1: 73728 0x1FFEFFF2A2: ???
+                             n1: 73728 0x1FFEFFF2A4: ???
+                              n1: 73728 0x1FFEFFF2B9: ???
+                               n1: 73728 0x1FFEFFF2BE: ???
+                                n1: 73728 0x1FFEFFF2D2: ???
+                                 n0: 73728 0x1FFEFFF2D7: ???
+ n0: 26262 in 77 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=27
+#-----------
+time=99077524
+mem_heap_B=889422
+mem_heap_extra_B=4554
+mem_stacks_B=2784
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=103256071
+mem_heap_B=891302
+mem_heap_extra_B=5306
+mem_stacks_B=2784
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=108485114
+mem_heap_B=892678
+mem_heap_extra_B=5898
+mem_stacks_B=2784
+heap_tree=detailed
+n3: 892678 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 786432 0x46BE4B: std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  n1: 786432 0x46B93B: SingleAgentSolver::compute_heuristics() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+   n1: 786432 0x413637: CBS::CBS(Instance const&, bool, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+    n0: 786432 0x40806B: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+ n1: 73728 0x498771B: pool (eh_alloc.cc:235)
+  n1: 73728 0x498771B: __static_initialization_and_destruction_0 (eh_alloc.cc:373)
+   n1: 73728 0x498771B: _GLOBAL__sub_I_eh_alloc.cc (eh_alloc.cc:456)
+    n1: 73728 0x4004556: call_init (dl-init.c:74)
+     n1: 73728 0x4004556: call_init (dl-init.c:26)
+      n1: 73728 0x400464C: _dl_init (dl-init.c:121)
+       n1: 73728 0x401CE5F: ??? (in /usr/lib64/ld-linux-x86-64.so.2)
+        n1: 73728 0x1D: ???
+         n1: 73728 0x1FFEFFF1AE: ???
+          n1: 73728 0x1FFEFFF1B4: ???
+           n1: 73728 0x1FFEFFF1B7: ???
+            n1: 73728 0x1FFEFFF1D4: ???
+             n1: 73728 0x1FFEFFF1D7: ???
+              n1: 73728 0x1FFEFFF20B: ???
+               n1: 73728 0x1FFEFFF20E: ???
+                n1: 73728 0x1FFEFFF228: ???
+                 n1: 73728 0x1FFEFFF24D: ???
+                  n1: 73728 0x1FFEFFF250: ???
+                   n1: 73728 0x1FFEFFF252: ???
+                    n1: 73728 0x1FFEFFF255: ???
+                     n1: 73728 0x1FFEFFF257: ???
+                      n1: 73728 0x1FFEFFF264: ???
+                       n1: 73728 0x1FFEFFF269: ???
+                        n1: 73728 0x1FFEFFF281: ???
+                         n1: 73728 0x1FFEFFF283: ???
+                          n1: 73728 0x1FFEFFF28C: ???
+                           n1: 73728 0x1FFEFFF28E: ???
+                            n1: 73728 0x1FFEFFF2A2: ???
+                             n1: 73728 0x1FFEFFF2A4: ???
+                              n1: 73728 0x1FFEFFF2B9: ???
+                               n1: 73728 0x1FFEFFF2BE: ???
+                                n1: 73728 0x1FFEFFF2D2: ???
+                                 n0: 73728 0x1FFEFFF2D7: ???
+ n0: 32518 in 77 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=30
+#-----------
+time=113708230
+mem_heap_B=892910
+mem_heap_extra_B=5930
+mem_stacks_B=2696
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=116842214
+mem_heap_B=893734
+mem_heap_extra_B=6314
+mem_stacks_B=2616
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=122065327
+mem_heap_B=894422
+mem_heap_extra_B=6538
+mem_stacks_B=2784
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=127288500
+mem_heap_B=896334
+mem_heap_extra_B=7338
+mem_stacks_B=2696
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=130448354
+mem_heap_B=893678
+mem_heap_extra_B=6282
+mem_stacks_B=2784
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=133659386
+mem_heap_B=890422
+mem_heap_extra_B=4954
+mem_stacks_B=2616
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=136870552
+mem_heap_B=891462
+mem_heap_extra_B=5354
+mem_stacks_B=2616
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=141273591
+mem_heap_B=1148734
+mem_heap_extra_B=3234
+mem_stacks_B=2800
+heap_tree=detailed
+n3: 1148734 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1048576 0x46BE4B: std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  n1: 1048576 0x46B93B: SingleAgentSolver::compute_heuristics() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+   n1: 1048576 0x413637: CBS::CBS(Instance const&, bool, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+    n0: 1048576 0x40806B: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+ n1: 73728 0x498771B: pool (eh_alloc.cc:235)
+  n1: 73728 0x498771B: __static_initialization_and_destruction_0 (eh_alloc.cc:373)
+   n1: 73728 0x498771B: _GLOBAL__sub_I_eh_alloc.cc (eh_alloc.cc:456)
+    n1: 73728 0x4004556: call_init (dl-init.c:74)
+     n1: 73728 0x4004556: call_init (dl-init.c:26)
+      n1: 73728 0x400464C: _dl_init (dl-init.c:121)
+       n1: 73728 0x401CE5F: ??? (in /usr/lib64/ld-linux-x86-64.so.2)
+        n1: 73728 0x1D: ???
+         n1: 73728 0x1FFEFFF1AE: ???
+          n1: 73728 0x1FFEFFF1B4: ???
+           n1: 73728 0x1FFEFFF1B7: ???
+            n1: 73728 0x1FFEFFF1D4: ???
+             n1: 73728 0x1FFEFFF1D7: ???
+              n1: 73728 0x1FFEFFF20B: ???
+               n1: 73728 0x1FFEFFF20E: ???
+                n1: 73728 0x1FFEFFF228: ???
+                 n1: 73728 0x1FFEFFF24D: ???
+                  n1: 73728 0x1FFEFFF250: ???
+                   n1: 73728 0x1FFEFFF252: ???
+                    n1: 73728 0x1FFEFFF255: ???
+                     n1: 73728 0x1FFEFFF257: ???
+                      n1: 73728 0x1FFEFFF264: ???
+                       n1: 73728 0x1FFEFFF269: ???
+                        n1: 73728 0x1FFEFFF281: ???
+                         n1: 73728 0x1FFEFFF283: ???
+                          n1: 73728 0x1FFEFFF28C: ???
+                           n1: 73728 0x1FFEFFF28E: ???
+                            n1: 73728 0x1FFEFFF2A2: ???
+                             n1: 73728 0x1FFEFFF2A4: ???
+                              n1: 73728 0x1FFEFFF2B9: ???
+                               n1: 73728 0x1FFEFFF2BE: ???
+                                n1: 73728 0x1FFEFFF2D2: ???
+                                 n0: 73728 0x1FFEFFF2D7: ???
+ n0: 26430 in 77 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=38
+#-----------
+time=144484948
+mem_heap_B=1153702
+mem_heap_extra_B=5394
+mem_stacks_B=2784
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=148766673
+mem_heap_B=1154966
+mem_heap_extra_B=5906
+mem_stacks_B=2784
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=153047900
+mem_heap_B=1154822
+mem_heap_extra_B=5858
+mem_stacks_B=2704
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=155188885
+mem_heap_B=1154974
+mem_heap_extra_B=5906
+mem_stacks_B=2616
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=158399873
+mem_heap_B=1156038
+mem_heap_extra_B=6338
+mem_stacks_B=2784
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=162681091
+mem_heap_B=1156462
+mem_heap_extra_B=6530
+mem_stacks_B=2784
+heap_tree=detailed
+n3: 1156462 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1048576 0x46BE4B: std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  n1: 1048576 0x46B93B: SingleAgentSolver::compute_heuristics() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+   n1: 1048576 0x413637: CBS::CBS(Instance const&, bool, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+    n0: 1048576 0x40806B: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+ n1: 73728 0x498771B: pool (eh_alloc.cc:235)
+  n1: 73728 0x498771B: __static_initialization_and_destruction_0 (eh_alloc.cc:373)
+   n1: 73728 0x498771B: _GLOBAL__sub_I_eh_alloc.cc (eh_alloc.cc:456)
+    n1: 73728 0x4004556: call_init (dl-init.c:74)
+     n1: 73728 0x4004556: call_init (dl-init.c:26)
+      n1: 73728 0x400464C: _dl_init (dl-init.c:121)
+       n1: 73728 0x401CE5F: ??? (in /usr/lib64/ld-linux-x86-64.so.2)
+        n1: 73728 0x1D: ???
+         n1: 73728 0x1FFEFFF1AE: ???
+          n1: 73728 0x1FFEFFF1B4: ???
+           n1: 73728 0x1FFEFFF1B7: ???
+            n1: 73728 0x1FFEFFF1D4: ???
+             n1: 73728 0x1FFEFFF1D7: ???
+              n1: 73728 0x1FFEFFF20B: ???
+               n1: 73728 0x1FFEFFF20E: ???
+                n1: 73728 0x1FFEFFF228: ???
+                 n1: 73728 0x1FFEFFF24D: ???
+                  n1: 73728 0x1FFEFFF250: ???
+                   n1: 73728 0x1FFEFFF252: ???
+                    n1: 73728 0x1FFEFFF255: ???
+                     n1: 73728 0x1FFEFFF257: ???
+                      n1: 73728 0x1FFEFFF264: ???
+                       n1: 73728 0x1FFEFFF269: ???
+                        n1: 73728 0x1FFEFFF281: ???
+                         n1: 73728 0x1FFEFFF283: ???
+                          n1: 73728 0x1FFEFFF28C: ???
+                           n1: 73728 0x1FFEFFF28E: ???
+                            n1: 73728 0x1FFEFFF2A2: ???
+                             n1: 73728 0x1FFEFFF2A4: ???
+                              n1: 73728 0x1FFEFFF2B9: ???
+                               n1: 73728 0x1FFEFFF2BE: ???
+                                n1: 73728 0x1FFEFFF2D2: ???
+                                 n0: 73728 0x1FFEFFF2D7: ???
+ n0: 34158 in 77 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=44
+#-----------
+time=165294149
+mem_heap_B=1156870
+mem_heap_extra_B=6690
+mem_stacks_B=2784
+heap_tree=detailed
+n3: 1156870 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1048576 0x46BE4B: std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  n1: 1048576 0x46B93B: SingleAgentSolver::compute_heuristics() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+   n1: 1048576 0x413637: CBS::CBS(Instance const&, bool, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+    n0: 1048576 0x40806B: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+ n1: 73728 0x498771B: pool (eh_alloc.cc:235)
+  n1: 73728 0x498771B: __static_initialization_and_destruction_0 (eh_alloc.cc:373)
+   n1: 73728 0x498771B: _GLOBAL__sub_I_eh_alloc.cc (eh_alloc.cc:456)
+    n1: 73728 0x4004556: call_init (dl-init.c:74)
+     n1: 73728 0x4004556: call_init (dl-init.c:26)
+      n1: 73728 0x400464C: _dl_init (dl-init.c:121)
+       n1: 73728 0x401CE5F: ??? (in /usr/lib64/ld-linux-x86-64.so.2)
+        n1: 73728 0x1D: ???
+         n1: 73728 0x1FFEFFF1AE: ???
+          n1: 73728 0x1FFEFFF1B4: ???
+           n1: 73728 0x1FFEFFF1B7: ???
+            n1: 73728 0x1FFEFFF1D4: ???
+             n1: 73728 0x1FFEFFF1D7: ???
+              n1: 73728 0x1FFEFFF20B: ???
+               n1: 73728 0x1FFEFFF20E: ???
+                n1: 73728 0x1FFEFFF228: ???
+                 n1: 73728 0x1FFEFFF24D: ???
+                  n1: 73728 0x1FFEFFF250: ???
+                   n1: 73728 0x1FFEFFF252: ???
+                    n1: 73728 0x1FFEFFF255: ???
+                     n1: 73728 0x1FFEFFF257: ???
+                      n1: 73728 0x1FFEFFF264: ???
+                       n1: 73728 0x1FFEFFF269: ???
+                        n1: 73728 0x1FFEFFF281: ???
+                         n1: 73728 0x1FFEFFF283: ???
+                          n1: 73728 0x1FFEFFF28C: ???
+                           n1: 73728 0x1FFEFFF28E: ???
+                            n1: 73728 0x1FFEFFF2A2: ???
+                             n1: 73728 0x1FFEFFF2A4: ???
+                              n1: 73728 0x1FFEFFF2B9: ???
+                               n1: 73728 0x1FFEFFF2BE: ???
+                                n1: 73728 0x1FFEFFF2D2: ???
+                                 n0: 73728 0x1FFEFFF2D7: ???
+ n0: 34566 in 77 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=45
+#-----------
+time=168505352
+mem_heap_B=1157622
+mem_heap_extra_B=6962
+mem_stacks_B=2784
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=170645977
+mem_heap_B=1156766
+mem_heap_extra_B=6626
+mem_stacks_B=2696
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=173856958
+mem_heap_B=1156782
+mem_heap_extra_B=6642
+mem_stacks_B=2784
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=178138327
+mem_heap_B=1155166
+mem_heap_extra_B=5986
+mem_stacks_B=2696
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=181349315
+mem_heap_B=1153214
+mem_heap_extra_B=5170
+mem_stacks_B=2616
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=183489949
+mem_heap_B=1151974
+mem_heap_extra_B=4658
+mem_stacks_B=2784
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=185630737
+mem_heap_B=1150854
+mem_heap_extra_B=4226
+mem_stacks_B=2616
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=186665887
+mem_heap_B=1411046
+mem_heap_extra_B=3258
+mem_stacks_B=2800
+heap_tree=detailed
+n3: 1411046 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1310720 0x46BE4B: std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  n1: 1310720 0x46B93B: SingleAgentSolver::compute_heuristics() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+   n1: 1310720 0x413637: CBS::CBS(Instance const&, bool, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+    n0: 1310720 0x40806B: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+ n1: 73728 0x498771B: pool (eh_alloc.cc:235)
+  n1: 73728 0x498771B: __static_initialization_and_destruction_0 (eh_alloc.cc:373)
+   n1: 73728 0x498771B: _GLOBAL__sub_I_eh_alloc.cc (eh_alloc.cc:456)
+    n1: 73728 0x4004556: call_init (dl-init.c:74)
+     n1: 73728 0x4004556: call_init (dl-init.c:26)
+      n1: 73728 0x400464C: _dl_init (dl-init.c:121)
+       n1: 73728 0x401CE5F: ??? (in /usr/lib64/ld-linux-x86-64.so.2)
+        n1: 73728 0x1D: ???
+         n1: 73728 0x1FFEFFF1AE: ???
+          n1: 73728 0x1FFEFFF1B4: ???
+           n1: 73728 0x1FFEFFF1B7: ???
+            n1: 73728 0x1FFEFFF1D4: ???
+             n1: 73728 0x1FFEFFF1D7: ???
+              n1: 73728 0x1FFEFFF20B: ???
+               n1: 73728 0x1FFEFFF20E: ???
+                n1: 73728 0x1FFEFFF228: ???
+                 n1: 73728 0x1FFEFFF24D: ???
+                  n1: 73728 0x1FFEFFF250: ???
+                   n1: 73728 0x1FFEFFF252: ???
+                    n1: 73728 0x1FFEFFF255: ???
+                     n1: 73728 0x1FFEFFF257: ???
+                      n1: 73728 0x1FFEFFF264: ???
+                       n1: 73728 0x1FFEFFF269: ???
+                        n1: 73728 0x1FFEFFF281: ???
+                         n1: 73728 0x1FFEFFF283: ???
+                          n1: 73728 0x1FFEFFF28C: ???
+                           n1: 73728 0x1FFEFFF28E: ???
+                            n1: 73728 0x1FFEFFF2A2: ???
+                             n1: 73728 0x1FFEFFF2A4: ???
+                              n1: 73728 0x1FFEFFF2B9: ???
+                               n1: 73728 0x1FFEFFF2BE: ???
+                                n1: 73728 0x1FFEFFF2D2: ???
+                                 n0: 73728 0x1FFEFFF2D7: ???
+ n0: 26598 in 77 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=53
+#-----------
+time=188806514
+mem_heap_B=1414326
+mem_heap_extra_B=4762
+mem_stacks_B=2696
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=190947144
+mem_heap_B=1416854
+mem_heap_extra_B=5738
+mem_stacks_B=2784
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=193087773
+mem_heap_B=1418518
+mem_heap_extra_B=6394
+mem_stacks_B=2696
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=195228402
+mem_heap_B=1417654
+mem_heap_extra_B=6090
+mem_stacks_B=2784
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=197369040
+mem_heap_B=1418430
+mem_heap_extra_B=6378
+mem_stacks_B=2696
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=199509709
+mem_heap_B=1419686
+mem_heap_extra_B=6890
+mem_stacks_B=2696
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=201650335
+mem_heap_B=1418910
+mem_heap_extra_B=6586
+mem_stacks_B=2784
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=203790962
+mem_heap_B=1418846
+mem_heap_extra_B=6554
+mem_stacks_B=2784
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=205931589
+mem_heap_B=1419358
+mem_heap_extra_B=6794
+mem_stacks_B=2696
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=207077046
+mem_heap_B=1421062
+mem_heap_extra_B=7466
+mem_stacks_B=2784
+heap_tree=detailed
+n3: 1421062 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1310720 0x46BE4B: std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  n1: 1310720 0x46B93B: SingleAgentSolver::compute_heuristics() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+   n1: 1310720 0x413637: CBS::CBS(Instance const&, bool, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+    n0: 1310720 0x40806B: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+ n1: 73728 0x498771B: pool (eh_alloc.cc:235)
+  n1: 73728 0x498771B: __static_initialization_and_destruction_0 (eh_alloc.cc:373)
+   n1: 73728 0x498771B: _GLOBAL__sub_I_eh_alloc.cc (eh_alloc.cc:456)
+    n1: 73728 0x4004556: call_init (dl-init.c:74)
+     n1: 73728 0x4004556: call_init (dl-init.c:26)
+      n1: 73728 0x400464C: _dl_init (dl-init.c:121)
+       n1: 73728 0x401CE5F: ??? (in /usr/lib64/ld-linux-x86-64.so.2)
+        n1: 73728 0x1D: ???
+         n1: 73728 0x1FFEFFF1AE: ???
+          n1: 73728 0x1FFEFFF1B4: ???
+           n1: 73728 0x1FFEFFF1B7: ???
+            n1: 73728 0x1FFEFFF1D4: ???
+             n1: 73728 0x1FFEFFF1D7: ???
+              n1: 73728 0x1FFEFFF20B: ???
+               n1: 73728 0x1FFEFFF20E: ???
+                n1: 73728 0x1FFEFFF228: ???
+                 n1: 73728 0x1FFEFFF24D: ???
+                  n1: 73728 0x1FFEFFF250: ???
+                   n1: 73728 0x1FFEFFF252: ???
+                    n1: 73728 0x1FFEFFF255: ???
+                     n1: 73728 0x1FFEFFF257: ???
+                      n1: 73728 0x1FFEFFF264: ???
+                       n1: 73728 0x1FFEFFF269: ???
+                        n1: 73728 0x1FFEFFF281: ???
+                         n1: 73728 0x1FFEFFF283: ???
+                          n1: 73728 0x1FFEFFF28C: ???
+                           n1: 73728 0x1FFEFFF28E: ???
+                            n1: 73728 0x1FFEFFF2A2: ???
+                             n1: 73728 0x1FFEFFF2A4: ???
+                              n1: 73728 0x1FFEFFF2B9: ???
+                               n1: 73728 0x1FFEFFF2BE: ???
+                                n1: 73728 0x1FFEFFF2D2: ???
+                                 n0: 73728 0x1FFEFFF2D7: ???
+ n0: 36614 in 77 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=63
+#-----------
+time=209217681
+mem_heap_B=1419518
+mem_heap_extra_B=6858
+mem_stacks_B=2784
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=211358357
+mem_heap_B=1419966
+mem_heap_extra_B=7002
+mem_stacks_B=2696
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=213498995
+mem_heap_B=1419358
+mem_heap_extra_B=6778
+mem_stacks_B=2784
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=215639655
+mem_heap_B=1419014
+mem_heap_extra_B=6650
+mem_stacks_B=2696
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=217780419
+mem_heap_B=1419766
+mem_heap_extra_B=6922
+mem_stacks_B=2616
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=219921046
+mem_heap_B=1419990
+mem_heap_extra_B=6986
+mem_stacks_B=2616
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=222061828
+mem_heap_B=1419246
+mem_heap_extra_B=6682
+mem_stacks_B=2616
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=224202484
+mem_heap_B=1418382
+mem_heap_extra_B=6346
+mem_stacks_B=2616
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=226343130
+mem_heap_B=1415542
+mem_heap_extra_B=5242
+mem_stacks_B=2616
+heap_tree=empty
+#-----------
+snapshot=72
+#-----------
+time=228483764
+mem_heap_B=1414942
+mem_heap_extra_B=5018
+mem_stacks_B=2784
+heap_tree=detailed
+n3: 1414942 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1310720 0x46BE4B: std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  n1: 1310720 0x46B93B: SingleAgentSolver::compute_heuristics() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+   n1: 1310720 0x413637: CBS::CBS(Instance const&, bool, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+    n0: 1310720 0x40806B: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+ n1: 73728 0x498771B: pool (eh_alloc.cc:235)
+  n1: 73728 0x498771B: __static_initialization_and_destruction_0 (eh_alloc.cc:373)
+   n1: 73728 0x498771B: _GLOBAL__sub_I_eh_alloc.cc (eh_alloc.cc:456)
+    n1: 73728 0x4004556: call_init (dl-init.c:74)
+     n1: 73728 0x4004556: call_init (dl-init.c:26)
+      n1: 73728 0x400464C: _dl_init (dl-init.c:121)
+       n1: 73728 0x401CE5F: ??? (in /usr/lib64/ld-linux-x86-64.so.2)
+        n1: 73728 0x1D: ???
+         n1: 73728 0x1FFEFFF1AE: ???
+          n1: 73728 0x1FFEFFF1B4: ???
+           n1: 73728 0x1FFEFFF1B7: ???
+            n1: 73728 0x1FFEFFF1D4: ???
+             n1: 73728 0x1FFEFFF1D7: ???
+              n1: 73728 0x1FFEFFF20B: ???
+               n1: 73728 0x1FFEFFF20E: ???
+                n1: 73728 0x1FFEFFF228: ???
+                 n1: 73728 0x1FFEFFF24D: ???
+                  n1: 73728 0x1FFEFFF250: ???
+                   n1: 73728 0x1FFEFFF252: ???
+                    n1: 73728 0x1FFEFFF255: ???
+                     n1: 73728 0x1FFEFFF257: ???
+                      n1: 73728 0x1FFEFFF264: ???
+                       n1: 73728 0x1FFEFFF269: ???
+                        n1: 73728 0x1FFEFFF281: ???
+                         n1: 73728 0x1FFEFFF283: ???
+                          n1: 73728 0x1FFEFFF28C: ???
+                           n1: 73728 0x1FFEFFF28E: ???
+                            n1: 73728 0x1FFEFFF2A2: ???
+                             n1: 73728 0x1FFEFFF2A4: ???
+                              n1: 73728 0x1FFEFFF2B9: ???
+                               n1: 73728 0x1FFEFFF2BE: ???
+                                n1: 73728 0x1FFEFFF2D2: ???
+                                 n0: 73728 0x1FFEFFF2D7: ???
+ n0: 30494 in 77 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=73
+#-----------
+time=230624391
+mem_heap_B=1413854
+mem_heap_extra_B=4522
+mem_stacks_B=2696
+heap_tree=empty
+#-----------
+snapshot=74
+#-----------
+time=232077994
+mem_heap_B=1673358
+mem_heap_extra_B=3282
+mem_stacks_B=2800
+heap_tree=peak
+n3: 1673358 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1572864 0x46BE4B: std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  n1: 1572864 0x46B93B: SingleAgentSolver::compute_heuristics() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+   n1: 1572864 0x413637: CBS::CBS(Instance const&, bool, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+    n0: 1572864 0x40806B: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+ n1: 73728 0x498771B: pool (eh_alloc.cc:235)
+  n1: 73728 0x498771B: __static_initialization_and_destruction_0 (eh_alloc.cc:373)
+   n1: 73728 0x498771B: _GLOBAL__sub_I_eh_alloc.cc (eh_alloc.cc:456)
+    n1: 73728 0x4004556: call_init (dl-init.c:74)
+     n1: 73728 0x4004556: call_init (dl-init.c:26)
+      n1: 73728 0x400464C: _dl_init (dl-init.c:121)
+       n1: 73728 0x401CE5F: ??? (in /usr/lib64/ld-linux-x86-64.so.2)
+        n1: 73728 0x1D: ???
+         n1: 73728 0x1FFEFFF1AE: ???
+          n1: 73728 0x1FFEFFF1B4: ???
+           n1: 73728 0x1FFEFFF1B7: ???
+            n1: 73728 0x1FFEFFF1D4: ???
+             n1: 73728 0x1FFEFFF1D7: ???
+              n1: 73728 0x1FFEFFF20B: ???
+               n1: 73728 0x1FFEFFF20E: ???
+                n1: 73728 0x1FFEFFF228: ???
+                 n1: 73728 0x1FFEFFF24D: ???
+                  n1: 73728 0x1FFEFFF250: ???
+                   n1: 73728 0x1FFEFFF252: ???
+                    n1: 73728 0x1FFEFFF255: ???
+                     n1: 73728 0x1FFEFFF257: ???
+                      n1: 73728 0x1FFEFFF264: ???
+                       n1: 73728 0x1FFEFFF269: ???
+                        n1: 73728 0x1FFEFFF281: ???
+                         n1: 73728 0x1FFEFFF283: ???
+                          n1: 73728 0x1FFEFFF28C: ???
+                           n1: 73728 0x1FFEFFF28E: ???
+                            n1: 73728 0x1FFEFFF2A2: ???
+                             n1: 73728 0x1FFEFFF2A4: ???
+                              n1: 73728 0x1FFEFFF2B9: ???
+                               n1: 73728 0x1FFEFFF2BE: ???
+                                n1: 73728 0x1FFEFFF2D2: ???
+                                 n0: 73728 0x1FFEFFF2D7: ???
+ n0: 26766 in 77 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=75
+#-----------
+time=234218635
+mem_heap_B=1677358
+mem_heap_extra_B=5058
+mem_stacks_B=2696
+heap_tree=empty
+#-----------
+snapshot=76
+#-----------
+time=236359262
+mem_heap_B=1678830
+mem_heap_extra_B=5650
+mem_stacks_B=2616
+heap_tree=empty
+#-----------
+snapshot=77
+#-----------
+time=238499909
+mem_heap_B=1681526
+mem_heap_extra_B=6722
+mem_stacks_B=2784
+heap_tree=empty
+#-----------
+snapshot=78
+#-----------
+time=240640536
+mem_heap_B=1679078
+mem_heap_extra_B=5730
+mem_stacks_B=2784
+heap_tree=empty
+#-----------
+snapshot=79
+#-----------
+time=242781178
+mem_heap_B=1679734
+mem_heap_extra_B=6018
+mem_stacks_B=2784
+heap_tree=empty
+#-----------
+snapshot=80
+#-----------
+time=244921803
+mem_heap_B=1679598
+mem_heap_extra_B=5922
+mem_stacks_B=2648
+heap_tree=empty
+#-----------
+snapshot=81
+#-----------
+time=247062473
+mem_heap_B=1680470
+mem_heap_extra_B=6306
+mem_stacks_B=2696
+heap_tree=empty
+#-----------
+snapshot=82
+#-----------
+time=249203140
+mem_heap_B=1680926
+mem_heap_extra_B=6482
+mem_stacks_B=2784
+heap_tree=empty
+#-----------
+snapshot=83
+#-----------
+time=251343773
+mem_heap_B=1681406
+mem_heap_extra_B=6658
+mem_stacks_B=2784
+heap_tree=empty
+#-----------
+snapshot=84
+#-----------
+time=253484398
+mem_heap_B=1680766
+mem_heap_extra_B=6434
+mem_stacks_B=2784
+heap_tree=detailed
+n3: 1680766 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1572864 0x46BE4B: std::vector<int, std::allocator<int> >::_M_fill_insert(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, unsigned long, int const&) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+  n1: 1572864 0x46B93B: SingleAgentSolver::compute_heuristics() (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+   n1: 1572864 0x413637: CBS::CBS(Instance const&, bool, int) (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+    n0: 1572864 0x40806B: main (in /home/gabi/Desktop/GitHub_Repositories/CBSH2-RTC/cbs)
+ n1: 73728 0x498771B: pool (eh_alloc.cc:235)
+  n1: 73728 0x498771B: __static_initialization_and_destruction_0 (eh_alloc.cc:373)
+   n1: 73728 0x498771B: _GLOBAL__sub_I_eh_alloc.cc (eh_alloc.cc:456)
+    n1: 73728 0x4004556: call_init (dl-init.c:74)
+     n1: 73728 0x4004556: call_init (dl-init.c:26)
+      n1: 73728 0x400464C: _dl_init (dl-init.c:121)
+       n1: 73728 0x401CE5F: ??? (in /usr/lib64/ld-linux-x86-64.so.2)
+        n1: 73728 0x1D: ???
+         n1: 73728 0x1FFEFFF1AE: ???
+          n1: 73728 0x1FFEFFF1B4: ???
+           n1: 73728 0x1FFEFFF1B7: ???
+            n1: 73728 0x1FFEFFF1D4: ???
+             n1: 73728 0x1FFEFFF1D7: ???
+              n1: 73728 0x1FFEFFF20B: ???
+               n1: 73728 0x1FFEFFF20E: ???
+                n1: 73728 0x1FFEFFF228: ???
+                 n1: 73728 0x1FFEFFF24D: ???
+                  n1: 73728 0x1FFEFFF250: ???
+                   n1: 73728 0x1FFEFFF252: ???
+                    n1: 73728 0x1FFEFFF255: ???
+                     n1: 73728 0x1FFEFFF257: ???
+                      n1: 73728 0x1FFEFFF264: ???
+                       n1: 73728 0x1FFEFFF269: ???
+                        n1: 73728 0x1FFEFFF281: ???
+                         n1: 73728 0x1FFEFFF283: ???
+                          n1: 73728 0x1FFEFFF28C: ???
+                           n1: 73728 0x1FFEFFF28E: ???
+                            n1: 73728 0x1FFEFFF2A2: ???
+                             n1: 73728 0x1FFEFFF2A4: ???
+                              n1: 73728 0x1FFEFFF2B9: ???
+                               n1: 73728 0x1FFEFFF2BE: ???
+                                n1: 73728 0x1FFEFFF2D2: ???
+                                 n0: 73728 0x1FFEFFF2D7: ???
+ n0: 34174 in 77 places, all below massif's threshold (1.00%)
