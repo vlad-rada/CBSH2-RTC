@@ -4,9 +4,10 @@ import random
 import psutil
 import time
 import csv
+import shutil
 
-results_csv = "./cbs_output/final_results.csv"
-write_header = not os.path.exists(results_csv)
+# results_csv = "./cbs_output/final_results.csv"
+# write_header = not os.path.exists(results_csv)
 runtest_path = "./cbs_output/runtests.csv"
 not_valgrind_path = "./cbs_output/runtests_not_valgrind.csv"
 
@@ -41,6 +42,25 @@ headers = ["runtime", "#high-level expanded", "#high-level generated", "#low-lev
 		   "runtime of path finding", "runtime of generating child nodes",
 		   "preprocessing runtime", "solver name", "instance name", "num_agents"]
 
+# Refresh the directories
+try:
+    shutil.rmtree("./valgrind_outputs/cleaned")
+    shutil.rmtree("./valgrind_outputs/cachesim")
+    shutil.rmtree("./valgrind_outputs/massif_stacks")
+except OSError as e:
+    print(f"Error: {e.strerror}")
+os.makedirs("./valgrind_outputs/cleaned", exist_ok=True)
+os.makedirs("./valgrind_outputs/cachesim", exist_ok=True)
+os.makedirs("./valgrind_outputs/massif_stacks", exist_ok=True)
+
+
+
+
+if os.path.exists(runtest_path):
+  os.remove(runtest_path)
+
+if os.path.exists(not_valgrind_path):
+    os.remove(not_valgrind_path)
 
 with open(runtest_path, "w", newline="") as csvfile:
 	writer = csv.writer(csvfile)
@@ -53,9 +73,8 @@ with open(not_valgrind_path, "w", newline="") as csvfile:
 #look into psutil to get peak memory usage 
 #take in 
 
-input_dir = "./maps/maps"
+input_dir = "./maps"
 
-input_files = sorted(os.listdir(input_dir))
 
 output_dir = "outputs"
 os.makedirs(output_dir, exist_ok=True)
@@ -64,158 +83,141 @@ executable = "./cbs"
 
 
 #loop through "input" folder to grab each map file 
-for filename in input_files:
+for filename in os.listdir(input_dir):
+    # Skip files that are not .map
+
     if not filename.endswith(".map"):
         continue
-    # Skip files that are not .map
     
-    
+
     input_path = os.path.join(input_dir, filename)
+    
+    # Set number of agents here
+    num_agents = 150
+    
+    # Set number of scenes here
+    num_scenes = 5
 
-    # agents folder will be in ./inputs/(filename)/
-    # for example if we have the inputs/Berlin_1_256.map, the scenes are in .inputs/Berlin_1_256/ 
+    for scene in range(1, num_scenes):
 
-    #run the command
-    #loop to increase number of agents
-    process = None
-
-    #TODO: CHANGE TO 25
-    for scene in range(1,6):
-        timeoutCounter = 0
-
+        chosenScen = os.path.join("./scenesinput/"+ filename.split(".")[0], filename.split(".")[0] + "-even-" + str(scene) + ".scen")
+        # print(filename)
         
-        #INSERT FUNCTION TO CALL AGENT FILE CHANGER HERE. WILL CHANGE agents.txt FILE
 
-        ### pull y agents randomly from a randomly chosen scen file
+        # continue
+        for agents in range(1, num_agents):
 
-        chosenScen = filename.split(".")[0] + "-even-" + str(scene) + ".scen"
-        chosenScenTwo = os.path.join("./scenesinput/"+ filename.split(".")[0], chosenScen)
-        print(filename)
-        
-        for agents in range(1,150):
-
-            print("Running " + filename + " with scene " + chosenScenTwo + " and " + str(agents) + " agents")
+            print("Running " + filename + " with scene " + chosenScen + " and " + str(agents) + " agents")
             output_path = "./cbs_output/paths.txt"
             numAgents = str(agents)
-            args = [executable, "-m", input_path, "-a", chosenScenTwo, "-o", "./cbs_output/runtests_not_valgrind.csv", "--outputPaths=" + 
-                    output_path,"-k", numAgents, "-t", "10", "--heuristics", "Zero", "--prioritizingConflicts", "0", 
+            args = [executable, "-m", input_path, "-a", chosenScen, "-o", "./cbs_output/runtests_not_valgrind.csv", "--outputPaths=" + 
+                    output_path,"-k", numAgents, "-t", "30", "--heuristics", "Zero", "--prioritizingConflicts", "0", 
                     "--bypass", "0", "--disjointSplitting", "0", "--rectangleReasoning", "None", "--corridorReasoning", "None", 
                     "--mutexReasoning", "0", "--targetReasoning", "0", "--sip", "0"]
-            print(args)
-            print(numAgents)
-            
+            # print(args)
+            # print(numAgents)
+                        
             #run process.
-            process = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-            processes.append(process)
+            process1 = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            processes.append(process1)
 
-            '''
-            old memory logging:
-
-            while process.poll() is None:
-                try:
-                    mem = p.memory_info().rss  
-                    peak_memory = max(peak_memory, mem)
-                except psutil.NoSuchProcess:
-                    break
-                time.sleep(0.1)  # frequency of polling
-                
-            # bytes to MB
-            peak_memory_MB = peak_memory / (1024 ** 2)
-            '''
-
-
+            # stdout, stderr = process1.communicate()
+            # process1.wait()
+            
             # copy last line from runtest.csv to final_results.csv  -- important to stop data from being overriden 
             # by valgrind later
 
-            with open(runtest_path, "r") as src, open(results_csv, "a", newline="") as dst:
-                last_line = list(csv.reader(src))[-1]
-                csv.writer(dst).writerow(last_line)
+            # with open(runtest_path, "r") as src, open(results_csv, "a", newline="") as dst:
+            #     last_line = list(csv.reader(src))[-1]
+            #     csv.writer(dst).writerow(last_line)
 
             # NOW SAFE TO RUN VALGRIND
             # FIRST CHECK FOR TIMEOUT -- IF IT TIMES OUT WE DONT CARE ABT VALGRIND OUTPUT
 
             # Check if the solution cost is -2 (timeout)
             try:
-                with open("./cbs_output/runtests.csv", "r") as csvfile:
+                with open("./cbs_output/runtests_not_valgrind.csv", "r") as csvfile:
                     reader = csv.reader(csvfile)
                     rows = list(reader)
                     if len(rows) > 1:  # Ensure there's at least one data row
                         last_row = rows[-1]
                         solution_cost_index = headers.index("solution cost")
-                        if len(last_row) > solution_cost_index:
+                        try:
                             solution_cost = last_row[solution_cost_index]
                             if solution_cost == "-2" or solution_cost == "-1":
-                                print(f"Timeout occurred. Timeout counter: {timeoutCounter}")
                                 break
+                        except ValueError:
+                            print(f"Error: 'solution cost' not found in headers.")
+                            continue
             except Exception as e:
                 print(f"Error reading runtests.csv: {e}")
+            
 
-            #RUN CACHEGRIND W NO ARGS
-            
-            # teststring = f"{filename} {scene} {numAgents}"
-            # /valgrind_outputs/cachegrind/[numAgents]/Boston_0_256.map.S1.out
-            os.makedirs(f"./valgrind_outputs/cachegrind/agents_{numAgents}", exist_ok=True)
-            cachegrindoutfile = f"--cachegrind-out-file=./valgrind_outputs/cachegrind/agents_{numAgents}/{filename}_{scene}.out"
-            
-            
-            
-            args = ["valgrind", "--tool=cachegrind", cachegrindoutfile, executable, "-m", input_path, "-a", chosenScenTwo, "-o", "./cbs_output/runtests.csv", "--outputPaths=" + 
-                    output_path,"-k", numAgents, "-t", "5", "--heuristics", "Zero", "--prioritizingConflicts", "0", 
-                    "--bypass", "0", "--disjointSplitting", "0", "--rectangleReasoning", "None", "--corridorReasoning", "None", 
-                    "--mutexReasoning", "0", "--targetReasoning", "0", "--sip", "0"]
+            # # Callgrind process creation
+            # os.makedirs(f"./valgrind_outputs/callgrind/agents_{numAgents}", exist_ok=True)
+            # callgrindoutfile = f"--callgrind-out-file=./valgrind_outputs/callgrind/agents_{numAgents}/{filename}_{scene}.out"
+            # args = ["valgrind", "--tool=callgrind", "--cache-sim=yes", 
+            #          "--I1=32768,8,64", "--D1=49152,12,64", "--LL=2097152,16,64",
+            #         callgrindoutfile, executable, "-m", input_path, "-a", chosenScen, "-o", "./cbs_output/runtests.csv", "--outputPaths=" +
+            #         output_path,"-k", numAgents, "-t", "60", "--heuristics", "Zero", "--prioritizingConflicts", "0", 
+            #         "--bypass", "0", "--disjointSplitting", "0", "--rectangleReasoning", "None", "--corridorReasoning", "None", 
+            #         "--mutexReasoning", "0", "--targetReasoning", "0", "--sip", "0"]
             
             
-            
-            #run process.
-            process = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-            processes.append(process)
+            # #run process.
+            # process2 = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            # processes.append(process2)
 
-            # print(stderr.decode())
-            # p = psutil.Process(process.pid)  
 
-            #RUN CACHEGRIND W CACHE SIM ARGS
-            # /valgrind_outputs/cachesim/[numAgents]/Boston_0_256.map.S1.out
+            # Cachegrind process creation
             os.makedirs(f"./valgrind_outputs/cachesim/agents_{numAgents}", exist_ok=True)
             cachesimoutfile = f"--cachegrind-out-file=./valgrind_outputs/cachesim/agents_{numAgents}/{filename}_{scene}.out"
-
-
-            args = ["valgrind", "--tool=cachegrind", "--cache-sim=yes", cachesimoutfile, executable, "-m", input_path, "-a", chosenScenTwo, "-o", "./cbs_output/runtests.csv", "--outputPaths=" + 
-                    output_path,"-k", numAgents, "-t", "5", "--heuristics", "Zero", "--prioritizingConflicts", "0", 
+            args = ["valgrind", "--tool=cachegrind", "--cache-sim=yes", 
+                     "--I1=32768,8,64", "--D1=49152,12,64", "--LL=2097152,16,64",
+                    cachesimoutfile, executable, "-m", input_path, "-a", chosenScen, "-o", "./cbs_output/runtests.csv", "--outputPaths=" + 
+                    output_path,"-k", numAgents, "-t", "60", "--heuristics", "Zero", "--prioritizingConflicts", "0", 
                     "--bypass", "0", "--disjointSplitting", "0", "--rectangleReasoning", "None", "--corridorReasoning", "None", 
                     "--mutexReasoning", "0", "--targetReasoning", "0", "--sip", "0"]
-            
             #run process.
-            process = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)    
-            processes.append(process)
-      
-
-            #RUN MASSIF W NO ARGS
-            os.makedirs(f"./valgrind_outputs/massif/agents_{numAgents}", exist_ok=True)
-            massifoutfile = f"--massif-out-file=./valgrind_outputs/massif/agents_{numAgents}/{filename}_{scene}.out"
-
-            args = ["valgrind", "--tool=massif", massifoutfile, executable, "-m", input_path, "-a", chosenScenTwo, "-o", "./cbs_output/runtests.csv", "--outputPaths=" + 
-                    output_path,"-k", numAgents, "-t", "5", "--heuristics", "Zero", "--prioritizingConflicts", "0", 
-                    "--bypass", "0", "--disjointSplitting", "0", "--rectangleReasoning", "None", "--corridorReasoning", "None", 
-                    "--mutexReasoning", "0", "--targetReasoning", "0", "--sip", "0"]
-            
-            #run process.
-            process = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-            processes.append(process)
+            process3 = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)    
+            processes.append(process3)
 
 
-            #RUN MASSIF W STACKS ON
+            # Massif process creation (Stacks option enabled)
             os.makedirs(f"./valgrind_outputs/massif_stacks/agents_{numAgents}", exist_ok=True)
             massif_stacksoutfile = f"--massif-out-file=./valgrind_outputs/massif_stacks/agents_{numAgents}/{filename}_{scene}.out"
-
-            args = ["valgrind", "--tool=massif", "--stacks=yes", massif_stacksoutfile, executable, "-m", input_path, "-a", chosenScenTwo, "-o", "./cbs_output/runtests.csv", "--outputPaths=" + 
-                    output_path,"-k", numAgents, "-t", "5", "--heuristics", "Zero", "--prioritizingConflicts", "0", 
+            args = ["valgrind", "--tool=massif", "--stacks=yes", massif_stacksoutfile, executable, "-m", input_path, "-a", chosenScen, "-o", "./cbs_output/runtests.csv", "--outputPaths=" + 
+                    output_path,"-k", numAgents, "-t", "60", "--heuristics", "Zero", "--prioritizingConflicts", "0", 
                     "--bypass", "0", "--disjointSplitting", "0", "--rectangleReasoning", "None", "--corridorReasoning", "None", 
                     "--mutexReasoning", "0", "--targetReasoning", "0", "--sip", "0"]
-            
             #run process.
-            process = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-            processes.append(process)
-
-for process in processes:
-    stdout, stderr = process.communicate()
-    process.wait()
+            process4 = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            processes.append(process4)
+            
+            
+            
+            for process in processes:
+                stdout, stderr = process.communicate()
+                process.wait()
+            processes.clear()
+            
+            
+            # Create directories for cleaned valgrind outputs
+            os.makedirs(f"./valgrind_outputs/cleaned/cachesim/agents_{numAgents}", exist_ok=True)
+            os.makedirs(f"./valgrind_outputs/cleaned/massif_stacks/agents_{numAgents}", exist_ok=True)
+            
+            from pathlib import Path
+            output_path = Path(f"./valgrind_outputs/cleaned/cachesim/agents_{numAgents}/{filename}_{scene}.out.clean")
+            with open(output_path, "w") as outfile:
+                subprocess.run(
+                    ["cg_annotate", f"./valgrind_outputs/cachesim/agents_{numAgents}/{filename}_{scene}.out"],
+                    stdout=outfile,
+                    stderr=subprocess.PIPE
+                )
+            output_path = Path(f"./valgrind_outputs/cleaned/massif_stacks/agents_{numAgents}/{filename}_{scene}.out.clean")
+            with open(output_path, "w") as outfile:
+                subprocess.run(
+                    ["ms_print", f"./valgrind_outputs/massif_stacks/agents_{numAgents}/{filename}_{scene}.out"],
+                    stdout=outfile,
+                    stderr=subprocess.PIPE
+                )

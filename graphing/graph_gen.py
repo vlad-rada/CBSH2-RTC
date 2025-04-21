@@ -165,11 +165,13 @@ def plot_scatter_agents_runtime(x, y):
                     [avg + 3 for avg in avg_runtime],
                     color='b', alpha=0.2, label='±3 bound')
     
-    plt.title('Runtime vs Number of Agents')
-    plt.xlabel('Number of Agents')
-    plt.ylabel('Runtime (s)')
+    plt.title('Runtime vs Number of Agents', fontsize=16)
+    plt.xlabel('Number of Agents', fontsize=16)
+    plt.ylabel('Runtime (s)', fontsize=16)
     plt.grid(True)
-    plt.legend()
+    plt.xticks(fontsize=12)
+    plt.yticks(fontsize=12)
+    plt.legend(fontsize=12)
     plt.tight_layout()
     plt.savefig('./graphing/runtime_vs_agents_scatter.png')
 
@@ -188,11 +190,13 @@ def plot_scatter_agents_solution_cost(x, y):
     # Create scatter plot of raw data
     plt.scatter(x, y, c='r', marker='x', alpha=0.5, label='Individual runs')
     
-    plt.title('Solution Cost vs Number of Agents')
-    plt.xlabel('Number of Agents')
-    plt.ylabel('Solution Cost')
+    plt.title('Solution Cost vs Number of Agents',fontsize=16)
+    plt.xlabel('Number of Agents',fontsize=16)
+    plt.ylabel('Solution Cost',fontsize=16)
     plt.grid(True)
-    plt.legend()
+    plt.xticks(fontsize=12)
+    plt.yticks(fontsize=12)
+    plt.legend(fontsize=16)
     plt.tight_layout()
     plt.savefig('./graphing/solution_cost_vs_agents_scatter.png')
     
@@ -211,11 +215,13 @@ def plot_scatter_ramuse_numagents(x, y):
     # Create scatter plot of raw data
     plt.scatter(x, y, c='r', marker='x', alpha=0.5, label='Individual runs')
     
-    plt.title('RAM Usage vs Number of Agents')
-    plt.xlabel('Number of Agents')
-    plt.ylabel('RAM Usage (MB)')
+    plt.title('RAM Usage vs Number of Agents',fontsize=16)
+    plt.xlabel('Number of Agents',fontsize=16)
+    plt.ylabel('RAM Usage (MB)',fontsize=16)
     plt.grid(True)
-    plt.legend()
+    plt.xticks(fontsize=12)
+    plt.yticks(fontsize=12)
+    plt.legend(fontsize=16)
     plt.tight_layout()
     plt.savefig('./graphing/ram_usage_vs_agents_scatter.png')
 
